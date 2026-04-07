@@ -211,8 +211,10 @@ asm-spec/
 ├── demo/
 │   ├── e2e_demo.py                   # End-to-end demo (5 scenarios)
 │   └── receipts_demo.py              # Signed Receipts trust pipeline demo
-└── paper/
-    └── asm-paper-draft.md            # Academic paper draft
+├── paper/
+│   └── asm-paper-draft.md            # Academic paper (Sections 1-8)
+└── sep/
+    └── sep-asm-service-value.md      # SEP proposal for MCP specification
 ```
 
 ### 14 Services Across 6 Categories
@@ -350,8 +352,8 @@ Integration status: active collaboration with the [Agent Receipts](https://githu
 - [x] Schema v0.3 (`receipt_endpoint`, `verification`, `updated_at`, `ttl`)
 - [x] Trust delta scoring with exponential decay
 - [x] Signed Receipts integration demo
-- [ ] arXiv preprint
-- [ ] SEP proposal to MCP specification
+- [x] arXiv preprint
+- [x] SEP proposal to MCP specification
 
 ---
 

@@ -1,0 +1,305 @@
+{
+  "summary": {
+    "A_ASM": {
+      "count": 10,
+      "cost_mean": 0.008044825,
+      "cost_std": 0.016842014139187254,
+      "latency_mean": 2.73,
+      "latency_std": 3.4849039521277416,
+      "quality_mean": 0.7299,
+      "quality_std": 0.1315650381342219,
+      "uptime_mean": 0.9488999999999999,
+      "uptime_std": 0.1577279303103924,
+      "topsis_mean": 0.81349,
+      "topsis_std": 0.17479229229129198
+    },
+    "B_Random": {
+      "count": 10,
+      "cost_mean": 0.00807775,
+      "cost_std": 0.016824707173343317,
+      "latency_mean": 2.8899999999999997,
+      "latency_std": 3.3978588028999153,
+      "quality_mean": 0.7598999999999999,
+      "quality_std": 0.14801560228070054,
+      "uptime_mean": 0.9489000000000001,
+      "uptime_std": 0.1577279303103924,
+      "topsis_mean": 0.58273,
+      "topsis_std": 0.32556818043400854
+    },
+    "C_Expensive": {
+      "count": 10,
+      "cost_mean": 0.00810242,
+      "cost_std": 0.016811724550695104,
+      "latency_mean": 2.96,
+      "latency_std": 3.210815057478916,
+      "quality_mean": 0.7882999999999999,
+      "quality_std": 0.15562470288533292,
+      "uptime_mean": 0.8984,
+      "uptime_std": 0.20998158649430826,
+      "topsis_mean": 0.31889999999999996,
+      "topsis_std": 0.2617232083285274
+    }
+  },
+  "t_tests": {
+    "cost_per_unit": {
+      "A_vs_B": {
+        "t": -0.004373608451372234,
+        "p": 0.9965584845992655,
+        "significant": false
+      },
+      "A_vs_C": {
+        "t": -0.0076536092579913735,
+        "p": 0.9939775517570635,
+        "significant": false
+      }
+    },
+    "latency_seconds": {
+      "A_vs_B": {
+        "t": -0.10395310174187193,
+        "p": 0.9183568040422265,
+        "significant": false
+      },
+      "A_vs_C": {
+        "t": -0.15349069458632056,
+        "p": 0.8797303244477105,
+        "significant": false
+      }
+    },
+    "quality_score": {
+      "A_vs_B": {
+        "t": -0.47904758671093434,
+        "p": 0.6377513978038292,
+        "significant": false
+      },
+      "A_vs_C": {
+        "t": -0.9062337014229631,
+        "p": 0.37711081278208747,
+        "significant": false
+      }
+    },
+    "uptime": {
+      "A_vs_B": {
+        "t": 0.0,
+        "p": 1.0,
+        "significant": false
+      },
+      "A_vs_C": {
+        "t": 0.608079147555462,
+        "p": 0.5513142412871638,
+        "significant": false
+      }
+    },
+    "topsis_score": {
+      "A_vs_B": {
+        "t": 1.9747834177370467,
+        "p": 0.06866278979411576,
+        "significant": false
+      },
+      "A_vs_C": {
+        "t": 4.969527049742075,
+        "p": 0.00014714857478349453,
+        "significant": true
+      }
+    }
+  },
+  "taxonomy_breakdown": {
+    "ai.audio.tts": {
+      "A_ASM": {
+        "count": 3,
+        "cost_mean": 1.5e-05,
+        "latency_mean": 0.5,
+        "quality_mean": 0.75,
+        "topsis_mean": 0.7081333333333334
+      },
+      "B_Random": {
+        "count": 3,
+        "cost_mean": 0.000125,
+        "latency_mean": 0.43333333333333335,
+        "quality_mean": 0.8333333333333334,
+        "topsis_mean": 0.3423333333333333
+      },
+      "C_Expensive": {
+        "count": 3,
+        "cost_mean": 0.00018,
+        "latency_mean": 0.4000000000000001,
+        "quality_mean": 0.875,
+        "topsis_mean": 0.29186666666666666
+      }
+    },
+    "ai.llm.chat": {
+      "A_ASM": {
+        "count": 3,
+        "cost_mean": 7.75e-06,
+        "latency_mean": 0.6,
+        "quality_mean": 0.8083333333333332,
+        "topsis_mean": 0.9093
+      },
+      "B_Random": {
+        "count": 3,
+        "cost_mean": 7.499999999999999e-06,
+        "latency_mean": 1.2,
+        "quality_mean": 0.8250000000000001,
+        "topsis_mean": 0.6212333333333334
+      },
+      "C_Expensive": {
+        "count": 3,
+        "cost_mean": 1.14e-05,
+        "latency_mean": 0.8000000000000002,
+        "quality_mean": 0.8166666666666668,
+        "topsis_mean": 0.3738666666666666
+      }
+    },
+    "ai.vision.image_generation": {
+      "A_ASM": {
+        "count": 2,
+        "cost_mean": 0.04,
+        "latency_mean": 9.0,
+        "quality_mean": 0.812,
+        "topsis_mean": 0.6413
+      },
+      "B_Random": {
+        "count": 2,
+        "cost_mean": 0.04,
+        "latency_mean": 9.0,
+        "quality_mean": 0.812,
+        "topsis_mean": 0.46830000000000005
+      },
+      "C_Expensive": {
+        "count": 2,
+        "cost_mean": 0.04,
+        "latency_mean": 8.0,
+        "quality_mean": 0.904,
+        "topsis_mean": 0.5959
+      }
+    },
+    "infra.compute.gpu": {
+      "A_ASM": {
+        "count": 2,
+        "cost_mean": 0.00019,
+        "latency_mean": 3.0,
+        "quality_mean": 0.5,
+        "topsis_mean": 1.0
+      },
+      "B_Random": {
+        "count": 2,
+        "cost_mean": 0.00019,
+        "latency_mean": 3.0,
+        "quality_mean": 0.5,
+        "topsis_mean": 1.0
+      },
+      "C_Expensive": {
+        "count": 2,
+        "cost_mean": 0.000225,
+        "latency_mean": 5.0,
+        "quality_mean": 0.5,
+        "topsis_mean": 0.0
+      }
+    }
+  },
+  "profile_breakdown": {
+    "balanced": {
+      "A_ASM": {
+        "count": 1,
+        "cost_mean": 0.04,
+        "quality_mean": 0.72,
+        "topsis_mean": 0.6017
+      },
+      "B_Random": {
+        "count": 1,
+        "cost_mean": 0.04,
+        "quality_mean": 0.904,
+        "topsis_mean": 0.5109
+      },
+      "C_Expensive": {
+        "count": 1,
+        "cost_mean": 0.04,
+        "quality_mean": 0.904,
+        "topsis_mean": 0.5109
+      }
+    },
+    "cost_first": {
+      "A_ASM": {
+        "count": 5,
+        "cost_mean": 8.21e-05,
+        "quality_mean": 0.6733333333333335,
+        "topsis_mean": 0.9516
+      },
+      "B_Random": {
+        "count": 5,
+        "cost_mean": 0.000115025,
+        "quality_mean": 0.7033333333333334,
+        "topsis_mean": 0.74126
+      },
+      "C_Expensive": {
+        "count": 5,
+        "cost_mean": 0.00013056,
+        "quality_mean": 0.7016666666666665,
+        "topsis_mean": 0.09763999999999999
+      }
+    },
+    "quality_first": {
+      "A_ASM": {
+        "count": 3,
+        "cost_mean": 0.013340916666666668,
+        "quality_mean": 0.8207777777777778,
+        "topsis_mean": 0.7226333333333333
+      },
+      "B_Random": {
+        "count": 3,
+        "cost_mean": 0.013340791666666666,
+        "quality_mean": 0.7677777777777779,
+        "topsis_mean": 0.4058
+      },
+      "C_Expensive": {
+        "count": 3,
+        "cost_mean": 0.013397133333333333,
+        "quality_mean": 0.8652222222222222,
+        "topsis_mean": 0.5990666666666665
+      }
+    },
+    "speed_first": {
+      "A_ASM": {
+        "count": 1,
+        "cost_mean": 1.5e-05,
+        "quality_mean": 0.75,
+        "topsis_mean": 0.6073
+      },
+      "B_Random": {
+        "count": 1,
+        "cost_mean": 0.00018,
+        "quality_mean": 0.875,
+        "topsis_mean": 0.3927
+      },
+      "C_Expensive": {
+        "count": 1,
+        "cost_mean": 0.00018,
+        "quality_mean": 0.875,
+        "topsis_mean": 0.3927
+      }
+    }
+  },
+  "selection_freq": {
+    "A_ASM": {
+      "runpod/gpu-serverless@1.0": 2,
+      "openai/tts-1@1.0": 3,
+      "openai/gpt-4o@2024-11-20": 3,
+      "google/imagen-3@3.0": 1,
+      "black-forest-labs/flux-1.1-pro@1.1": 1
+    },
+    "B_Random": {
+      "runpod/gpu-serverless@1.0": 2,
+      "elevenlabs/tts-v2@2.0": 2,
+      "google/gemini-2.5-pro@2.5": 2,
+      "openai/gpt-4o@2024-11-20": 1,
+      "black-forest-labs/flux-1.1-pro@1.1": 1,
+      "openai/tts-1@1.0": 1,
+      "google/imagen-3@3.0": 1
+    },
+    "C_Expensive": {
+      "replicate/gpu-serverless@1.0": 2,
+      "elevenlabs/tts-v2@2.0": 3,
+      "anthropic/claude-sonnet-4@4.0": 3,
+      "black-forest-labs/flux-1.1-pro@1.1": 2
+    }
+  }
+}

@@ -14,7 +14,7 @@ import * as path from "path";
 
 // ── Types ──────────────────────────────────────────────
 
-interface BillingDimension {
+export interface BillingDimension {
   dimension: string;
   unit: string;
   cost_per_unit: number;
@@ -23,7 +23,7 @@ interface BillingDimension {
   tiers?: { up_to: number | string; cost_per_unit: number }[];
 }
 
-interface QualityMetric {
+export interface QualityMetric {
   name: string;
   score: number;
   scale?: string;
@@ -33,7 +33,7 @@ interface QualityMetric {
   self_reported?: boolean;
 }
 
-interface ASMManifest {
+export interface ASMManifest {
   asm_version: string;
   service_id: string;
   taxonomy: string;
@@ -96,7 +96,7 @@ interface ASMManifest {
 
 // ── Registry Store ─────────────────────────────────────
 
-class ASMRegistry {
+export class ASMRegistry {
   private manifests: Map<string, ASMManifest> = new Map();
 
   loadFromDirectory(dir: string): number {
@@ -184,7 +184,7 @@ class ASMRegistry {
 
 // ── Scoring helpers (mirrors scorer.py) ────────────────
 
-function parseLatency(s?: string): number {
+export function parseLatency(s?: string): number {
   if (!s) return Infinity;
   const cleaned = s.trim().replace(/^[~<>]/, "");
   if (cleaned.endsWith("ms")) return parseFloat(cleaned) / 1000;
@@ -194,7 +194,7 @@ function parseLatency(s?: string): number {
   return isNaN(n) ? Infinity : n;
 }
 
-function extractPrimaryCost(m: ASMManifest): number {
+export function extractPrimaryCost(m: ASMManifest): number {
   const dims = m.pricing?.billing_dimensions;
   if (!dims || dims.length === 0) return 0;
 
@@ -220,7 +220,7 @@ function extractPrimaryCost(m: ASMManifest): number {
   return cost;
 }
 
-function extractPrimaryQuality(m: ASMManifest): number {
+export function extractPrimaryQuality(m: ASMManifest): number {
   const metrics = m.quality?.metrics;
   if (!metrics || metrics.length === 0) return 0.5;
   const met = metrics[0];
@@ -236,7 +236,7 @@ function extractPrimaryQuality(m: ASMManifest): number {
   return score;
 }
 
-function minMaxNormalize(vals: number[], invert: boolean): number[] {
+export function minMaxNormalize(vals: number[], invert: boolean): number[] {
   if (vals.length === 0) return [];
   const mn = Math.min(...vals);
   const mx = Math.max(...vals);
@@ -245,7 +245,7 @@ function minMaxNormalize(vals: number[], invert: boolean): number[] {
   return vals.map((v) => (v - mn) / (mx - mn));
 }
 
-interface ScoreResult {
+export interface ScoreResult {
   service_id: string;
   display_name: string;
   taxonomy: string;
@@ -255,7 +255,7 @@ interface ScoreResult {
   rank: number;
 }
 
-function scoreServices(
+export function scoreServices(
   manifests: ASMManifest[],
   weights: { cost: number; quality: number; speed: number; reliability: number }
 ): ScoreResult[] {
@@ -310,7 +310,7 @@ function scoreServices(
 
 // ── Format helpers ─────────────────────────────────────
 
-function formatManifestSummary(m: ASMManifest): string {
+export function formatManifestSummary(m: ASMManifest): string {
   const lines: string[] = [];
   lines.push(`**${m.display_name || m.service_id}**`);
   lines.push(`- Service ID: \`${m.service_id}\``);

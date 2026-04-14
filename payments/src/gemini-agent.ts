@@ -12,7 +12,6 @@
  * Uses Gemini Free Tier (gemini-2.5-flash, no credit card needed)
  */
 
-import { loadConfig } from "./config.js";
 
 // ── Gemini Request/Response Types ──────────────────────────────
 
@@ -172,8 +171,8 @@ export async function parseAgentIntent(
     // Parse JSON
     const parsed = JSON.parse(text);
     return normalizeIntent(parsed);
-  } catch (err: any) {
-    console.warn(`⚠️  Gemini call failed: ${err.message}，using rule engine`);
+  } catch (err: unknown) {
+    console.warn(`⚠️  Gemini call failed: ${(err instanceof Error ? err.message : String(err))}，using rule engine`);
     return ruleBasedParse(naturalLanguageRequest);
   }
 }

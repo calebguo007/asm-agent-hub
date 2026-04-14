@@ -188,9 +188,9 @@ async function initX402(): Promise<boolean> {
     console.log(`   Routes: ${Object.keys(routes).join(", ")}`);
     x402Initialized = true;
     return true;
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.warn("⚠️  x402 init failed, falling back to mock mode");
-    console.warn(`   Error: ${err.message}`);
+    console.warn(`   Error: ${(err instanceof Error ? err.message : String(err))}`);
     return false;
   }
 }
@@ -297,7 +297,7 @@ function recordPayment(endpoint: string, price: string) {
   return (req: Request, res: Response, next: NextFunction) => {
     // Temp storage: populated in res.json, consumed in finish
     let capturedTaxonomy: string | undefined;
-    let capturedBody: any;
+//     let capturedBody: any;  // unused
 
     const origJson = res.json.bind(res);
     (res as any).json = function(body: any) {
@@ -307,7 +307,7 @@ function recordPayment(endpoint: string, price: string) {
           || body?.intent?.taxonomy
           || body?.scoring?.ranking?.[0]?.taxonomy
           || undefined;
-        capturedBody = body;
+        // capturedBody = body;  // unused
       }
       return origJson(body);
     };
@@ -437,8 +437,8 @@ function registerRoutes() {
       }
 
       res.json(data);
-    } catch (err: any) {
-      res.status(502).json({ error: "registry_unavailable", message: err.message });
+    } catch (err: unknown) {
+      res.status(502).json({ error: "registry_unavailable", message: (err instanceof Error ? err.message : String(err)) });
     }
   });
 
@@ -474,7 +474,7 @@ function registerRoutes() {
           action: "score",
           taxonomy: req.body?.taxonomy,
           weights: { w_cost: req.body?.w_cost, w_quality: req.body?.w_quality, w_speed: req.body?.w_speed, w_reliability: req.body?.w_reliability },
-          ranking: data.ranking?.slice(0, 3)?.map((s: any) => ({ display_name: s.display_name, score: s.total_score })),
+          ranking: data.ranking?.slice(0, 3)?.map((s: {display_name: string; total_score: number}) => ({ display_name: s.display_name, score: s.total_score })),
           winner: data.ranking?.[0]?.display_name,
           amount: config.scorePrice,
           txHash: paymentInfo?.txHash,
@@ -517,8 +517,8 @@ function registerRoutes() {
           network: config.network,
         },
       });
-    } catch (err: any) {
-      res.status(502).json({ error: "registry_unavailable", message: err.message });
+    } catch (err: unknown) {
+      res.status(502).json({ error: "registry_unavailable", message: (err instanceof Error ? err.message : String(err)) });
     }
   });
 
@@ -562,8 +562,8 @@ function registerRoutes() {
           network: config.network,
         },
       });
-    } catch (err: any) {
-      res.status(502).json({ error: "registry_unavailable", message: err.message });
+    } catch (err: unknown) {
+      res.status(502).json({ error: "registry_unavailable", message: (err instanceof Error ? err.message : String(err)) });
     }
   });
 
@@ -712,7 +712,7 @@ function registerRoutes() {
           action: "agent_decide",
           request: agentRequest,
           intent: { taxonomy: intent.taxonomy, weights: intent.weights, reasoning: intent.reasoning },
-          ranking: scoring.ranking?.slice(0, 5)?.map((s: any) => ({
+          ranking: scoring.ranking?.slice(0, 5)?.map((s: {display_name: string; total_score: number; asm_score?: number; trust_score?: number; taxonomy?: string; breakdown?: Record<string, number>}) => ({
             display_name: s.display_name,
             score: s.total_score,
             taxonomy: s.taxonomy,
@@ -783,8 +783,8 @@ function registerRoutes() {
         } : undefined,
         latencyMs,
       });
-    } catch (err: any) {
-      res.status(500).json({ error: "agent_decide_failed", message: err.message });
+    } catch (err: unknown) {
+      res.status(500).json({ error: "agent_decide_failed", message: (err instanceof Error ? err.message : String(err)) });
     }
   });
 

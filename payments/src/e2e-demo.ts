@@ -265,8 +265,8 @@ async function main() {
       info(`  • ${svc.display_name} (${svc.taxonomy})`);
     }
     if (services.count > 3) info(`  ... and ${services.count - 3}  more`);
-  } catch (err: any) {
-    console.log(`    ${R}✗ Cannot connect: ${err.message}${X}`);
+  } catch (err: unknown) {
+    console.log(`    ${R}✗ Cannot connect: ${(err instanceof Error ? err.message : String(err))}${X}`);
     console.log(`    ${D}Please start first: npm run dev:all${X}`);
     process.exit(1);
   }
@@ -302,7 +302,7 @@ async function main() {
       try {
         if (task.action === "agent-decide") {
           // Gemini semantic decision
-          let result: any;
+          let result: any;  // eslint-disable-line @typescript-eslint/no-explicit-any -- dynamic HTTP response
           if (isLive && buyer.isLive()) {
             // Live mode: GatewayClient.pay() auto-handles 402 → sign → settle
             result = await buyer.agentDecide(task.params, wallet.name, wallet.address);
@@ -346,7 +346,7 @@ async function main() {
           const scoreRequest = `Service selection: taxonomy=${task.params.taxonomy || "all"}, ` +
             `cost_weight=${task.params.w_cost}, quality_weight=${task.params.w_quality}, ` +
             `speed_weight=${task.params.w_speed}, reliability_weight=${task.params.w_reliability}`;
-          let scoreResult: any;
+          let scoreResult: any;  // eslint-disable-line @typescript-eslint/no-explicit-any -- dynamic HTTP response
           if (isLive && buyer.isLive()) {
             scoreResult = await buyer.agentDecide({ request: scoreRequest }, wallet.name, wallet.address);
           } else {
@@ -379,8 +379,8 @@ async function main() {
           ok(`${G}[Query]${X} ${task.description} → ${result.query?.count || 0}  results`);
         }
         totalTx++;
-      } catch (err: any) {
-        console.log(`    ${R}✗ ${task.description}: ${err.message}${X}`);
+      } catch (err: unknown) {
+        console.log(`    ${R}✗ ${task.description}: ${(err instanceof Error ? err.message : String(err))}${X}`);
       }
     }
   }
@@ -391,7 +391,7 @@ async function main() {
 
   if (remaining > 0) {
     info(`Need ${remaining}  more txns, rotating Agent addresses`);
-    const taxonomies = ["ai.llm.chat", "ai.vision.image_generation", "ai.audio.tts", "ai.video.generation", "ai.embedding", "cloud.compute.gpu"];
+//     const taxonomies = ["ai.llm.chat", "ai.vision.image_generation", "ai.audio.tts", "ai.video.generation", "ai.embedding", "cloud.compute.gpu"];  // unused
     const nlRequests = [
       "Find the cheapest LLM for simple Q&A tasks",
       "I need a high quality image generator for marketing",
@@ -413,7 +413,7 @@ async function main() {
 
     for (let i = 0; i < remaining; i++) {
       const wallet = wallets[i % wallets.length];
-      const useGemini = i % 3 === 0;  // Use Gemini decision every 3 txns
+//       const useGemini = i % 3 === 0;  // Use Gemini decision every 3 txns  // unused
 
       try {
         const nlReq = nlRequests[i % nlRequests.length];
@@ -471,8 +471,8 @@ async function main() {
     if (stats.totalTransactions >= 50) {
       console.log(`\n    ${G}${B}✅ Reached 50+ transaction requirement!${X}`);
     }
-  } catch (err: any) {
-    console.log(`    ${R}Cannot get stats: ${err.message}${X}`);
+  } catch (err: unknown) {
+    console.log(`    ${R}Cannot get stats: ${(err instanceof Error ? err.message : String(err))}${X}`);
   }
 
   // Step 6: Trust Delta Verification
@@ -488,7 +488,7 @@ async function main() {
     // Show top 5 trust scores
     const sorted = serviceIds
       .map(id => ({ id, ...scores[id] }))
-      .sort((a: any, b: any) => b.trustScore - a.trustScore)
+      .sort((a: {trustScore: number}, b: {trustScore: number}) => b.trustScore - a.trustScore)
       .slice(0, 5);
     if (sorted.length > 0) {
       console.log(`    └─ Top 5 trust scores:`);
@@ -500,8 +500,8 @@ async function main() {
     if (trust.totalReceipts > 0) {
       console.log(`\n    ${G}${B}✅ Trust Delta loop verification passed!${X}`);
     }
-  } catch (err: any) {
-    console.log(`    ${R}Cannot get trust data: ${err.message}${X}`);
+  } catch (err: unknown) {
+    console.log(`    ${R}Cannot get trust data: ${(err instanceof Error ? err.message : String(err))}${X}`);
   }
 
   // Step 7: Block Explorer links

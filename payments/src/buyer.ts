@@ -12,7 +12,7 @@
  */
 
 import { loadConfig, PaymentConfig } from "./config.js";
-import { WalletBalance, NanopaymentReceipt } from "./types.js";
+import { WalletBalance } from "./types.js";
 import { privateKeyToAccount } from "viem/accounts";
 
 export class ASMBuyerClient {
@@ -53,9 +53,9 @@ export class ASMBuyerClient {
       console.log(`   Address: ${this.buyerAddress}`);
       console.log(`   Chain: ${this.config.chainName}`);
       return true;
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.warn("⚠️  Buyer: GatewayClient init failed, falling back to mock mode");
-      console.warn(`   Error: ${err.message}`);
+      console.warn(`   Error: ${(err instanceof Error ? err.message : String(err))}`);
       this.isRealMode = false;
       return false;
     }
@@ -73,8 +73,8 @@ export class ASMBuyerClient {
           chain: this.config.chainName,
           timestamp: new Date().toISOString(),
         };
-      } catch (err: any) {
-        console.warn(`⚠️  Balance query failed: ${err.message}`);
+      } catch (err: unknown) {
+        console.warn(`⚠️  Balance query failed: ${(err instanceof Error ? err.message : String(err))}`);
       }
     }
 

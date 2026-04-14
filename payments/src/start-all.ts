@@ -57,7 +57,7 @@ async function main() {
   console.log(`${BOLD}${CYAN}${"═".repeat(60)}${RESET}\n`);
 
   const rootDir = path.resolve(__dirname, "..", "..");
-  const paymentsDir = path.resolve(__dirname, "..");
+//   const paymentsDir = path.resolve(__dirname, "..");  // unused
 
   // 1. Start ASM Registry
   startProcess("Registry", "npx", ["tsx", "registry/src/http.ts"], rootDir, GREEN);

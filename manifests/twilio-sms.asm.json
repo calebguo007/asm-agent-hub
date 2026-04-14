@@ -1,0 +1,59 @@
+{
+  "asm_version": "0.3",
+  "service_id": "twilio/sms@v1",
+  "taxonomy": "tool.communication.sms",
+  "display_name": "Twilio SMS",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Twilio",
+    "url": "https://www.twilio.com"
+  },
+  "capabilities": {
+    "description": "Programmable SMS and MMS messaging \u2014 send notifications, OTPs, and alerts to any phone number worldwide",
+    "input_modalities": [
+      "text"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_message",
+        "cost_per_unit": 0.0079,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "Free trial with $15 credit"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "200ms",
+    "latency_p99": "800ms",
+    "uptime": 0.999,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://www.twilio.com"
+  },
+  "extensions": {
+    "tool": {
+      "supports_mms": true,
+      "supports_whatsapp": true,
+      "global_coverage": true
+    }
+  }
+}

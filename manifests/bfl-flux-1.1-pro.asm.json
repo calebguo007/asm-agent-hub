@@ -43,7 +43,8 @@
   "sla": {
     "latency_p50": "8s",
     "latency_p99": "25s",
-    "cold_start": "~15s"
+    "cold_start": "~15s",
+    "uptime": 0.995
   },
   "payment": {
     "methods": [

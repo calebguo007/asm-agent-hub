@@ -26,3 +26,23 @@ schema-org-analogy.md
 更新说明-20260407.md
 growth-landing-plan.md
 execution-guide.md
+
+# Hackathon internal docs (Chinese content)
+HACKATHON.md
+DEMO-SCRIPT.md
+SUBMISSION-DRAFT.md
+README-HACKATHON-ADDITIONS.md
+WORKLOG-2026-04-14.md
+ASM-Pitch-Deck.pptx
+CIRCLE-PRODUCT-FEEDBACK.md
+
+# Additional internal Chinese docs
+更新说明-20260407.md
+*.bak
+
+# Auxiliary dirs with Chinese comments (keep in private only)
+demo/
+experiments/
+tools/
+integrations/
+paper/x-twitter-thread.md

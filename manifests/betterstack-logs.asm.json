@@ -1,0 +1,57 @@
+{
+  "asm_version": "0.3",
+  "service_id": "betterstack/logs@v2",
+  "taxonomy": "tool.devops.logging",
+  "display_name": "Better Stack",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Better Stack",
+    "url": "https://betterstack.com"
+  },
+  "capabilities": {
+    "description": "Structured logging and uptime monitoring \u2014 centralize logs, set alerts, and create status pages",
+    "input_modalities": [
+      "structured_data"
+    ],
+    "output_modalities": [
+      "structured_data"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_event",
+        "cost_per_unit": 0.0,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "1GB logs/month free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "30ms",
+    "latency_p99": "100ms",
+    "uptime": 0.999,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://betterstack.com"
+  },
+  "extensions": {
+    "tool": {
+      "supports_alerts": true,
+      "supports_status_pages": true
+    }
+  }
+}

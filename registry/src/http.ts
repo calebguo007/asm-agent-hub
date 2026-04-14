@@ -2,17 +2,17 @@
 /**
  * ASM Registry — HTTP API
  *
- * 将 MCP Server 的 4 个核心 tool 映射为 REST 端点，
- * 不复制 index.ts 的逻辑，直接导入其导出的类和函数。
+ * Maps MCP Server 4 core tools to REST endpoints,
+ * imports from index.ts directly without duplicating logic.
  *
- * 端点：
+ * Endpoints:
  *   GET  /api/services          → asm_list
  *   GET  /api/services/:id      → asm_get
  *   POST /api/query             → asm_query
  *   POST /api/compare           → asm_compare
  *
- * 启动：npx ts-node src/http.ts
- * 端口：3456（可通过 PORT 环境变量覆盖）
+ * Started：npx ts-node src/http.ts
+ * Port: 3456 (override via PORT env var)
  */
 
 import express, { Request, Response } from "express";
@@ -31,29 +31,29 @@ import {
   formatManifestSummary,
 } from "./index.js";
 
-// ── 初始化 Registry ────────────────────────────────────
+// ── Initialize Registry ────────────────────────────────────
 
 const registry = new ASMRegistry();
 const manifestDir = path.resolve(__dirname, "..", "..", "manifests");
 
 if (!fs.existsSync(manifestDir)) {
-  console.error(`❌ Manifest 目录不存在: ${manifestDir}`);
+  console.error(`❌ Manifest directory not found: ${manifestDir}`);
   process.exit(1);
 }
 
 const loadedCount = registry.loadFromDirectory(manifestDir);
-console.log(`✅ ASM Registry: 加载了 ${loadedCount} 个 manifest (${manifestDir})`);
+console.log(`✅ ASM Registry: Loaded ${loadedCount}  manifests (${manifestDir})`);
 
-// ── 创建 Express 应用 ──────────────────────────────────
+// ── Create Express App ──────────────────────────────────
 
 const app = express();
 const PORT = parseInt(process.env.PORT || "3456", 10);
 
-// 中间件
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// ── 健康检查 ───────────────────────────────────────────
+// ── Health Check ───────────────────────────────────────────
 
 app.get("/api/health", (_req: Request, res: Response) => {
   res.json({
@@ -90,7 +90,7 @@ app.get("/api/services", (_req: Request, res: Response) => {
 // ── GET /api/services/:id → asm_get ────────────────────
 
 app.get("/api/services/:id(*)", (req: Request, res: Response) => {
-  // service_id 可能包含 / 和 @，如 "anthropic/claude-sonnet-4@4.0"
+  // service_id may contain / and @, e.g. "anthropic/claude-sonnet-4@4.0"
   const rawId = req.params.id;
   const serviceId = Array.isArray(rawId) ? rawId.join("/") : rawId;
   const manifest = registry.getById(serviceId);
@@ -131,7 +131,7 @@ app.post("/api/query", (req: Request, res: Response) => {
     limit,
   } = req.body;
 
-  // 基础过滤（复用 registry.query）
+  // Basic filtering (reuse registry.query)
   let results = registry.query({
     taxonomy,
     max_cost,
@@ -141,14 +141,14 @@ app.post("/api/query", (req: Request, res: Response) => {
     output_modality,
   });
 
-  // v0.3: receipt 过滤
+  // v0.3: Receipt filtering
   if (has_receipts !== undefined) {
     results = results.filter((m) =>
       has_receipts ? !!m.receipt_endpoint : !m.receipt_endpoint
     );
   }
 
-  // 排序
+  // Sort
   if (sort_by) {
     const sortFns: Record<string, (a: ASMManifest, b: ASMManifest) => number> = {
       cost: (a, b) => extractPrimaryCost(a) - extractPrimaryCost(b),
@@ -162,11 +162,11 @@ app.post("/api/query", (req: Request, res: Response) => {
     }
   }
 
-  // 限制数量
+  // Limit count
   const maxResults = typeof limit === "number" && limit > 0 ? limit : results.length;
   results = results.slice(0, maxResults);
 
-  // 构建响应
+  // Build response
   const services = results.map((m) => ({
     service_id: m.service_id,
     display_name: m.display_name || m.service_id,
@@ -225,7 +225,7 @@ app.post("/api/compare", (req: Request, res: Response) => {
     return;
   }
 
-  // 构建对比数据
+  // Build comparison data
   const comparison = manifests.map((m) => ({
     service_id: m.service_id,
     display_name: m.display_name || m.service_id,
@@ -267,7 +267,7 @@ app.post("/api/compare", (req: Request, res: Response) => {
     },
   }));
 
-  // 使用 TOPSIS 计算综合评分（与 Python scorer 一致）
+  // Use TOPSIS for composite scoring (aligned with Python scorer)
   const ioRatio = req.body.io_ratio ?? 0.3;
   const method = req.body.method ?? "topsis";
   const weights = {
@@ -294,7 +294,7 @@ app.post("/api/compare", (req: Request, res: Response) => {
   });
 });
 
-// ── POST /api/score → 评分排名 ──────────────────────
+// ── POST /api/score → Scoring & Ranking ──────────────────────
 
 app.post("/api/score", (req: Request, res: Response) => {
   const {
@@ -307,7 +307,7 @@ app.post("/api/score", (req: Request, res: Response) => {
     io_ratio = 0.3,
   } = req.body;
 
-  // 归一化权重
+  // NormalizeWeight
   const total = w_cost + w_quality + w_speed + w_reliability;
   const weights = {
     cost: w_cost / total,
@@ -357,17 +357,17 @@ app.post("/api/score", (req: Request, res: Response) => {
   });
 });
 
-// ── 启动服务器 ─────────────────────────────────────────
+// ── Start Server ─────────────────────────────────────────
 
 app.listen(PORT, () => {
-  console.log(`\n🚀 ASM Registry HTTP API 已启动`);
-  console.log(`   地址: http://localhost:${PORT}`);
-  console.log(`   端点:`);
-  console.log(`     GET  /api/health           — 健康检查`);
-  console.log(`     GET  /api/services          — 列出所有服务`);
-  console.log(`     GET  /api/services/:id      — 获取服务详情`);
-  console.log(`     POST /api/query             — 按条件查询服务`);
-  console.log(`     POST /api/compare           — 对比多个服务`);
-  console.log(`     POST /api/score             — 评分排名（TOPSIS/加权平均）`);
-  console.log(`\n   已加载 ${loadedCount} 个 ASM manifest\n`);
+  console.log(`\n🚀 ASM Registry HTTP API started`);
+  console.log(`   Address: http://localhost:${PORT}`);
+  console.log(`   Endpoints:`);
+  console.log(`     GET  /api/health           — Health Check`);
+  console.log(`     GET  /api/services          — List all services`);
+  console.log(`     GET  /api/services/:id      — Get service details`);
+  console.log(`     POST /api/query             — Query services by criteria`);
+  console.log(`     POST /api/compare           — Compare multiple services`);
+  console.log(`     POST /api/score             — Scoring & Ranking（TOPSIS/weighted average）`);
+  console.log(`\n   Loaded ${loadedCount}  ASM manifests\n`);
 });

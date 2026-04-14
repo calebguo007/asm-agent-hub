@@ -1,0 +1,58 @@
+{
+  "asm_version": "0.3",
+  "service_id": "google/translate@v3",
+  "taxonomy": "ai.nlp.translation",
+  "display_name": "Google Cloud Translation",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Google",
+    "url": "https://cloud.google.com/translate"
+  },
+  "capabilities": {
+    "description": "Neural and phrase-based translation supporting 130+ languages with auto-detection",
+    "input_modalities": [
+      "text"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_character",
+        "cost_per_unit": 2e-05,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "500K characters/month free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "150ms",
+    "latency_p99": "500ms",
+    "uptime": 0.999,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://cloud.google.com/translate"
+  },
+  "extensions": {
+    "tool": {
+      "languages": 133,
+      "supports_auto_detect": true
+    }
+  }
+}

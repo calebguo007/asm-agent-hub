@@ -1,0 +1,59 @@
+{
+  "asm_version": "0.3",
+  "service_id": "fly/machines@v1",
+  "taxonomy": "tool.devops.deployment",
+  "display_name": "Fly.io",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Fly.io",
+    "url": "https://fly.io"
+  },
+  "capabilities": {
+    "description": "Deploy full-stack apps globally \u2014 containers, databases, and persistent storage close to users",
+    "input_modalities": [
+      "text"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_cpu_second",
+        "cost_per_unit": 3.1e-06,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "3 shared VMs free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "2s",
+    "latency_p99": "8s",
+    "uptime": 0.998,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://fly.io"
+  },
+  "extensions": {
+    "tool": {
+      "supports_gpu": true,
+      "supports_volumes": true,
+      "global_regions": true
+    }
+  }
+}

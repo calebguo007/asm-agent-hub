@@ -52,7 +52,8 @@
     "regions": [
       "us-east-1",
       "cn-north-1"
-    ]
+    ],
+    "uptime": 0.996
   },
   "payment": {
     "methods": [

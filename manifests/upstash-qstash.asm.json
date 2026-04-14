@@ -1,0 +1,59 @@
+{
+  "asm_version": "0.3",
+  "service_id": "upstash/qstash@v2",
+  "taxonomy": "infra.messaging.queue",
+  "display_name": "Upstash QStash",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Upstash",
+    "url": "https://upstash.com"
+  },
+  "capabilities": {
+    "description": "Serverless message queue and task scheduler \u2014 reliable delivery, retries, and cron-like scheduling via HTTP",
+    "input_modalities": [
+      "structured_data"
+    ],
+    "output_modalities": [
+      "structured_data"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_message",
+        "cost_per_unit": 1e-06,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "500 messages/day free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "50ms",
+    "latency_p99": "200ms",
+    "uptime": 0.999,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://upstash.com"
+  },
+  "extensions": {
+    "tool": {
+      "serverless": true,
+      "supports_cron": true,
+      "supports_retries": true
+    }
+  }
+}

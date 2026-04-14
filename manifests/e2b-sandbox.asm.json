@@ -1,0 +1,61 @@
+{
+  "asm_version": "0.3",
+  "service_id": "e2b/sandbox@v1",
+  "taxonomy": "infra.compute.sandbox",
+  "display_name": "E2B Code Sandbox",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "E2B",
+    "url": "https://e2b.dev"
+  },
+  "capabilities": {
+    "description": "Cloud sandboxes for AI-generated code execution \u2014 run Python, JS, Bash safely with filesystem and networking",
+    "input_modalities": [
+      "text"
+    ],
+    "output_modalities": [
+      "text",
+      "structured_data"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_second",
+        "cost_per_unit": 0.0001,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "100 sandbox hours/month free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "800ms",
+    "latency_p99": "3s",
+    "uptime": 0.998,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://e2b.dev"
+  },
+  "extensions": {
+    "tool": {
+      "supports_python": true,
+      "supports_js": true,
+      "supports_bash": true,
+      "sandboxed": true
+    }
+  }
+}

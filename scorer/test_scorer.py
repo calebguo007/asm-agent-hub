@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""ASM Scorer 单元测试 — 3 个关键测试用例。
+"""ASM Scorer Unit Tests — 3 key test cases.
 
-1. Golden Test:  TOPSIS 在已知输入下的输出是否正确
-2. io_ratio Test: io_ratio 参数对排名的影响（回归测试）
-3. Cross-language Parity: Python 输出与 TypeScript 输出的一致性验证
+1. Golden test: verify TOPSIS output on known input
+2. io_ratio test: effect of io_ratio on ranking (regression test)
+3. Cross-language parity: Python vs TypeScript output consistency
 
-用法:
+Usage:
     python -m pytest test_scorer.py -v
-    python test_scorer.py  # 直接运行
+    python test_scorer.py  # Run directly
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-# 将 scorer 加入 path
+# Add scorer to path
 _SCORER_DIR = str(Path(__file__).resolve().parent)
 if _SCORER_DIR not in sys.path:
     sys.path.insert(0, _SCORER_DIR)
@@ -37,7 +37,7 @@ from scorer import (
 
 
 # ============================================================
-# 测试数据：3 个合成 manifest（已知输入）
+# Test data: 3 synthetic manifests (known input)
 # ============================================================
 
 SYNTHETIC_MANIFESTS = [
@@ -87,97 +87,97 @@ SYNTHETIC_MANIFESTS = [
 
 
 def _parse_all(manifests, io_ratio=0.3):
-    """解析 manifests 为 ServiceVector 列表。"""
+    """Parse manifests into ServiceVector list."""
     return [parse_manifest(m, io_ratio=io_ratio) for m in manifests]
 
 
 # ============================================================
-# Test 1: Golden Test — TOPSIS 在已知输入下的输出
+# Test 1: Golden Test — TOPSIS output on known input
 # ============================================================
 
 def test_topsis_golden():
-    """验证 TOPSIS 在已知合成数据上的排名和分数范围。
+    """Verify TOPSIS ranking and score range on known synthetic data.
 
-    已知：
-    - Cheap Fast: 低成本、低延迟、中等质量
-    - Expensive Good: 高成本、高延迟、高质量
-    - Balanced Mid: 中等各维度
+    Known:
+    - Cheap Fast: Low cost, low latency, medium quality
+    - Expensive Good: High cost, high latency, high quality
+    - Balanced Mid: Medium across all dimensions
 
-    用均衡权重 (0.25 each) 时，TOPSIS 应该倾向于 Balanced Mid 或 Cheap Fast
-    （因为它们在多数维度上都有竞争力）。
+    With equal weights (0.25 each), TOPSIS should favor Balanced Mid or Cheap Fast
+    （because they are competitive across most dimensions）。
     """
     services = _parse_all(SYNTHETIC_MANIFESTS)
     prefs = Preferences(cost=0.25, quality=0.25, speed=0.25, reliability=0.25)
     results = score_topsis(services, prefs)
 
-    # 基本结构验证
-    assert len(results) == 3, f"应有 3 个结果，得到 {len(results)}"
+    # Basic structure validation
+    assert len(results) == 3, f"Expected 3 results, got {len(results)}"
     assert results[0].rank == 1
     assert results[1].rank == 2
     assert results[2].rank == 3
 
-    # 分数范围验证：TOPSIS 贴近度在 [0, 1]
+    # Score range: TOPSIS closeness in [0, 1]
     for r in results:
-        assert 0.0 <= r.total_score <= 1.0, f"{r.service.display_name} 分数 {r.total_score} 超出 [0,1]"
+        assert 0.0 <= r.total_score <= 1.0, f"{r.service.display_name} score {r.total_score} out of range [0,1]"
 
-    # 排名单调性：分数严格递减
+    # Ranking monotonicity: strictly decreasing scores
     for i in range(len(results) - 1):
         assert results[i].total_score >= results[i + 1].total_score, \
-            f"排名 #{i+1} 分数 {results[i].total_score} < 排名 #{i+2} 分数 {results[i+1].total_score}"
+            f"Rank #{i+1} score {results[i].total_score} < Rank #{i+2} score {results[i+1].total_score}"
 
-    # Breakdown 维度完整性
+    # Breakdown dimension completeness
     for r in results:
         assert set(r.breakdown.keys()) == {"cost", "quality", "speed", "reliability"}, \
-            f"Breakdown 维度不完整: {r.breakdown.keys()}"
+            f"Breakdown Dimensions incomplete: {r.breakdown.keys()}"
         for dim, val in r.breakdown.items():
-            assert 0.0 <= val <= 1.0, f"{r.service.display_name}.{dim} = {val} 超出 [0,1]"
+            assert 0.0 <= val <= 1.0, f"{r.service.display_name}.{dim} = {val} out of range [0,1]"
 
-    # Reasoning 非空
+    # Reasoning non-empty
     for r in results:
-        assert len(r.reasoning) > 0, f"{r.service.display_name} reasoning 为空"
+        assert len(r.reasoning) > 0, f"{r.service.display_name} reasoning is empty"
 
-    # 具体排名验证：成本优先时，Cheap Fast 应该排第一
+    # Specific ranking: cost-priority, Cheap Fast should rank first
     prefs_cost = Preferences(cost=0.7, quality=0.1, speed=0.1, reliability=0.1)
     results_cost = score_topsis(services, prefs_cost)
     assert results_cost[0].service.service_id == "test/cheap-fast@1.0", \
-        f"成本优先时，排名第一应是 Cheap Fast，实际是 {results_cost[0].service.display_name}"
+        f"Cost-priority rank 1 should be Cheap Fast, got {results_cost[0].service.display_name}"
 
-    # 质量优先时，Expensive Good 应该排第一
+    # Quality-priority: Expensive Good should rank first
     prefs_quality = Preferences(cost=0.1, quality=0.7, speed=0.1, reliability=0.1)
     results_quality = score_topsis(services, prefs_quality)
     assert results_quality[0].service.service_id == "test/expensive-good@1.0", \
-        f"质量优先时，排名第一应是 Expensive Good，实际是 {results_quality[0].service.display_name}"
+        f"Quality-priority rank 1 should be Expensive Good, got {results_quality[0].service.display_name}"
 
     print("✅ Test 1 (Golden Test): PASSED")
 
 
 # ============================================================
-# Test 2: io_ratio 对排名的影响（回归测试）
+# Test 2: io_ratio effect on ranking (regression test)
 # ============================================================
 
 def test_io_ratio_regression():
-    """验证 io_ratio 参数确实影响成本计算和最终排名。
+    """Verify io_ratio affects cost calculation and final ranking.
 
-    io_ratio=0.3 (默认, chat) → 偏重 output cost
-    io_ratio=0.8 (RAG) → 偏重 input cost
+    io_ratio=0.3 (default, chat) → weighted toward output cost
+    io_ratio=0.8 (RAG) → weighted toward input cost
 
-    对于 Expensive Good (input=10, output=30):
+    For Expensive Good (input=10, output=30):
       io_ratio=0.3 → cost = 0.3*10e-6 + 0.7*30e-6 = 24e-6
       io_ratio=0.8 → cost = 0.8*10e-6 + 0.2*30e-6 = 14e-6
     
-    所以在 RAG 场景下，Expensive Good 的成本更低，排名可能上升。
+    So in RAG scenario, Expensive Good has lower cost and may rank higher.
     """
-    # 验证 _extract_primary_cost 的 io_ratio 行为
+    # Verify _extract_primary_cost io_ratio behavior
     pricing = SYNTHETIC_MANIFESTS[1]["pricing"]  # Expensive Good
 
     cost_chat = _extract_primary_cost(pricing, io_ratio=0.3)
     cost_rag = _extract_primary_cost(pricing, io_ratio=0.8)
 
-    # Chat 场景偏重 output (30/M)，所以 cost 更高
+    # Chat scenario weights output (30/M), so cost is higher
     assert cost_chat > cost_rag, \
-        f"Chat cost ({cost_chat}) 应大于 RAG cost ({cost_rag})，因为 output token 更贵"
+        f"Chat cost ({cost_chat}) should be greater than RAG cost ({cost_rag})，because output tokens are more expensive"
 
-    # 精确值验证
+    # Exact value verification
     expected_chat = 0.3 * 10 / 1_000_000 + 0.7 * 30 / 1_000_000
     expected_rag = 0.8 * 10 / 1_000_000 + 0.2 * 30 / 1_000_000
     assert math.isclose(cost_chat, expected_chat, rel_tol=1e-9), \
@@ -185,7 +185,7 @@ def test_io_ratio_regression():
     assert math.isclose(cost_rag, expected_rag, rel_tol=1e-9), \
         f"RAG cost {cost_rag} != expected {expected_rag}"
 
-    # 验证 io_ratio 对 TOPSIS 排名的影响
+    # Verify io_ratio effect on TOPSIS ranking
     services_chat = _parse_all(SYNTHETIC_MANIFESTS, io_ratio=0.3)
     services_rag = _parse_all(SYNTHETIC_MANIFESTS, io_ratio=0.8)
 
@@ -193,11 +193,11 @@ def test_io_ratio_regression():
     results_chat = score_topsis(services_chat, prefs)
     results_rag = score_topsis(services_rag, prefs)
 
-    # 排名应该不同（或至少分数不同）
+    # Rankings should differ (or at least scores)
     chat_order = [r.service.service_id for r in results_chat]
     rag_order = [r.service.service_id for r in results_rag]
 
-    # 分数必须不同
+    # Scores must differ
     chat_scores = {r.service.service_id: r.total_score for r in results_chat}
     rag_scores = {r.service.service_id: r.total_score for r in results_rag}
 
@@ -207,13 +207,13 @@ def test_io_ratio_regression():
             any_diff = True
             break
 
-    assert any_diff, "io_ratio 变化后分数应有差异"
+    assert any_diff, "Scores should differ after io_ratio change"
 
-    # 边界值测试
-    cost_0 = _extract_primary_cost(pricing, io_ratio=0.0)  # 纯 output
-    cost_1 = _extract_primary_cost(pricing, io_ratio=1.0)  # 纯 input
-    expected_0 = 30 / 1_000_000  # 纯 output token cost
-    expected_1 = 10 / 1_000_000  # 纯 input token cost
+    # Edge case tests
+    cost_0 = _extract_primary_cost(pricing, io_ratio=0.0)  # Pure output
+    cost_1 = _extract_primary_cost(pricing, io_ratio=1.0)  # Pure input
+    expected_0 = 30 / 1_000_000  # Pure output token cost
+    expected_1 = 10 / 1_000_000  # Pure input token cost
     assert math.isclose(cost_0, expected_0, rel_tol=1e-9)
     assert math.isclose(cost_1, expected_1, rel_tol=1e-9)
 
@@ -221,27 +221,27 @@ def test_io_ratio_regression():
 
 
 # ============================================================
-# Test 3: 跨语言一致性 (Python vs TypeScript)
+# Test 3: Cross-language parity (Python vs TypeScript)
 # ============================================================
 
 def test_cross_language_parity():
-    """验证 Python scorer 和 TypeScript scorer 在相同输入下输出一致。
+    """Verify Python and TypeScript scorers produce consistent output on same input.
 
-    使用真实的 14 个 manifest 文件，对比两个实现的 TOPSIS 排名。
-    如果 TypeScript 编译环境不可用，则跳过。
+    Uses real 14 manifest files, comparing TOPSIS rankings from both implementations.
+    Skipped if TypeScript compilation environment unavailable.
     """
     manifest_dir = Path(__file__).resolve().parent.parent / "manifests"
     registry_dir = Path(__file__).resolve().parent.parent / "registry"
     ts_test_script = registry_dir / "src" / "test_topsis.ts"
 
     if not manifest_dir.exists():
-        print("⚠️ Test 3 (Cross-language): SKIPPED — manifests 目录不存在")
+        print("⚠️ Test 3 (Cross-language): SKIPPED — manifests directory not found")
         return
 
-    # Python 端
+    # Python side
     manifests = load_manifests(manifest_dir)
     if len(manifests) < 2:
-        print("⚠️ Test 3 (Cross-language): SKIPPED — manifest 不足")
+        print("⚠️ Test 3 (Cross-language): SKIPPED — insufficient manifests")
         return
 
     services = _parse_all(manifests, io_ratio=0.3)
@@ -250,7 +250,7 @@ def test_cross_language_parity():
 
     py_ranking = [(r.service.service_id, r.total_score) for r in py_results]
 
-    # TypeScript 端 — 尝试运行
+    # TypeScript side — try running
     try:
         result = subprocess.run(
             ["npx", "tsx", str(ts_test_script)],
@@ -260,10 +260,10 @@ def test_cross_language_parity():
             timeout=30,
         )
         if result.returncode != 0:
-            print(f"⚠️ Test 3 (Cross-language): SKIPPED — TypeScript 执行失败: {result.stderr[:200]}")
+            print(f"⚠️ Test 3 (Cross-language): SKIPPED — TypeScript execution failed: {result.stderr[:200]}")
             return
 
-        # 解析 TypeScript 输出（只取 TOPSIS 部分，忽略 Weighted Average 部分）
+        # Parse TypeScript output (TOPSIS part only, ignore Weighted Average)
         ts_ranking = []
         in_topsis_section = False
         for line in result.stdout.strip().split("\n"):
@@ -278,7 +278,7 @@ def test_cross_language_parity():
                 continue
             if not line.startswith("#"):
                 continue
-            # 格式: #1 service_id: score=0.xxxx ...
+            # Format: #1 service_id: score=0.xxxx ...
             parts = line.split()
             if len(parts) >= 3:
                 sid = parts[1].rstrip(":")
@@ -286,17 +286,17 @@ def test_cross_language_parity():
                 ts_ranking.append((sid, float(score_str)))
 
         if not ts_ranking:
-            print("⚠️ Test 3 (Cross-language): SKIPPED — 无法解析 TypeScript 输出")
+            print("⚠️ Test 3 (Cross-language): SKIPPED — Cannot parse TypeScript output")
             return
 
-        # 对比排名
+        # Compare rankings
         py_order = [sid for sid, _ in py_ranking]
         ts_order = [sid for sid, _ in ts_ranking]
 
         assert py_order == ts_order, \
-            f"排名不一致!\nPython:     {py_order[:5]}\nTypeScript: {ts_order[:5]}"
+            f"Rankings inconsistent!\nPython:     {py_order[:5]}\nTypeScript: {ts_order[:5]}"
 
-        # 对比分数（允许 0.001 的浮点误差）
+        # Compare scores (0.001 tolerance)
         py_scores = dict(py_ranking)
         ts_scores = dict(ts_ranking)
 
@@ -308,21 +308,21 @@ def test_cross_language_parity():
                 assert diff < 0.001, \
                     f"{sid}: Python={py_scores[sid]:.4f} vs TS={ts_scores[sid]:.4f}, diff={diff:.6f}"
 
-        print(f"✅ Test 3 (Cross-language Parity): PASSED — {len(py_ranking)} 个服务排名一致, 最大分数差: {max_diff:.6f}")
+        print(f"✅ Test 3 (Cross-language Parity): PASSED — {len(py_ranking)} services ranked consistently, max score diff: {max_diff:.6f}")
 
     except FileNotFoundError:
-        print("⚠️ Test 3 (Cross-language): SKIPPED — npx/tsx 不可用")
+        print("⚠️ Test 3 (Cross-language): SKIPPED — npx/tsx unavailable")
     except subprocess.TimeoutExpired:
-        print("⚠️ Test 3 (Cross-language): SKIPPED — TypeScript 执行超时")
+        print("⚠️ Test 3 (Cross-language): SKIPPED — TypeScript execution timeout")
 
 
 # ============================================================
-# 主入口
+# Main entry
 # ============================================================
 
 def main():
     print("=" * 60)
-    print("  ASM Scorer 单元测试")
+    print("  ASM Scorer Unit Tests")
     print("=" * 60)
     print()
 
@@ -348,7 +348,7 @@ def main():
             failed += 1
 
     print(f"\n{'=' * 60}")
-    print(f"  结果: {passed} passed, {failed} failed")
+    print(f"  Results: {passed} passed, {failed} failed")
     print(f"{'=' * 60}")
 
     return 0 if failed == 0 else 1

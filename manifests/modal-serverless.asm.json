@@ -1,0 +1,60 @@
+{
+  "asm_version": "0.3",
+  "service_id": "modal/serverless@v1",
+  "taxonomy": "infra.compute.serverless",
+  "display_name": "Modal",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Modal",
+    "url": "https://modal.com"
+  },
+  "capabilities": {
+    "description": "Serverless compute for AI/ML \u2014 run any Python function in the cloud with GPU support and auto-scaling",
+    "input_modalities": [
+      "text"
+    ],
+    "output_modalities": [
+      "text",
+      "structured_data"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_cpu_second",
+        "cost_per_unit": 1.6e-05,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "$30/month free credit"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "500ms",
+    "latency_p99": "2s",
+    "uptime": 0.998,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://modal.com"
+  },
+  "extensions": {
+    "tool": {
+      "supports_gpu": true,
+      "supports_cron": true,
+      "supports_web_endpoints": true
+    }
+  }
+}

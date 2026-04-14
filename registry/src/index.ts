@@ -80,7 +80,7 @@ export interface ASMManifest {
     ap2_endpoint?: string;
     signup_url?: string;
   };
-  // v0.3 新增字段
+  // v0.3 new fields
   updated_at?: string;
   ttl?: number;
   receipt_endpoint?: string;
@@ -211,7 +211,7 @@ export function extractPrimaryCost(m: ASMManifest, ioRatio: number = 0.3): numbe
   }
 
   if (inputCost !== null && outputCost !== null) {
-    // 可配置的 IO 比例：ioRatio * input + (1 - ioRatio) * output
+    // Configurable IO ratio：ioRatio * input + (1 - ioRatio) * output
     return ioRatio * inputCost + (1 - ioRatio) * outputCost;
   }
 
@@ -312,15 +312,15 @@ export function scoreServices(
 /**
  * TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)
  * 
- * 与 scorer.py 的 score_topsis 完全对齐的 TypeScript 实现。
- * 步骤：
- *   1. 构建决策矩阵 (n services × 4 criteria)
- *   2. 向量归一化
- *   3. 加权
- *   4. 找到正理想解 (A+) 和负理想解 (A-)
- *   5. 计算每个服务到 A+ 和 A- 的距离
- *   6. 计算贴近度: C = d- / (d+ + d-)
- *   7. 按 C 排序（越高越好）
+ * TypeScript implementation fully aligned with scorer.py score_topsis.
+ * Steps:
+ *   1. Build decision matrix (n services × 4 criteria)
+ *   2. Vector normalization
+ *   3. Weighting
+ *   4. Find positive ideal (A+) and negative ideal (A-)
+ *   5. Compute distance from each service to A+ and A-
+ *   6. Compute closeness: C = d- / (d+ + d-)
+ *   7. Sort by C (higher is better)
  */
 export function scoreTopsis(
   manifests: ASMManifest[],
@@ -332,7 +332,7 @@ export function scoreTopsis(
   const n = manifests.length;
   const numCriteria = 4;
 
-  // Step 1: 决策矩阵 — [cost(minimize), quality(maximize), latency(minimize), uptime(maximize)]
+  // Step 1: Decision matrix — [cost(minimize), quality(maximize), latency(minimize), uptime(maximize)]
   const isBenefit = [false, true, false, true];
   const w = [weights.cost, weights.quality, weights.speed, weights.reliability];
 
@@ -343,7 +343,7 @@ export function scoreTopsis(
     m.sla?.uptime ?? 0.5,
   ]);
 
-  // Step 2: 向量归一化
+  // Step 2: Vector normalization
   const norm: number[][] = Array.from({ length: n }, () => Array(numCriteria).fill(0));
   for (let j = 0; j < numCriteria; j++) {
     const colSumSq = Math.sqrt(raw.reduce((sum, row) => sum + row[j] ** 2, 0));
@@ -353,12 +353,12 @@ export function scoreTopsis(
     }
   }
 
-  // Step 3: 加权归一化矩阵
+  // Step 3: Weighted normalized matrix
   const weighted: number[][] = norm.map((row) =>
     row.map((val, j) => val * w[j])
   );
 
-  // Step 4: 正理想解和负理想解
+  // Step 4: Positive and negative ideal solutions
   const aPos: number[] = [];
   const aNeg: number[] = [];
   for (let j = 0; j < numCriteria; j++) {
@@ -372,7 +372,7 @@ export function scoreTopsis(
     }
   }
 
-  // Step 5: 到理想解的距离
+  // Step 5: Distance to ideal solutions
   const dPos: number[] = [];
   const dNeg: number[] = [];
   for (let i = 0; i < n; i++) {
@@ -382,13 +382,13 @@ export function scoreTopsis(
     dNeg.push(dn);
   }
 
-  // Step 6: 贴近度系数
+  // Step 6: Closeness coefficient
   const labels = ["cost", "quality", "speed", "reliability"] as const;
   const results: ScoreResult[] = manifests.map((m, i) => {
     const denom = dPos[i] + dNeg[i];
     const c = denom > 0 ? dNeg[i] / denom : 0.5;
 
-    // 构建 breakdown（将加权归一化值转为 0-1 展示分数）
+    // Build breakdown (Convert weighted normalized values to 0-1 display scores）
     const bd: Record<string, number> = {};
     for (let j = 0; j < numCriteria; j++) {
       const col = weighted.map((row) => row[j]);
@@ -479,7 +479,7 @@ export function formatManifestSummary(m: ASMManifest): string {
   if (m.payment?.methods)
     lines.push(`- Payment: ${m.payment.methods.join(", ")}`);
 
-  // v0.3 字段
+  // v0.3 fields
   if (m.updated_at) lines.push(`- Updated at: ${m.updated_at}`);
   if (m.ttl !== undefined) lines.push(`- TTL: ${m.ttl}s`);
   if (m.receipt_endpoint) lines.push(`- Receipt endpoint: ${m.receipt_endpoint}`);
@@ -562,10 +562,10 @@ async function main() {
           ],
         };
       }
-      // 构建包含 v0.3 字段的详情输出
+      // Build detail output with v0.3 fields
       let detail = formatManifestSummary(m);
 
-      // v0.3 额外字段独立展示
+      // v0.3 extra fields shown separately
       const v03Lines: string[] = [];
       if (m.updated_at) v03Lines.push(`- **Updated at**: ${m.updated_at}`);
       if (m.ttl !== undefined) v03Lines.push(`- **TTL**: ${m.ttl}s`);
@@ -630,7 +630,7 @@ async function main() {
     },
     async (params) => {
       let results = registry.query(params);
-      // v0.3: 按 receipt_endpoint 过滤
+      // v0.3: Filter by receipt_endpoint
       if (params.has_receipts !== undefined) {
         if (params.has_receipts) {
           results = results.filter((m) => !!m.receipt_endpoint);

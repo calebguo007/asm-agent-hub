@@ -54,7 +54,8 @@
     "latency_p99": "120s",
     "regions": [
       "us-central1"
-    ]
+    ],
+    "uptime": 0.997
   },
   "payment": {
     "methods": [

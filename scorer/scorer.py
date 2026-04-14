@@ -57,7 +57,7 @@ class Preferences:
     quality: float = 0.35
     speed: float = 0.15
     reliability: float = 0.10
-    io_ratio: float = 0.3  # input token 占比，默认 0.3（典型聊天场景）
+    io_ratio: float = 0.3  # input token ratio, default 0.3 (typical chat scenario)
 
     def __post_init__(self):
         total = self.cost + self.quality + self.speed + self.reliability
@@ -641,7 +641,7 @@ def select_service(
     if constraints is None:
         constraints = Constraints()
 
-    # Parse manifests（传递 io_ratio 以支持可配置的成本归一化）
+    # Parse manifests（pass io_ratio to support configurable cost normalization）
     services = [parse_manifest(m, io_ratio=preferences.io_ratio) for m in manifests]
 
     # Stage 1: Filter

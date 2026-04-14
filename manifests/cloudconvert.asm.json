@@ -1,0 +1,58 @@
+{
+  "asm_version": "0.3",
+  "service_id": "cloudconvert/api@v2",
+  "taxonomy": "tool.data.conversion",
+  "display_name": "CloudConvert",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "Lunaweb",
+    "url": "https://cloudconvert.com"
+  },
+  "capabilities": {
+    "description": "File conversion API \u2014 convert between 200+ formats including PDF, DOCX, images, video, and audio",
+    "input_modalities": [
+      "binary"
+    ],
+    "output_modalities": [
+      "binary"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_conversion",
+        "cost_per_unit": 0.001,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "25 conversions/day free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "2s",
+    "latency_p99": "15s",
+    "uptime": 0.998,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://cloudconvert.com"
+  },
+  "extensions": {
+    "tool": {
+      "formats": 200,
+      "supports_batch": true
+    }
+  }
+}

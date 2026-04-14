@@ -1,0 +1,61 @@
+{
+  "asm_version": "0.3",
+  "service_id": "pdfco/api@v1",
+  "taxonomy": "tool.data.pdf",
+  "display_name": "PDF.co",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "ByteScout",
+    "url": "https://pdf.co"
+  },
+  "capabilities": {
+    "description": "PDF processing API \u2014 generate, parse, merge, split, OCR, and convert PDFs programmatically",
+    "input_modalities": [
+      "binary",
+      "structured_data"
+    ],
+    "output_modalities": [
+      "binary",
+      "text"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_page",
+        "cost_per_unit": 0.005,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "100 pages/month free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "1s",
+    "latency_p99": "5s",
+    "uptime": 0.997,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier",
+      "stripe"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://pdf.co"
+  },
+  "extensions": {
+    "tool": {
+      "supports_ocr": true,
+      "supports_merge": true,
+      "supports_generation": true
+    }
+  }
+}

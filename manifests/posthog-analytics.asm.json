@@ -1,0 +1,58 @@
+{
+  "asm_version": "0.3",
+  "service_id": "posthog/analytics@v1",
+  "taxonomy": "tool.data.analytics",
+  "display_name": "PostHog",
+  "updated_at": "2026-04-14T00:00:00Z",
+  "ttl": 86400,
+  "provider": {
+    "name": "PostHog",
+    "url": "https://posthog.com"
+  },
+  "capabilities": {
+    "description": "Product analytics, session replay, feature flags, and A/B testing \u2014 understand user behavior end-to-end",
+    "input_modalities": [
+      "structured_data"
+    ],
+    "output_modalities": [
+      "structured_data"
+    ],
+    "supported_languages": [
+      "en"
+    ]
+  },
+  "pricing": {
+    "billing_dimensions": [
+      {
+        "dimension": "api_call",
+        "unit": "per_event",
+        "cost_per_unit": 0.0,
+        "currency": "USD"
+      }
+    ],
+    "free_tier": "1M events/month free"
+  },
+  "quality": {
+    "metrics": []
+  },
+  "sla": {
+    "latency_p50": "50ms",
+    "latency_p99": "200ms",
+    "uptime": 0.999,
+    "rate_limit": "varies"
+  },
+  "payment": {
+    "methods": [
+      "free_tier"
+    ],
+    "auth_type": "api_key",
+    "signup_url": "https://posthog.com"
+  },
+  "extensions": {
+    "tool": {
+      "supports_session_replay": true,
+      "supports_feature_flags": true,
+      "open_source": true
+    }
+  }
+}

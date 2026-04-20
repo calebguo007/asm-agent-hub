@@ -28,6 +28,7 @@ import {
   parseLatency,
   scoreServices,
   scoreTopsis,
+  pickWinner,
   formatManifestSummary,
 } from "./index.js";
 
@@ -339,12 +340,33 @@ app.post("/api/score", (req: Request, res: Response) => {
     ? scoreTopsis(candidates, weights, io_ratio)
     : scoreServices(candidates, weights);
 
+  // v2 contract: emit a `pick` block the benchmark/frontend consume directly.
+  // Only meaningful when scoring a single taxonomy's pool (≥ 1 candidate).
+  // Always included when candidates exist — harmless for legacy callers
+  // because the old `ranking` field is preserved below.
+  let pick;
+  try {
+    pick = pickWinner(candidates, weights, io_ratio);
+  } catch {
+    pick = undefined;
+  }
+
   res.json({
     method: method === "topsis" ? "TOPSIS" : "Weighted Average",
     io_ratio,
     weights,
     taxonomy: taxonomy || null,
     count: results.length,
+    // New v2 fields — UI/benchmark contract
+    pick: pick
+      ? {
+          taxonomy: pick.taxonomy,
+          candidates: pick.candidates,
+          winner: pick.winner,
+          reasoning: pick.reasoning,
+        }
+      : null,
+    // Legacy ranking (kept for back-compat with existing dashboard)
     ranking: results.map((r) => ({
       rank: r.rank,
       service_id: r.service_id,

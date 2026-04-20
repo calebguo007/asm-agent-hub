@@ -11,8 +11,13 @@
   },
   "capabilities": {
     "description": "Developer-first email API — send transactional and marketing emails with React templates and webhooks",
-    "input_modalities": ["structured_data", "text"],
-    "output_modalities": ["structured_data"]
+    "input_modalities": [
+      "structured_data",
+      "text"
+    ],
+    "output_modalities": [
+      "structured_data"
+    ]
   },
   "pricing": {
     "billing_dimensions": [
@@ -44,9 +49,15 @@
     "rate_limit": "100 req/s"
   },
   "payment": {
-    "methods": ["free_tier", "stripe"],
+    "methods": [
+      "free_tier",
+      "stripe",
+      "onchain_usdc"
+    ],
     "auth_type": "api_key",
-    "signup_url": "https://resend.com/signup"
+    "signup_url": "https://resend.com/signup",
+    "onchain_address": "0x72fC9e616984801E002151f4C040A444B67A624f",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {
@@ -54,7 +65,11 @@
       "supports_webhooks": true,
       "supports_attachments": true,
       "supports_batch_send": true,
-      "integrations": ["react_email", "next_js", "vercel"]
+      "integrations": [
+        "react_email",
+        "next_js",
+        "vercel"
+      ]
     }
   }
 }

@@ -10,7 +10,7 @@
     "url": "https://firecrawl.dev"
   },
   "capabilities": {
-    "description": "Web scraping API \u2014 extract clean markdown from any URL, crawl entire sites, and handle JS-rendered pages",
+    "description": "Web scraping API — extract clean markdown from any URL, crawl entire sites, and handle JS-rendered pages",
     "input_modalities": [
       "text"
     ],
@@ -45,10 +45,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://firecrawl.dev"
+    "signup_url": "https://firecrawl.dev",
+    "onchain_address": "0xF2BF8B0dEfd8dD49DC02F99518e81B132e96Bbd8",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

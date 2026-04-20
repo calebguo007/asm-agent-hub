@@ -10,7 +10,7 @@
     "url": "https://cloudconvert.com"
   },
   "capabilities": {
-    "description": "File conversion API \u2014 convert between 200+ formats including PDF, DOCX, images, video, and audio",
+    "description": "File conversion API — convert between 200+ formats including PDF, DOCX, images, video, and audio",
     "input_modalities": [
       "binary"
     ],
@@ -44,10 +44,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://cloudconvert.com"
+    "signup_url": "https://cloudconvert.com",
+    "onchain_address": "0xbcC6cBBC866442e652dc2068b23221A4c4351179",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

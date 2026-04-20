@@ -11,8 +11,14 @@
   },
   "capabilities": {
     "description": "Enterprise CI/CD with intelligent test splitting, Docker layer caching, and advanced parallelism",
-    "input_modalities": ["structured_data", "file"],
-    "output_modalities": ["structured_data", "file"]
+    "input_modalities": [
+      "structured_data",
+      "file"
+    ],
+    "output_modalities": [
+      "structured_data",
+      "file"
+    ]
   },
   "pricing": {
     "billing_dimensions": [
@@ -44,9 +50,16 @@
     "rate_limit": "80 concurrent jobs"
   },
   "payment": {
-    "methods": ["free_tier", "stripe", "invoice"],
+    "methods": [
+      "free_tier",
+      "stripe",
+      "invoice",
+      "onchain_usdc"
+    ],
     "auth_type": "api_key",
-    "signup_url": "https://circleci.com/signup"
+    "signup_url": "https://circleci.com/signup",
+    "onchain_address": "0x389d4faa7894422B1D9b682b958537E8DDd51426",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {
@@ -54,7 +67,14 @@
       "supports_docker_layer_cache": true,
       "supports_parallelism": true,
       "supports_arm": true,
-      "integrations": ["github", "gitlab", "bitbucket", "docker", "aws", "gcp"]
+      "integrations": [
+        "github",
+        "gitlab",
+        "bitbucket",
+        "docker",
+        "aws",
+        "gcp"
+      ]
     }
   }
 }

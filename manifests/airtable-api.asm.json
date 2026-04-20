@@ -10,7 +10,7 @@
     "url": "https://airtable.com"
   },
   "capabilities": {
-    "description": "Spreadsheet-database hybrid \u2014 structured data with views, automations, and rich field types",
+    "description": "Spreadsheet-database hybrid — structured data with views, automations, and rich field types",
     "input_modalities": [
       "structured_data"
     ],
@@ -26,7 +26,7 @@
       {
         "dimension": "api_call",
         "unit": "per_record",
-        "cost_per_unit": 0.0,
+        "cost_per_unit": 0,
         "currency": "USD"
       }
     ],
@@ -43,10 +43,13 @@
   },
   "payment": {
     "methods": [
-      "free_tier"
+      "free_tier",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://airtable.com"
+    "signup_url": "https://airtable.com",
+    "onchain_address": "0x53d11edF5B0B7a447431FAF42260f22BEA9FFB66",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

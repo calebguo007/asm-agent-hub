@@ -10,7 +10,7 @@
     "url": "https://www.cloudflare.com"
   },
   "capabilities": {
-    "description": "S3-compatible object storage with zero egress fees \u2014 store Agent artifacts, logs, and generated content",
+    "description": "S3-compatible object storage with zero egress fees — store Agent artifacts, logs, and generated content",
     "input_modalities": [
       "binary",
       "structured_data"
@@ -46,10 +46,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://www.cloudflare.com"
+    "signup_url": "https://www.cloudflare.com",
+    "onchain_address": "0x6C4121b4a61c887D471d1839F8b62645eC13B82B",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

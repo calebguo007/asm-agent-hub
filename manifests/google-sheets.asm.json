@@ -10,7 +10,7 @@
     "url": "https://sheets.google.com"
   },
   "capabilities": {
-    "description": "Spreadsheet API \u2014 read, write, and format cells, create charts, and automate data workflows",
+    "description": "Spreadsheet API — read, write, and format cells, create charts, and automate data workflows",
     "input_modalities": [
       "structured_data"
     ],
@@ -26,7 +26,7 @@
       {
         "dimension": "api_call",
         "unit": "per_request",
-        "cost_per_unit": 0.0,
+        "cost_per_unit": 0,
         "currency": "USD"
       }
     ],
@@ -43,10 +43,13 @@
   },
   "payment": {
     "methods": [
-      "free_tier"
+      "free_tier",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://sheets.google.com"
+    "signup_url": "https://sheets.google.com",
+    "onchain_address": "0x71C4eDf7182028794Ab4dC85C9a372394D5439A4",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

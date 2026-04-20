@@ -10,7 +10,7 @@
     "url": "https://pdf.co"
   },
   "capabilities": {
-    "description": "PDF processing API \u2014 generate, parse, merge, split, OCR, and convert PDFs programmatically",
+    "description": "PDF processing API — generate, parse, merge, split, OCR, and convert PDFs programmatically",
     "input_modalities": [
       "binary",
       "structured_data"
@@ -46,10 +46,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://pdf.co"
+    "signup_url": "https://pdf.co",
+    "onchain_address": "0x0Ec016d126F32B7b18279029a5A6848Be3106632",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

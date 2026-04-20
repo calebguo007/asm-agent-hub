@@ -52,6 +52,7 @@
     "dev:all": "tsx src/start-all.ts",
     "deposit": "tsx scripts/deposit.ts",
     "balance": "tsx scripts/check-balance.ts",
+    "benchmark:50tx": "tsx scripts/benchmark-50tx.ts",
     "demo": "tsx src/e2e-demo.ts",
     "dashboard": "tsx src/dashboard.ts",
     "prepublishOnly": "npm run build"

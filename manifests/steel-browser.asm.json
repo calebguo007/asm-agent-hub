@@ -11,8 +11,15 @@
   },
   "capabilities": {
     "description": "Open-source browser API built for AI agents — session management, cookie persistence, and anti-detection for reliable web automation",
-    "input_modalities": ["structured_data", "text"],
-    "output_modalities": ["structured_data", "file", "text"]
+    "input_modalities": [
+      "structured_data",
+      "text"
+    ],
+    "output_modalities": [
+      "structured_data",
+      "file",
+      "text"
+    ]
   },
   "pricing": {
     "billing_dimensions": [
@@ -44,9 +51,15 @@
     "rate_limit": "100 concurrent sessions"
   },
   "payment": {
-    "methods": ["free_tier", "stripe"],
+    "methods": [
+      "free_tier",
+      "stripe",
+      "onchain_usdc"
+    ],
     "auth_type": "api_key",
-    "signup_url": "https://steel.dev"
+    "signup_url": "https://steel.dev",
+    "onchain_address": "0x82c0538b1eD43E8eA88158D988D24c7647735e04",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {
@@ -55,7 +68,10 @@
       "supports_proxy": true,
       "supports_session_persistence": true,
       "playwright_compatible": true,
-      "integrations": ["playwright", "puppeteer"]
+      "integrations": [
+        "playwright",
+        "puppeteer"
+      ]
     }
   }
 }

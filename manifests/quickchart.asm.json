@@ -10,7 +10,7 @@
     "url": "https://quickchart.io"
   },
   "capabilities": {
-    "description": "Chart image generation API \u2014 create bar, line, pie, radar, and scatter charts from data via URL or POST",
+    "description": "Chart image generation API — create bar, line, pie, radar, and scatter charts from data via URL or POST",
     "input_modalities": [
       "structured_data"
     ],
@@ -26,7 +26,7 @@
       {
         "dimension": "api_call",
         "unit": "per_chart",
-        "cost_per_unit": 0.0,
+        "cost_per_unit": 0,
         "currency": "USD"
       }
     ],
@@ -43,10 +43,13 @@
   },
   "payment": {
     "methods": [
-      "free_tier"
+      "free_tier",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://quickchart.io"
+    "signup_url": "https://quickchart.io",
+    "onchain_address": "0x08840F0d3acDD60d8fabf39CbB7D681cB5B00C9d",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

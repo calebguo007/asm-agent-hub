@@ -308,6 +308,101 @@ The `asm-registry` MCP server provides 5 tools:
 
 ---
 
+## Live Payments on Arc (Circle × x402)
+
+ASM is not just a scoring layer — each pick ends in a real USDC settlement to the
+winning provider's on-chain address. The `payments/` package wires the registry
+into Circle's x402 protocol on Arc testnet.
+
+### The 50-tx Benchmark
+
+The canonical demo (see `docs/demo-scenario.md`) runs a **Marketing Campaign
+Agent** that decomposes a single brief into **50 subtasks across 15 service
+categories** — image generation, copywriting, translation, TTS, video, scraping,
+code-gen, and more. For every subtask:
+
+1. The buyer calls `POST /api/score` with the task's taxonomy.
+2. The registry returns 2–5 candidates, ranks them with TOPSIS, and nominates a
+   winner with a one-line `reasoning` string
+   (e.g. *"FLUX 1.1 Pro wins on price ($0.040/call, trust 0.90) among 3
+   candidates; +0.643 ahead of Imagen 3."*).
+3. x402 settles the sub-cent payment directly to the winner's
+   `payment.onchain_address` on Arc testnet.
+
+```bash
+cd payments
+npm install
+npx tsx scripts/seed-onchain-addresses.ts   # one-time: derive per-service receive addresses
+npx tsx scripts/benchmark-50tx.ts           # run the 50-subtask scenario
+```
+
+A representative run produces **50 payments fanning out to ~15 distinct recipient
+addresses** — concrete proof that the selection layer is actually routing money,
+not just reshuffling a ledger:
+
+```
+Top recipients (by volume):
+  openai/gpt-4o              6x   $0.0300
+  google-translate           6x   $0.0300
+  openai/embedding-3-large   5x   $0.0250
+  jina-reader                5x   $0.0250
+  black-forest-labs/flux-1.1 4x   $0.0200
+  ...
+Unique recipients: 15
+Total value moved : $0.25 (target ≤ $0.01 per action)
+```
+
+### Dynamic `payTo` via x402
+
+Each `/api/score` request resolves its recipient **at request time**:
+
+```ts
+const dynamicScorePayTo = async (ctx) => {
+  const { taxonomy } = ctx.getBody();
+  const pick = await pickWinnerForTaxonomy(taxonomy);
+  return pick?.winner?.onchain_address ?? config.sellerAddress;
+};
+```
+
+One route, N recipients — the winning provider is paid without any manual
+wallet wiring per service.
+
+### Why Traditional Gas Fails for Sub-cent Agent Payments
+
+Agent workflows decompose into *hundreds* of micro-purchases, each worth
+fractions of a cent. On a conventional L1 the economics simply do not close:
+
+| Payment size | Ethereum L1 gas (typical) | Viable? |
+|---|---|---|
+| $0.001 per embedding call | $0.50 – $5.00 | ❌ 500× – 5000× overhead |
+| $0.005 per image generation | $0.50 – $5.00 | ❌ 100× – 1000× overhead |
+| $0.01 cap (hackathon bar)  | $0.50 – $5.00 | ❌ still underwater |
+
+A **$0.005 payment that costs $0.50–$5 in gas is economically impossible** — the
+fee dwarfs the transaction 100× to 1000×. Agents cannot transact this way, so
+today's agent ecosystems either (a) pre-fund long-lived API keys (no per-action
+accounting), or (b) settle off-chain (no public verifiability).
+
+**Arc + Circle Nanopayments batch thousands of USDC transfers and collapse
+per-tx fees toward zero**, making per-query agent pricing viable. ASM supplies
+the missing piece: *which* provider should receive each nanopayment.
+
+### Run It
+
+```bash
+# Mock mode — no Circle credentials required (good for hacking on the scorer)
+ASM_MODE=mock npx tsx scripts/benchmark-50tx.ts
+
+# Live mode — real Arc testnet transactions
+#   requires: Circle developer credentials + funded Arc testnet wallet
+ASM_MODE=live npx tsx scripts/benchmark-50tx.ts
+```
+
+Results (including per-task candidates, chosen winner, reasoning, and aggregated
+`fundsFlow`) are written to `payments/benchmark-results/benchmark-*.json`.
+
+---
+
 ## Trust Model
 
 ASM implements a 3-layer trust architecture:
@@ -396,6 +491,10 @@ Integration status: active collaboration with the [Agent Receipts](https://githu
 - [x] arXiv preprint
 - [x] SEP proposal to MCP specification
 - [x] MCP community discussion ([#718](https://github.com/orgs/modelcontextprotocol/discussions/718))
+- [x] On-chain `payment.onchain_address` for every manifest (Arc testnet)
+- [x] `pickWinner` API — candidates + winner + one-line reasoning
+- [x] x402 dynamic `payTo` — per-request routing to scorer-selected winner
+- [x] 50-tx benchmark scenario (Marketing Campaign Agent, 15 categories)
 - [ ] Automated manifest crawler pipeline
 - [ ] LangChain PR / framework integration
 - [ ] Conference submission (AAMAS / WWW)

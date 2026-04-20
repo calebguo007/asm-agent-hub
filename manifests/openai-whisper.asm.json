@@ -10,7 +10,7 @@
     "url": "https://openai.com"
   },
   "capabilities": {
-    "description": "Automatic speech recognition \u2014 transcribe audio in 50+ languages with word-level timestamps",
+    "description": "Automatic speech recognition — transcribe audio in 50+ languages with word-level timestamps",
     "input_modalities": [
       "audio"
     ],
@@ -44,10 +44,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://openai.com"
+    "signup_url": "https://openai.com",
+    "onchain_address": "0x9CbFa1086aAd16E50Be4E654E88C59d08D6b01ae",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

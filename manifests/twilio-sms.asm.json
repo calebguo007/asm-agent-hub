@@ -10,7 +10,7 @@
     "url": "https://www.twilio.com"
   },
   "capabilities": {
-    "description": "Programmable SMS and MMS messaging \u2014 send notifications, OTPs, and alerts to any phone number worldwide",
+    "description": "Programmable SMS and MMS messaging — send notifications, OTPs, and alerts to any phone number worldwide",
     "input_modalities": [
       "text"
     ],
@@ -44,10 +44,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://www.twilio.com"
+    "signup_url": "https://www.twilio.com",
+    "onchain_address": "0xaB71d286DAFeD9177096B70D24344ed93997f514",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

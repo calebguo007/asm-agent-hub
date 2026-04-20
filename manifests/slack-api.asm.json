@@ -10,7 +10,7 @@
     "url": "https://slack.com"
   },
   "capabilities": {
-    "description": "Workspace messaging API \u2014 post messages, create channels, manage threads, and build bot interactions",
+    "description": "Workspace messaging API — post messages, create channels, manage threads, and build bot interactions",
     "input_modalities": [
       "text",
       "structured_data"
@@ -28,7 +28,7 @@
       {
         "dimension": "api_call",
         "unit": "per_message",
-        "cost_per_unit": 0.0,
+        "cost_per_unit": 0,
         "currency": "USD"
       }
     ],
@@ -45,10 +45,13 @@
   },
   "payment": {
     "methods": [
-      "free_tier"
+      "free_tier",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://slack.com"
+    "signup_url": "https://slack.com",
+    "onchain_address": "0xb8d7707f051dFa10260f28aB02ddA50EeA27C99B",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

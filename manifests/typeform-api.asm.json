@@ -10,7 +10,7 @@
     "url": "https://www.typeform.com"
   },
   "capabilities": {
-    "description": "Conversational form builder API \u2014 create surveys, quizzes, and feedback forms with branching logic",
+    "description": "Conversational form builder API — create surveys, quizzes, and feedback forms with branching logic",
     "input_modalities": [
       "structured_data"
     ],
@@ -26,7 +26,7 @@
       {
         "dimension": "api_call",
         "unit": "per_response",
-        "cost_per_unit": 0.0,
+        "cost_per_unit": 0,
         "currency": "USD"
       }
     ],
@@ -43,10 +43,13 @@
   },
   "payment": {
     "methods": [
-      "free_tier"
+      "free_tier",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://www.typeform.com"
+    "signup_url": "https://www.typeform.com",
+    "onchain_address": "0x991901D6d8fEA662dA606E12916cC4cb89264467",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

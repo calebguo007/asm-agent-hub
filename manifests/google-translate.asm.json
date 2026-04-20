@@ -26,7 +26,7 @@
       {
         "dimension": "api_call",
         "unit": "per_character",
-        "cost_per_unit": 2e-05,
+        "cost_per_unit": 0.00002,
         "currency": "USD"
       }
     ],
@@ -44,10 +44,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://cloud.google.com/translate"
+    "signup_url": "https://cloud.google.com/translate",
+    "onchain_address": "0x6abA07310EcFD9ce836C920295293fDc43329EC5",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

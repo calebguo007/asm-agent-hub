@@ -8,12 +8,20 @@
   "provider": {
     "name": "GitHub (Microsoft)",
     "url": "https://github.com",
-    "verified_by": ["microsoft"]
+    "verified_by": [
+      "microsoft"
+    ]
   },
   "capabilities": {
     "description": "CI/CD automation platform — build, test, deploy from GitHub repos with 13,000+ community actions",
-    "input_modalities": ["structured_data", "file"],
-    "output_modalities": ["structured_data", "file"]
+    "input_modalities": [
+      "structured_data",
+      "file"
+    ],
+    "output_modalities": [
+      "structured_data",
+      "file"
+    ]
   },
   "pricing": {
     "billing_dimensions": [
@@ -45,9 +53,15 @@
     "rate_limit": "500 concurrent jobs"
   },
   "payment": {
-    "methods": ["free_tier", "github_billing"],
+    "methods": [
+      "free_tier",
+      "github_billing",
+      "onchain_usdc"
+    ],
     "auth_type": "github_token",
-    "signup_url": "https://github.com/features/actions"
+    "signup_url": "https://github.com/features/actions",
+    "onchain_address": "0x34106Ef224F7FeC935f43340593AF1e314204745",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {
@@ -55,7 +69,13 @@
       "supports_self_hosted_runners": true,
       "marketplace_actions": 13000,
       "supports_docker": true,
-      "integrations": ["github", "docker", "aws", "azure", "gcp"]
+      "integrations": [
+        "github",
+        "docker",
+        "aws",
+        "azure",
+        "gcp"
+      ]
     }
   }
 }

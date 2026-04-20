@@ -118,6 +118,45 @@ function broadcastEvent(event: {
   }
 }
 
+// ── Registry pick helper ─────────────────────────────────────
+//
+// Route every paid /api/score call to the WINNER's onchain_address.
+// We ask the registry (which is already authoritative for scoring) and
+// cache per-request (body.taxonomy) so the x402 DynamicPayTo resolver
+// and the later handler don't hit the registry twice.
+
+type RegistryPick = {
+  taxonomy: string;
+  winner: { service_id: string; display_name: string; onchain_address?: string };
+  candidates: unknown[];
+  reasoning: string;
+};
+
+// Short-TTL cache so DynamicPayTo + handler share one pick per request.
+// Key = taxonomy; TTL 10s covers a benchmark burst without stale data.
+const pickCache = new Map<string, { pick: RegistryPick; ts: number }>();
+const PICK_TTL_MS = 10_000;
+
+async function pickWinnerForTaxonomy(
+  taxonomy: string | undefined,
+): Promise<RegistryPick | null> {
+  if (!taxonomy) return null;
+  const now = Date.now();
+  const cached = pickCache.get(taxonomy);
+  if (cached && now - cached.ts < PICK_TTL_MS) return cached.pick;
+
+  try {
+    const data = await proxyToRegistry("/api/score", "POST", { taxonomy });
+    const pick = data?.pick as RegistryPick | undefined;
+    if (!pick?.winner?.onchain_address) return null;
+    pickCache.set(taxonomy, { pick, ts: now });
+    return pick;
+  } catch (err: unknown) {
+    console.warn(`⚠️  pickWinnerForTaxonomy(${taxonomy}) failed:`, err instanceof Error ? err.message : err);
+    return null;
+  }
+}
+
 // ── x402 Payment Middleware Init ──────────────────────────────
 
 async function initX402(): Promise<boolean> {
@@ -140,6 +179,18 @@ async function initX402(): Promise<boolean> {
     resourceServer.register(config.network as `${string}:${string}`, new GatewayEvmScheme());
     await (resourceServer as any).initialize?.();
 
+    // Dynamic payTo: route each /api/score payment to the WINNING service's
+    // on-chain address, so 50 benchmark txs fan out across ~15–20 addresses.
+    // Falls back to config.sellerAddress when body lacks taxonomy or the
+    // pick doesn't resolve — preserves backwards-compat for legacy callers.
+    const dynamicScorePayTo = (async (ctx: any) => {
+      const body = (typeof ctx?.getBody === "function" ? ctx.getBody() : undefined) as
+        | { taxonomy?: string }
+        | undefined;
+      const pick = await pickWinnerForTaxonomy(body?.taxonomy);
+      return pick?.winner?.onchain_address ?? config.sellerAddress;
+    }) as any;
+
     const routes = {
       "POST /api/score": {
         accepts: [
@@ -147,7 +198,7 @@ async function initX402(): Promise<boolean> {
             scheme: "exact" as const,
             price: config.scorePrice,
             network: config.network as `${string}:${string}`,
-            payTo: config.sellerAddress,
+            payTo: dynamicScorePayTo,
           },
         ],
         description: "ASM TOPSIS multi-criteria service scoring",
@@ -198,15 +249,20 @@ async function initX402(): Promise<boolean> {
 // ── Mock Payment Middleware (dev mode) ─────────────────────────
 
 function mockPaymentMiddleware(price: string) {
-  return (req: Request, _res: Response, next: NextFunction) => {
+  return async (req: Request, _res: Response, next: NextFunction) => {
     const buyerAddress = req.headers["x-buyer-address"] as string
       || `0x${crypto.randomUUID().replace(/-/g, "").slice(0, 40)}`;
     const paymentId = crypto.randomUUID();
 
+    // Pre-select winner so the ledger records who actually received the money,
+    // making mock-mode funds-flow match what live mode will produce.
+    const pick = await pickWinnerForTaxonomy(req.body?.taxonomy);
+    const receiver = pick?.winner?.onchain_address ?? config.sellerAddress;
+
     const record: PaymentRecord = {
       paymentId,
       buyerAddress,
-      sellerAddress: config.sellerAddress,
+      sellerAddress: receiver,
       amount: price.replace("$", ""),
       endpoint: req.path,
       taxonomy: req.body?.taxonomy,
@@ -223,7 +279,10 @@ function mockPaymentMiddleware(price: string) {
       amount: price,
       paymentId,
       txHash: record.txHash,
+      recipientAddress: receiver,
     };
+    // Attach pick for the handler to surface in the response body.
+    (req as any).pick = pick;
     next();
   };
 }
@@ -313,7 +372,7 @@ function recordPayment(endpoint: string, price: string) {
     };
 
     // Record after response fully sent (x402 has completed settlement and set headers)
-    res.on("finish", () => {
+    res.on("finish", async () => {
       if (!x402Initialized) return;
 
       // Decode settlement info from x402 PAYMENT-RESPONSE header
@@ -323,10 +382,16 @@ function recordPayment(endpoint: string, price: string) {
         || settlement?.payer
         || "unknown";
 
+      // Ledger's sellerAddress should match where the x402 middleware
+      // routed funds — i.e. the winner's onchain_address (dynamic payTo).
+      // We resolve via the same pick cache used by dynamicScorePayTo.
+      const pick = await pickWinnerForTaxonomy(capturedTaxonomy);
+      const receiver = pick?.winner?.onchain_address ?? config.sellerAddress;
+
       const record: PaymentRecord = {
         paymentId: crypto.randomUUID(),
         buyerAddress: buyerAddr,
-        sellerAddress: config.sellerAddress,
+        sellerAddress: receiver,
         amount: price.replace("$", ""),
         endpoint,
         taxonomy: capturedTaxonomy,
@@ -455,10 +520,18 @@ function registerRoutes() {
       const settlement = (req as any).settlement;
       const payment = (req as any).payment;
 
+      // Pick is either attached by mockPaymentMiddleware (mock mode) or
+      // freshly resolved here (live mode). Used both for the `recipient`
+      // field in payment info and to be echoed back to the client.
+      const pick = (req as any).pick
+        ?? await pickWinnerForTaxonomy(req.body?.taxonomy);
+      const recipient = pick?.winner?.onchain_address ?? config.sellerAddress;
+
       const paymentInfo = (settlement || payment) ? {
         paymentId: payment?.paymentId || crypto.randomUUID(),
         amount: config.scorePrice,
         payer: req.headers["x-buyer-address"] as string || settlement?.payer || payment?.payerAddress || "unknown",
+        recipient,
         txHash: settlement?.transaction || payment?.txHash,
         chain: config.chainName,
         network: config.network,
@@ -476,6 +549,7 @@ function registerRoutes() {
           weights: { w_cost: req.body?.w_cost, w_quality: req.body?.w_quality, w_speed: req.body?.w_speed, w_reliability: req.body?.w_reliability },
           ranking: data.ranking?.slice(0, 3)?.map((s: {display_name: string; total_score: number}) => ({ display_name: s.display_name, score: s.total_score })),
           winner: data.ranking?.[0]?.display_name,
+          winnerAddress: recipient,
           amount: config.scorePrice,
           txHash: paymentInfo?.txHash,
         },

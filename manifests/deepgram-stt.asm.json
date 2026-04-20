@@ -10,7 +10,7 @@
     "url": "https://deepgram.com"
   },
   "capabilities": {
-    "description": "Real-time speech-to-text with industry-leading accuracy \u2014 streaming transcription, diarization, and sentiment",
+    "description": "Real-time speech-to-text with industry-leading accuracy — streaming transcription, diarization, and sentiment",
     "input_modalities": [
       "audio"
     ],
@@ -45,10 +45,13 @@
   "payment": {
     "methods": [
       "free_tier",
-      "stripe"
+      "stripe",
+      "onchain_usdc"
     ],
     "auth_type": "api_key",
-    "signup_url": "https://deepgram.com"
+    "signup_url": "https://deepgram.com",
+    "onchain_address": "0x71710D38155B3A09936147f67DBB18b5F3818e43",
+    "onchain_network": "eip155:5042002"
   },
   "extensions": {
     "tool": {

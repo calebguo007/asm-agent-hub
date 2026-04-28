@@ -14,7 +14,7 @@ import * as path from "path";
 
 // ── Types ──────────────────────────────────────────────
 
-interface BillingDimension {
+export interface BillingDimension {
   dimension: string;
   unit: string;
   cost_per_unit: number;
@@ -23,7 +23,7 @@ interface BillingDimension {
   tiers?: { up_to: number | string; cost_per_unit: number }[];
 }
 
-interface QualityMetric {
+export interface QualityMetric {
   name: string;
   score: number;
   scale?: string;
@@ -33,7 +33,7 @@ interface QualityMetric {
   self_reported?: boolean;
 }
 
-interface ASMManifest {
+export interface ASMManifest {
   asm_version: string;
   service_id: string;
   taxonomy: string;
@@ -87,7 +87,7 @@ interface ASMManifest {
     ap2_endpoint?: string;
     signup_url?: string;
   };
-  // v0.3 新增字段
+  // v0.3 new fields
   updated_at?: string;
   ttl?: number;
   receipt_endpoint?: string;
@@ -103,7 +103,7 @@ interface ASMManifest {
 
 // ── Registry Store ─────────────────────────────────────
 
-class ASMRegistry {
+export class ASMRegistry {
   private manifests: Map<string, ASMManifest> = new Map();
 
   loadFromDirectory(dir: string): number {
@@ -191,7 +191,7 @@ class ASMRegistry {
 
 // ── Scoring helpers (mirrors scorer.py) ────────────────
 
-function parseLatency(s?: string): number {
+export function parseLatency(s?: string): number {
   if (!s) return Infinity;
   const cleaned = s.trim().replace(/^[~<>]/, "");
   if (cleaned.endsWith("ms")) return parseFloat(cleaned) / 1000;
@@ -201,7 +201,7 @@ function parseLatency(s?: string): number {
   return isNaN(n) ? Infinity : n;
 }
 
-function extractPrimaryCost(m: ASMManifest): number {
+export function extractPrimaryCost(m: ASMManifest, ioRatio: number = 0.3): number {
   const dims = m.pricing?.billing_dimensions;
   if (!dims || dims.length === 0) return 0;
 
@@ -218,7 +218,8 @@ function extractPrimaryCost(m: ASMManifest): number {
   }
 
   if (inputCost !== null && outputCost !== null) {
-    return 0.3 * inputCost + 0.7 * outputCost;
+    // Configurable IO ratio：ioRatio * input + (1 - ioRatio) * output
+    return ioRatio * inputCost + (1 - ioRatio) * outputCost;
   }
 
   let cost = dims[0].cost_per_unit;
@@ -227,7 +228,7 @@ function extractPrimaryCost(m: ASMManifest): number {
   return cost;
 }
 
-function extractPrimaryQuality(m: ASMManifest): number {
+export function extractPrimaryQuality(m: ASMManifest): number {
   const metrics = m.quality?.metrics;
   if (!metrics || metrics.length === 0) return 0.5;
   const met = metrics[0];
@@ -243,7 +244,7 @@ function extractPrimaryQuality(m: ASMManifest): number {
   return score;
 }
 
-function minMaxNormalize(vals: number[], invert: boolean): number[] {
+export function minMaxNormalize(vals: number[], invert: boolean): number[] {
   if (vals.length === 0) return [];
   const mn = Math.min(...vals);
   const mx = Math.max(...vals);
@@ -252,7 +253,7 @@ function minMaxNormalize(vals: number[], invert: boolean): number[] {
   return vals.map((v) => (v - mn) / (mx - mn));
 }
 
-interface ScoreResult {
+export interface ScoreResult {
   service_id: string;
   display_name: string;
   taxonomy: string;
@@ -262,7 +263,7 @@ interface ScoreResult {
   rank: number;
 }
 
-function scoreServices(
+export function scoreServices(
   manifests: ASMManifest[],
   weights: { cost: number; quality: number; speed: number; reliability: number }
 ): ScoreResult[] {
@@ -315,9 +316,130 @@ function scoreServices(
   return results;
 }
 
+/**
+ * TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)
+ * 
+ * TypeScript implementation fully aligned with scorer.py score_topsis.
+ * Steps:
+ *   1. Build decision matrix (n services × 4 criteria)
+ *   2. Vector normalization
+ *   3. Weighting
+ *   4. Find positive ideal (A+) and negative ideal (A-)
+ *   5. Compute distance from each service to A+ and A-
+ *   6. Compute closeness: C = d- / (d+ + d-)
+ *   7. Sort by C (higher is better)
+ */
+export function scoreTopsis(
+  manifests: ASMManifest[],
+  weights: { cost: number; quality: number; speed: number; reliability: number },
+  ioRatio: number = 0.3
+): ScoreResult[] {
+  if (manifests.length === 0) return [];
+
+  const n = manifests.length;
+  const numCriteria = 4;
+
+  // Step 1: Decision matrix — [cost(minimize), quality(maximize), latency(minimize), uptime(maximize)]
+  const isBenefit = [false, true, false, true];
+  const w = [weights.cost, weights.quality, weights.speed, weights.reliability];
+
+  const raw: number[][] = manifests.map((m) => [
+    extractPrimaryCost(m, ioRatio),
+    extractPrimaryQuality(m),
+    parseLatency(m.sla?.latency_p50),
+    m.sla?.uptime ?? 0.5,
+  ]);
+
+  // Step 2: Vector normalization
+  const norm: number[][] = Array.from({ length: n }, () => Array(numCriteria).fill(0));
+  for (let j = 0; j < numCriteria; j++) {
+    const colSumSq = Math.sqrt(raw.reduce((sum, row) => sum + row[j] ** 2, 0));
+    if (colSumSq === 0) continue;
+    for (let i = 0; i < n; i++) {
+      norm[i][j] = raw[i][j] / colSumSq;
+    }
+  }
+
+  // Step 3: Weighted normalized matrix
+  const weighted: number[][] = norm.map((row) =>
+    row.map((val, j) => val * w[j])
+  );
+
+  // Step 4: Positive and negative ideal solutions
+  const aPos: number[] = [];
+  const aNeg: number[] = [];
+  for (let j = 0; j < numCriteria; j++) {
+    const col = weighted.map((row) => row[j]);
+    if (isBenefit[j]) {
+      aPos.push(Math.max(...col));
+      aNeg.push(Math.min(...col));
+    } else {
+      aPos.push(Math.min(...col));
+      aNeg.push(Math.max(...col));
+    }
+  }
+
+  // Step 5: Distance to ideal solutions
+  const dPos: number[] = [];
+  const dNeg: number[] = [];
+  for (let i = 0; i < n; i++) {
+    const dp = Math.sqrt(weighted[i].reduce((sum, val, j) => sum + (val - aPos[j]) ** 2, 0));
+    const dn = Math.sqrt(weighted[i].reduce((sum, val, j) => sum + (val - aNeg[j]) ** 2, 0));
+    dPos.push(dp);
+    dNeg.push(dn);
+  }
+
+  // Step 6: Closeness coefficient
+  const labels = ["cost", "quality", "speed", "reliability"] as const;
+  const results: ScoreResult[] = manifests.map((m, i) => {
+    const denom = dPos[i] + dNeg[i];
+    const c = denom > 0 ? dNeg[i] / denom : 0.5;
+
+    // Build breakdown (Convert weighted normalized values to 0-1 display scores）
+    const bd: Record<string, number> = {};
+    for (let j = 0; j < numCriteria; j++) {
+      const col = weighted.map((row) => row[j]);
+      const vmin = Math.min(...col);
+      const vmax = Math.max(...col);
+      if (vmax === vmin) {
+        bd[labels[j]] = 1.0;
+      } else if (isBenefit[j]) {
+        bd[labels[j]] = Math.round(((weighted[i][j] - vmin) / (vmax - vmin)) * 10000) / 10000;
+      } else {
+        bd[labels[j]] = Math.round(((vmax - weighted[i][j]) / (vmax - vmin)) * 10000) / 10000;
+      }
+    }
+
+    const dims = labels.map((name, j) => ({
+      name,
+      val: w[j] * bd[name],
+    }));
+    const topDim = dims.sort((a, b) => b.val - a.val)[0].name;
+
+    return {
+      service_id: m.service_id,
+      display_name: m.display_name || m.service_id,
+      taxonomy: m.taxonomy,
+      total_score: Math.round(c * 10000) / 10000,
+      breakdown: {
+        cost: bd.cost,
+        quality: bd.quality,
+        speed: bd.speed,
+        reliability: bd.reliability,
+      },
+      reasoning: `${m.display_name || m.service_id} scored ${c.toFixed(3)} (cost=${bd.cost.toFixed(2)}, quality=${bd.quality.toFixed(2)}, speed=${bd.speed.toFixed(2)}, reliability=${bd.reliability.toFixed(2)}). Strongest weighted dimension: ${topDim}. [TOPSIS]`,
+      rank: 0,
+    };
+  });
+
+  results.sort((a, b) => b.total_score - a.total_score);
+  results.forEach((r, i) => (r.rank = i + 1));
+  return results;
+}
+
 // ── Format helpers ─────────────────────────────────────
 
-function formatManifestSummary(m: ASMManifest): string {
+export function formatManifestSummary(m: ASMManifest): string {
   const lines: string[] = [];
   lines.push(`**${m.display_name || m.service_id}**`);
   lines.push(`- Service ID: \`${m.service_id}\``);
@@ -368,7 +490,7 @@ function formatManifestSummary(m: ASMManifest): string {
   if (m.payment?.methods)
     lines.push(`- Payment: ${m.payment.methods.join(", ")}`);
 
-  // v0.3 字段
+  // v0.3 fields
   if (m.updated_at) lines.push(`- Updated at: ${m.updated_at}`);
   if (m.ttl !== undefined) lines.push(`- TTL: ${m.ttl}s`);
   if (m.receipt_endpoint) lines.push(`- Receipt endpoint: ${m.receipt_endpoint}`);
@@ -451,10 +573,10 @@ async function main() {
           ],
         };
       }
-      // 构建包含 v0.3 字段的详情输出
+      // Build detail output with v0.3 fields
       let detail = formatManifestSummary(m);
 
-      // v0.3 额外字段独立展示
+      // v0.3 extra fields shown separately
       const v03Lines: string[] = [];
       if (m.updated_at) v03Lines.push(`- **Updated at**: ${m.updated_at}`);
       if (m.ttl !== undefined) v03Lines.push(`- **TTL**: ${m.ttl}s`);
@@ -519,7 +641,7 @@ async function main() {
     },
     async (params) => {
       let results = registry.query(params);
-      // v0.3: 按 receipt_endpoint 过滤
+      // v0.3: Filter by receipt_endpoint
       if (params.has_receipts !== undefined) {
         if (params.has_receipts) {
           results = results.filter((m) => !!m.receipt_endpoint);
@@ -667,7 +789,7 @@ async function main() {
   // ── Tool: asm_score ──
   server.tool(
     "asm_score",
-    "Score and rank services based on user preferences. Provide a taxonomy to filter, then set weights (0-1, must sum to 1) for cost, quality, speed, and reliability. Returns ranked recommendations with reasoning.",
+    "Score and rank services based on user preferences. Supports two methods: 'topsis' (default, multi-criteria decision analysis aligned with Python scorer) and 'weighted_average'. Also supports io_ratio for configurable input/output token cost blending.",
     {
       taxonomy: z
         .string()
@@ -677,8 +799,18 @@ async function main() {
       w_quality: z.number().min(0).max(1).default(0.3).describe("Weight for quality (higher is better). Default 0.3"),
       w_speed: z.number().min(0).max(1).default(0.2).describe("Weight for speed/latency (lower is better). Default 0.2"),
       w_reliability: z.number().min(0).max(1).default(0.2).describe("Weight for reliability/uptime (higher is better). Default 0.2"),
+      method: z
+        .enum(["topsis", "weighted_average"])
+        .default("topsis")
+        .describe("Scoring method. 'topsis' = TOPSIS multi-criteria analysis (default, aligned with Python scorer). 'weighted_average' = simple weighted average."),
+      io_ratio: z
+        .number()
+        .min(0)
+        .max(1)
+        .default(0.3)
+        .describe("Input/output token cost blend ratio. 0.3 = chat (default), 0.8 = RAG, 0.1 = creative writing, 0.5 = balanced."),
     },
-    async ({ taxonomy, w_cost, w_quality, w_speed, w_reliability }) => {
+    async ({ taxonomy, w_cost, w_quality, w_speed, w_reliability, method, io_ratio }) => {
       // Normalize weights
       const total = w_cost + w_quality + w_speed + w_reliability;
       const weights = {
@@ -704,10 +836,15 @@ async function main() {
         };
       }
 
-      const results = scoreServices(candidates, weights);
+      const results = method === "topsis"
+        ? scoreTopsis(candidates, weights, io_ratio)
+        : scoreServices(candidates, weights);
 
-      let text = `# ASM Service Ranking\n\n`;
+      const methodLabel = method === "topsis" ? "TOPSIS" : "Weighted Average";
+      let text = `# ASM Service Ranking (${methodLabel})\n\n`;
+      text += `**Method**: ${methodLabel}\n`;
       text += `**Weights**: cost=${weights.cost.toFixed(2)}, quality=${weights.quality.toFixed(2)}, speed=${weights.speed.toFixed(2)}, reliability=${weights.reliability.toFixed(2)}\n`;
+      text += `**IO Ratio**: ${io_ratio} (input token cost weight)\n`;
       text += `**Candidates**: ${candidates.length} services`;
       if (taxonomy) text += ` (taxonomy: \`${taxonomy}\`)`;
       text += "\n\n";

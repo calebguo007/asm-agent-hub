@@ -14,7 +14,12 @@
     "test": "tsx src/test_scorer.ts",
     "test:topsis": "tsx src/test_topsis.ts"
   },
-  "keywords": ["asm", "mcp", "agent", "service-manifest"],
+  "keywords": [
+    "asm",
+    "mcp",
+    "agent",
+    "service-manifest"
+  ],
   "author": "Caleb (yi guo)",
   "license": "MIT",
   "type": "commonjs",

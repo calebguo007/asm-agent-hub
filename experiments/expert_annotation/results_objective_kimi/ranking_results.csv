@@ -1,0 +1,109 @@
+task_id,taxonomy,preference_axis,selector,predicted_rank,kendall_tau,spearman_rho,top1_match,parse_failure,prompt_chars,completion_chars,raw_response
+1,ai.audio.stt,cost,asm_topsis,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,0,0,
+1,ai.audio.stt,cost,llm_raw_doc,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,4450,54,"{""ranking"": [""deepgram/nova@v2"", ""openai/whisper@v1""]}"
+1,ai.audio.stt,cost,llm_manifest,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,3478,54,"{""ranking"": [""deepgram/nova@v2"", ""openai/whisper@v1""]}"
+2,ai.audio.stt,latency,asm_topsis,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,0,0,
+2,ai.audio.stt,latency,llm_raw_doc,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,4453,54,"{""ranking"": [""deepgram/nova@v2"", ""openai/whisper@v1""]}"
+2,ai.audio.stt,latency,llm_manifest,"[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,1.0,True,False,3481,54,"{""ranking"": [""deepgram/nova@v2"", ""openai/whisper@v1""]}"
+3,ai.audio.tts,cost,asm_topsis,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,1.0,True,False,0,0,
+3,ai.audio.tts,cost,llm_raw_doc,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,1.0,True,False,4459,58,"{""ranking"": [""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]}"
+3,ai.audio.tts,cost,llm_manifest,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,1.0,True,False,4255,58,"{""ranking"": [""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]}"
+4,ai.audio.tts,latency,asm_topsis,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",-1.0,-1.0,False,False,0,0,
+4,ai.audio.tts,latency,llm_raw_doc,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",-1.0,-1.0,False,False,4462,58,"{""ranking"": [""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]}"
+4,ai.audio.tts,latency,llm_manifest,"[""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]",1.0,1.0,True,False,4258,58,"{""ranking"": [""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]}"
+5,ai.audio.tts,quality,asm_topsis,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",-1.0,-1.0,False,False,0,0,
+5,ai.audio.tts,quality,llm_raw_doc,"[""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]",1.0,1.0,True,False,4462,58,"{""ranking"": [""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]}"
+5,ai.audio.tts,quality,llm_manifest,"[""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]",1.0,1.0,True,False,4258,58,"{""ranking"": [""elevenlabs/tts-v2@2.0"", ""openai/tts-1@1.0""]}"
+6,ai.code.completion,latency,asm_topsis,"[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,1.0,True,False,0,0,
+6,ai.code.completion,latency,llm_raw_doc,"[""cursor/editor@v1"", ""github/copilot@v1""]",-1.0,-1.0,False,False,8424,54,"{""ranking"": [""cursor/editor@v1"", ""github/copilot@v1""]}"
+6,ai.code.completion,latency,llm_manifest,"[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,1.0,True,False,3489,54,"{""ranking"": [""github/copilot@v1"", ""cursor/editor@v1""]}"
+7,ai.llm.chat,cost,asm_topsis,"[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",0.3333333333333333,0.5,False,False,0,0,
+7,ai.llm.chat,cost,llm_raw_doc,"[""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]",1.0,1.0,True,False,5947,103,"{""ranking"": [""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]}"
+7,ai.llm.chat,cost,llm_manifest,"[""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]",1.0,1.0,True,False,8346,103,"{""ranking"": [""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]}"
+8,ai.llm.chat,latency,asm_topsis,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,1.0,True,False,0,0,
+8,ai.llm.chat,latency,llm_raw_doc,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,1.0,True,False,5950,103,"{""ranking"": [""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]}"
+8,ai.llm.chat,latency,llm_manifest,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,1.0,True,False,8349,103,"{""ranking"": [""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]}"
+9,ai.llm.chat,quality,asm_topsis,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",-1.0,-1.0,False,False,0,0,
+9,ai.llm.chat,quality,llm_raw_doc,"[""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0"", ""openai/gpt-4o@2024-11-20""]",1.0,1.0,True,False,5950,103,"{""ranking"": [""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0"", ""openai/gpt-4o@2024-11-20""]}"
+9,ai.llm.chat,quality,llm_manifest,"[""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0"", ""openai/gpt-4o@2024-11-20""]",1.0,1.0,True,False,8349,103,"{""ranking"": [""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0"", ""openai/gpt-4o@2024-11-20""]}"
+10,ai.llm.embedding,cost,asm_topsis,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,1.0,True,False,0,0,
+10,ai.llm.embedding,cost,llm_raw_doc,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,1.0,True,False,2914,81,"{""ranking"": [""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]}"
+10,ai.llm.embedding,cost,llm_manifest,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,1.0,True,False,4553,81,"{""ranking"": [""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]}"
+11,ai.llm.embedding,latency,asm_topsis,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,1.0,True,False,0,0,
+11,ai.llm.embedding,latency,llm_raw_doc,"[""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]",-1.0,-1.0,False,False,2917,81,"{""ranking"": [""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]}"
+11,ai.llm.embedding,latency,llm_manifest,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,1.0,True,False,4556,81,"{""ranking"": [""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]}"
+12,ai.llm.embedding,quality,asm_topsis,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",-1.0,-1.0,False,False,0,0,
+12,ai.llm.embedding,quality,llm_raw_doc,"[""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]",1.0,1.0,True,False,2917,81,"{""ranking"": [""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]}"
+12,ai.llm.embedding,quality,llm_manifest,"[""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]",1.0,1.0,True,False,4556,81,"{""ranking"": [""voyageai/voyage-3-large@3.0"", ""openai/text-embedding-3-large@3.0""]}"
+13,ai.nlp.translation,latency,asm_topsis,"[""google/translate@v3"", ""deepl/translate@v2""]",1.0,1.0,True,False,0,0,
+13,ai.nlp.translation,latency,llm_raw_doc,"[""deepl/translate@v2"", ""google/translate@v3""]",-1.0,-1.0,False,False,8434,58,"{""ranking"": [""deepl/translate@v2"", ""google/translate@v3""]}"
+13,ai.nlp.translation,latency,llm_manifest,"[""google/translate@v3"", ""deepl/translate@v2""]",1.0,1.0,True,False,3549,58,"{""ranking"": [""google/translate@v3"", ""deepl/translate@v2""]}"
+14,ai.video.generation,cost,asm_topsis,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,1.0,True,False,0,0,
+14,ai.video.generation,cost,llm_raw_doc,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,1.0,True,False,8436,61,"{""ranking"": [""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]}"
+14,ai.video.generation,cost,llm_manifest,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,1.0,True,False,4087,61,"{""ranking"": [""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]}"
+15,ai.video.generation,latency,asm_topsis,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",-1.0,-1.0,False,False,0,0,
+15,ai.video.generation,latency,llm_raw_doc,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",-1.0,-1.0,False,False,8439,61,"{""ranking"": [""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]}"
+15,ai.video.generation,latency,llm_manifest,"[""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]",1.0,1.0,True,False,4090,61,"{""ranking"": [""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]}"
+16,ai.video.generation,quality,asm_topsis,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",-1.0,-1.0,False,False,0,0,
+16,ai.video.generation,quality,llm_raw_doc,"[""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]",1.0,1.0,True,False,8439,61,"{""ranking"": [""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]}"
+16,ai.video.generation,quality,llm_manifest,"[""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]",1.0,1.0,True,False,4090,61,"{""ranking"": [""google/veo-3.1@3.1"", ""kuaishou/kling-3.0@3.0""]}"
+17,ai.vision.image_generation,latency,asm_topsis,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,1.0,True,False,0,0,
+17,ai.vision.image_generation,latency,llm_raw_doc,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,1.0,True,False,5066,97,"{""ranking"": [""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]}"
+17,ai.vision.image_generation,latency,llm_manifest,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,1.0,True,False,6090,97,"{""ranking"": [""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]}"
+18,infra.compute.gpu,cost,asm_topsis,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,0,0,
+18,infra.compute.gpu,cost,llm_raw_doc,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,8449,74,"{""ranking"": [""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]}"
+18,infra.compute.gpu,cost,llm_manifest,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,3923,74,"{""ranking"": [""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]}"
+19,infra.compute.gpu,latency,asm_topsis,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,0,0,
+19,infra.compute.gpu,latency,llm_raw_doc,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,8452,74,"{""ranking"": [""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]}"
+19,infra.compute.gpu,latency,llm_manifest,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,1.0,True,False,3926,74,"{""ranking"": [""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]}"
+20,infra.database.postgres,latency,asm_topsis,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,1.0,True,False,0,0,
+20,infra.database.postgres,latency,llm_raw_doc,"[""supabase/database@v2"", ""neon/serverless-postgres@v1""]",-1.0,-1.0,False,False,8200,68,"{""ranking"": [""supabase/database@v2"", ""neon/serverless-postgres@v1""]}"
+20,infra.database.postgres,latency,llm_manifest,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,1.0,True,False,3567,68,"{""ranking"": [""neon/serverless-postgres@v1"", ""supabase/database@v2""]}"
+21,infra.database.vector,latency,asm_topsis,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,1.0,True,False,0,0,
+21,infra.database.vector,latency,llm_raw_doc,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,1.0,True,False,8414,53,"{""ranking"": [""qdrant/cloud@v1"", ""pinecone/index@v3""]}"
+21,infra.database.vector,latency,llm_manifest,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,1.0,True,False,3499,53,"{""ranking"": [""qdrant/cloud@v1"", ""pinecone/index@v3""]}"
+22,tool.automation.browser,cost,asm_topsis,"[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,1.0,True,False,0,0,
+22,tool.automation.browser,cost,llm_raw_doc,"[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,1.0,True,False,5913,55,"{""ranking"": [""steel/browser@v1"", ""browserbase/api@v1""]}"
+22,tool.automation.browser,cost,llm_manifest,"[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,1.0,True,False,4048,55,"{""ranking"": [""steel/browser@v1"", ""browserbase/api@v1""]}"
+23,tool.automation.browser,latency,asm_topsis,"[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,1.0,True,False,0,0,
+23,tool.automation.browser,latency,llm_raw_doc,"[""browserbase/api@v1"", ""steel/browser@v1""]",-1.0,-1.0,False,False,5916,55,"{""ranking"": [""browserbase/api@v1"", ""steel/browser@v1""]}"
+23,tool.automation.browser,latency,llm_manifest,"[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,1.0,True,False,4051,55,"{""ranking"": [""steel/browser@v1"", ""browserbase/api@v1""]}"
+24,tool.communication.chat,latency,asm_topsis,"[""discord/api@v10"", ""slack/web-api@v2""]",1.0,1.0,True,False,0,0,
+24,tool.communication.chat,latency,llm_raw_doc,"[""discord/api@v10"", ""slack/web-api@v2""]",1.0,1.0,True,False,8408,52,"{""ranking"": [""discord/api@v10"", ""slack/web-api@v2""]}"
+24,tool.communication.chat,latency,llm_manifest,"[""discord/api@v10"", ""slack/web-api@v2""]",1.0,1.0,True,False,3561,52,"{""ranking"": [""discord/api@v10"", ""slack/web-api@v2""]}"
+25,tool.communication.email,cost,asm_topsis,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,0,0,
+25,tool.communication.email,cost,llm_raw_doc,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,8420,58,"{""ranking"": [""resend/email-api@v1"", ""twilio/sendgrid@v3""]}"
+25,tool.communication.email,cost,llm_manifest,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,4007,58,"{""ranking"": [""resend/email-api@v1"", ""twilio/sendgrid@v3""]}"
+26,tool.communication.email,latency,asm_topsis,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,0,0,
+26,tool.communication.email,latency,llm_raw_doc,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,8423,58,"{""ranking"": [""resend/email-api@v1"", ""twilio/sendgrid@v3""]}"
+26,tool.communication.email,latency,llm_manifest,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,1.0,True,False,4010,58,"{""ranking"": [""resend/email-api@v1"", ""twilio/sendgrid@v3""]}"
+27,tool.data.scraping,cost,asm_topsis,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,1.0,True,False,0,0,
+27,tool.data.scraping,cost,llm_raw_doc,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,1.0,True,False,7049,54,"{""ranking"": [""jina/reader@v1"", ""firecrawl/scrape@v1""]}"
+27,tool.data.scraping,cost,llm_manifest,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,1.0,True,False,3449,54,"{""ranking"": [""jina/reader@v1"", ""firecrawl/scrape@v1""]}"
+28,tool.data.scraping,latency,asm_topsis,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,1.0,True,False,0,0,
+28,tool.data.scraping,latency,llm_raw_doc,"[""firecrawl/scrape@v1"", ""jina/reader@v1""]",-1.0,-1.0,False,False,7052,54,"{""ranking"": [""firecrawl/scrape@v1"", ""jina/reader@v1""]}"
+28,tool.data.scraping,latency,llm_manifest,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,1.0,True,False,3452,54,"{""ranking"": [""jina/reader@v1"", ""firecrawl/scrape@v1""]}"
+29,tool.data.search,cost,asm_topsis,"[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,1.0,True,False,0,0,
+29,tool.data.search,cost,llm_raw_doc,"[""exa/search-api@v1"", ""tavily/search-api@v1""]",-1.0,-1.0,False,False,7241,58,"{""ranking"": [""exa/search-api@v1"", ""tavily/search-api@v1""]}"
+29,tool.data.search,cost,llm_manifest,"[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,1.0,True,False,3905,58,"{""ranking"": [""tavily/search-api@v1"", ""exa/search-api@v1""]}"
+30,tool.data.search,latency,asm_topsis,"[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,1.0,True,False,0,0,
+30,tool.data.search,latency,llm_raw_doc,"[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,1.0,True,False,7244,58,"{""ranking"": [""exa/search-api@v1"", ""tavily/search-api@v1""]}"
+30,tool.data.search,latency,llm_manifest,"[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,1.0,True,False,3908,58,"{""ranking"": [""exa/search-api@v1"", ""tavily/search-api@v1""]}"
+31,tool.devops.ci,latency,asm_topsis,"[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,1.0,True,False,0,0,
+31,tool.devops.ci,latency,llm_raw_doc,"[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,1.0,True,False,8407,55,"{""ranking"": [""circleci/cloud@v2"", ""github/actions@v2""]}"
+31,tool.devops.ci,latency,llm_manifest,"[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,1.0,True,False,4066,55,"{""ranking"": [""circleci/cloud@v2"", ""github/actions@v2""]}"
+32,tool.devops.deployment,cost,asm_topsis,"[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,1.0,True,False,0,0,
+32,tool.devops.deployment,cost,llm_raw_doc,"[""fly/machines@v1"", ""vercel/platform@v1""]",-1.0,-1.0,False,False,8404,54,"{""ranking"": [""fly/machines@v1"", ""vercel/platform@v1""]}"
+32,tool.devops.deployment,cost,llm_manifest,"[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,1.0,True,False,3429,54,"{""ranking"": [""vercel/platform@v1"", ""fly/machines@v1""]}"
+33,tool.devops.deployment,latency,asm_topsis,"[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,1.0,True,False,0,0,
+33,tool.devops.deployment,latency,llm_raw_doc,"[""fly/machines@v1"", ""vercel/platform@v1""]",-1.0,-1.0,False,False,8407,54,"{""ranking"": [""fly/machines@v1"", ""vercel/platform@v1""]}"
+33,tool.devops.deployment,latency,llm_manifest,"[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,1.0,True,False,3432,54,"{""ranking"": [""vercel/platform@v1"", ""fly/machines@v1""]}"
+34,tool.productivity.spreadsheet,latency,asm_topsis,"[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,1.0,True,False,0,0,
+34,tool.productivity.spreadsheet,latency,llm_raw_doc,"[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,1.0,True,False,8431,56,"{""ranking"": [""google/sheets-api@v4"", ""airtable/api@v1""]}"
+34,tool.productivity.spreadsheet,latency,llm_manifest,"[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,1.0,True,False,3526,56,"{""ranking"": [""google/sheets-api@v4"", ""airtable/api@v1""]}"
+35,tool.productivity.todo,latency,asm_topsis,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,1.0,True,False,0,0,
+35,tool.productivity.todo,latency,llm_raw_doc,"[""todoist/api@v2"", ""google/tasks-api@v1"", ""ticktick/api@v2""]",0.3333333333333333,0.5,True,False,8520,73,"{""ranking"": [""todoist/api@v2"", ""google/tasks-api@v1"", ""ticktick/api@v2""]}"
+35,tool.productivity.todo,latency,llm_manifest,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,1.0,True,False,6331,73,"{""ranking"": [""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]}"
+36,tool.productivity.todo,quality,asm_topsis,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",0.3333333333333333,0.5,False,False,0,0,
+36,tool.productivity.todo,quality,llm_raw_doc,"[""ticktick/api@v2"", ""todoist/api@v2"", ""google/tasks-api@v1""]",1.0,1.0,True,False,8520,73,"{""ranking"": [""ticktick/api@v2"", ""todoist/api@v2"", ""google/tasks-api@v1""]}"
+36,tool.productivity.todo,quality,llm_manifest,"[""ticktick/api@v2"", ""todoist/api@v2"", ""google/tasks-api@v1""]",1.0,1.0,True,False,6331,73,"{""ranking"": [""ticktick/api@v2"", ""todoist/api@v2"", ""google/tasks-api@v1""]}"

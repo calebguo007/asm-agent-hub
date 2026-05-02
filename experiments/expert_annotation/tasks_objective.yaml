@@ -1,0 +1,255 @@
+# tasks_objective.yaml
+# Auto-generated. Do not hand-edit; regenerate via generate_objective_tasks.py.
+tasks:
+  - id: 1
+    taxonomy: ai.audio.stt
+    preference_axis: cost
+    candidates: [deepgram/nova@v2, openai/whisper@v1]
+    expert_rank: [deepgram/nova@v2, openai/whisper@v1]
+    rationale: "objective: sort by cost_per_unit (api_call)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 2
+    taxonomy: ai.audio.stt
+    preference_axis: latency
+    candidates: [deepgram/nova@v2, openai/whisper@v1]
+    expert_rank: [deepgram/nova@v2, openai/whisper@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 3
+    taxonomy: ai.audio.tts
+    preference_axis: cost
+    candidates: [openai/tts-1@1.0, elevenlabs/tts-v2@2.0]
+    expert_rank: [openai/tts-1@1.0, elevenlabs/tts-v2@2.0]
+    rationale: "objective: sort by cost_per_unit (character)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 4
+    taxonomy: ai.audio.tts
+    preference_axis: latency
+    candidates: [elevenlabs/tts-v2@2.0, openai/tts-1@1.0]
+    expert_rank: [elevenlabs/tts-v2@2.0, openai/tts-1@1.0]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 5
+    taxonomy: ai.audio.tts
+    preference_axis: quality
+    candidates: [elevenlabs/tts-v2@2.0, openai/tts-1@1.0]
+    expert_rank: [elevenlabs/tts-v2@2.0, openai/tts-1@1.0]
+    rationale: "objective: sort by MOS (higher better)"
+    ground_truth_source: "manifest.quality.metrics[name=MOS]"
+  - id: 6
+    taxonomy: ai.code.completion
+    preference_axis: latency
+    candidates: [github/copilot@v1, cursor/editor@v1]
+    expert_rank: [github/copilot@v1, cursor/editor@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 7
+    taxonomy: ai.llm.chat
+    preference_axis: cost
+    candidates: [google/gemini-2.5-pro@2.5, openai/gpt-4o@2024-11-20, anthropic/claude-sonnet-4@4.0]
+    expert_rank: [google/gemini-2.5-pro@2.5, openai/gpt-4o@2024-11-20, anthropic/claude-sonnet-4@4.0]
+    rationale: "objective: sort by cost_per_unit (input_token)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 8
+    taxonomy: ai.llm.chat
+    preference_axis: latency
+    candidates: [openai/gpt-4o@2024-11-20, anthropic/claude-sonnet-4@4.0, google/gemini-2.5-pro@2.5]
+    expert_rank: [openai/gpt-4o@2024-11-20, anthropic/claude-sonnet-4@4.0, google/gemini-2.5-pro@2.5]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 9
+    taxonomy: ai.llm.chat
+    preference_axis: quality
+    candidates: [google/gemini-2.5-pro@2.5, anthropic/claude-sonnet-4@4.0, openai/gpt-4o@2024-11-20]
+    expert_rank: [google/gemini-2.5-pro@2.5, anthropic/claude-sonnet-4@4.0, openai/gpt-4o@2024-11-20]
+    rationale: "objective: sort by LMSYS_Elo (higher better)"
+    ground_truth_source: "manifest.quality.metrics[name=LMSYS_Elo]"
+  - id: 10
+    taxonomy: ai.llm.embedding
+    preference_axis: cost
+    candidates: [openai/text-embedding-3-large@3.0, voyageai/voyage-3-large@3.0]
+    expert_rank: [openai/text-embedding-3-large@3.0, voyageai/voyage-3-large@3.0]
+    rationale: "objective: sort by cost_per_unit (token)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 11
+    taxonomy: ai.llm.embedding
+    preference_axis: latency
+    candidates: [openai/text-embedding-3-large@3.0, voyageai/voyage-3-large@3.0]
+    expert_rank: [openai/text-embedding-3-large@3.0, voyageai/voyage-3-large@3.0]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 12
+    taxonomy: ai.llm.embedding
+    preference_axis: quality
+    candidates: [voyageai/voyage-3-large@3.0, openai/text-embedding-3-large@3.0]
+    expert_rank: [voyageai/voyage-3-large@3.0, openai/text-embedding-3-large@3.0]
+    rationale: "objective: sort by MTEB_avg (higher better)"
+    ground_truth_source: "manifest.quality.metrics[name=MTEB_avg]"
+  - id: 13
+    taxonomy: ai.nlp.translation
+    preference_axis: latency
+    candidates: [google/translate@v3, deepl/translate@v2]
+    expert_rank: [google/translate@v3, deepl/translate@v2]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 14
+    taxonomy: ai.video.generation
+    preference_axis: cost
+    candidates: [kuaishou/kling-3.0@3.0, google/veo-3.1@3.1]
+    expert_rank: [kuaishou/kling-3.0@3.0, google/veo-3.1@3.1]
+    rationale: "objective: sort by cost_per_unit (second)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 15
+    taxonomy: ai.video.generation
+    preference_axis: latency
+    candidates: [google/veo-3.1@3.1, kuaishou/kling-3.0@3.0]
+    expert_rank: [google/veo-3.1@3.1, kuaishou/kling-3.0@3.0]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 16
+    taxonomy: ai.video.generation
+    preference_axis: quality
+    candidates: [google/veo-3.1@3.1, kuaishou/kling-3.0@3.0]
+    expert_rank: [google/veo-3.1@3.1, kuaishou/kling-3.0@3.0]
+    rationale: "objective: sort by VBench_total (higher better)"
+    ground_truth_source: "manifest.quality.metrics[name=VBench_total]"
+  - id: 17
+    taxonomy: ai.vision.image_generation
+    preference_axis: latency
+    candidates: [black-forest-labs/flux-1.1-pro@1.1, google/imagen-3@3.0, openai/dall-e-3@3.0]
+    expert_rank: [black-forest-labs/flux-1.1-pro@1.1, google/imagen-3@3.0, openai/dall-e-3@3.0]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 18
+    taxonomy: infra.compute.gpu
+    preference_axis: cost
+    candidates: [runpod/gpu-serverless@1.0, replicate/gpu-serverless@1.0]
+    expert_rank: [runpod/gpu-serverless@1.0, replicate/gpu-serverless@1.0]
+    rationale: "objective: sort by cost_per_unit (gpu_second)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 19
+    taxonomy: infra.compute.gpu
+    preference_axis: latency
+    candidates: [runpod/gpu-serverless@1.0, replicate/gpu-serverless@1.0]
+    expert_rank: [runpod/gpu-serverless@1.0, replicate/gpu-serverless@1.0]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 20
+    taxonomy: infra.database.postgres
+    preference_axis: latency
+    candidates: [neon/serverless-postgres@v1, supabase/database@v2]
+    expert_rank: [neon/serverless-postgres@v1, supabase/database@v2]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 21
+    taxonomy: infra.database.vector
+    preference_axis: latency
+    candidates: [qdrant/cloud@v1, pinecone/index@v3]
+    expert_rank: [qdrant/cloud@v1, pinecone/index@v3]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 22
+    taxonomy: tool.automation.browser
+    preference_axis: cost
+    candidates: [steel/browser@v1, browserbase/api@v1]
+    expert_rank: [steel/browser@v1, browserbase/api@v1]
+    rationale: "objective: sort by cost_per_unit (browser_minute)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 23
+    taxonomy: tool.automation.browser
+    preference_axis: latency
+    candidates: [steel/browser@v1, browserbase/api@v1]
+    expert_rank: [steel/browser@v1, browserbase/api@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 24
+    taxonomy: tool.communication.chat
+    preference_axis: latency
+    candidates: [discord/api@v10, slack/web-api@v2]
+    expert_rank: [discord/api@v10, slack/web-api@v2]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 25
+    taxonomy: tool.communication.email
+    preference_axis: cost
+    candidates: [resend/email-api@v1, twilio/sendgrid@v3]
+    expert_rank: [resend/email-api@v1, twilio/sendgrid@v3]
+    rationale: "objective: sort by cost_per_unit (email)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 26
+    taxonomy: tool.communication.email
+    preference_axis: latency
+    candidates: [resend/email-api@v1, twilio/sendgrid@v3]
+    expert_rank: [resend/email-api@v1, twilio/sendgrid@v3]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 27
+    taxonomy: tool.data.scraping
+    preference_axis: cost
+    candidates: [jina/reader@v1, firecrawl/scrape@v1]
+    expert_rank: [jina/reader@v1, firecrawl/scrape@v1]
+    rationale: "objective: sort by cost_per_unit (api_call)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 28
+    taxonomy: tool.data.scraping
+    preference_axis: latency
+    candidates: [jina/reader@v1, firecrawl/scrape@v1]
+    expert_rank: [jina/reader@v1, firecrawl/scrape@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 29
+    taxonomy: tool.data.search
+    preference_axis: cost
+    candidates: [tavily/search-api@v1, exa/search-api@v1]
+    expert_rank: [tavily/search-api@v1, exa/search-api@v1]
+    rationale: "objective: sort by cost_per_unit (search_query)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 30
+    taxonomy: tool.data.search
+    preference_axis: latency
+    candidates: [exa/search-api@v1, tavily/search-api@v1]
+    expert_rank: [exa/search-api@v1, tavily/search-api@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 31
+    taxonomy: tool.devops.ci
+    preference_axis: latency
+    candidates: [circleci/cloud@v2, github/actions@v2]
+    expert_rank: [circleci/cloud@v2, github/actions@v2]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 32
+    taxonomy: tool.devops.deployment
+    preference_axis: cost
+    candidates: [vercel/platform@v1, fly/machines@v1]
+    expert_rank: [vercel/platform@v1, fly/machines@v1]
+    rationale: "objective: sort by cost_per_unit (api_call)"
+    ground_truth_source: "manifest.pricing.billing_dimensions"
+  - id: 33
+    taxonomy: tool.devops.deployment
+    preference_axis: latency
+    candidates: [vercel/platform@v1, fly/machines@v1]
+    expert_rank: [vercel/platform@v1, fly/machines@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 34
+    taxonomy: tool.productivity.spreadsheet
+    preference_axis: latency
+    candidates: [google/sheets-api@v4, airtable/api@v1]
+    expert_rank: [google/sheets-api@v4, airtable/api@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 35
+    taxonomy: tool.productivity.todo
+    preference_axis: latency
+    candidates: [todoist/api@v2, ticktick/api@v2, google/tasks-api@v1]
+    expert_rank: [todoist/api@v2, ticktick/api@v2, google/tasks-api@v1]
+    rationale: "objective: sort by sla.latency_p50 ascending"
+    ground_truth_source: "manifest.sla.latency_p50"
+  - id: 36
+    taxonomy: tool.productivity.todo
+    preference_axis: quality
+    candidates: [ticktick/api@v2, todoist/api@v2, google/tasks-api@v1]
+    expert_rank: [ticktick/api@v2, todoist/api@v2, google/tasks-api@v1]
+    rationale: "objective: sort by G2_Rating (higher better)"
+    ground_truth_source: "manifest.quality.metrics[name=G2_Rating]"

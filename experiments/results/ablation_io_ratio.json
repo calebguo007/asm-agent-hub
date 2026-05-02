@@ -1,0 +1,76 @@
+{
+  "experiment": "glm_3_io_ratio_sensitivity",
+  "generated_at": "2026-05-02T10:22:52Z",
+  "io_ratios_swept": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.8,
+    1.0,
+    2.0
+  ],
+  "profiles_tested": [
+    "cost_first",
+    "quality_first",
+    "speed_first",
+    "balanced"
+  ],
+  "pairwise_adjacent": {
+    "0.1->0.2": {
+      "tau_mean": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n_comparisons": 80
+    },
+    "0.2->0.3": {
+      "tau_mean": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n_comparisons": 80
+    },
+    "0.3->0.5": {
+      "tau_mean": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n_comparisons": 80
+    },
+    "0.5->0.8": {
+      "tau_mean": 0.9833,
+      "ci95": [
+        0.9583,
+        1.0
+      ],
+      "n_comparisons": 80
+    },
+    "0.8->1.0": {
+      "tau_mean": 0.9917,
+      "ci95": [
+        0.975,
+        1.0
+      ],
+      "n_comparisons": 80
+    },
+    "1.0->2.0": {
+      "tau_mean": 0.95,
+      "ci95": [
+        0.8833,
+        1.0
+      ],
+      "n_comparisons": 80
+    }
+  },
+  "stable_range": {
+    "start": 0.1,
+    "end": 2.0,
+    "note": "tau >= 0.9 considered stable"
+  },
+  "total_rankings": 1204,
+  "interpretation": "Stable range [0.2, 0.5] would confirm chat-scenario default is safe; degradation outside this band would warrant user-facing io_ratio config"
+}

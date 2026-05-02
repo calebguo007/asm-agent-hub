@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-05-02T09:47:23Z",
+  "tasks_total": 36,
+  "tasks_evaluated": 36,
+  "provider": null,
+  "model": null,
+  "ran_llm": false,
+  "selectors": {
+    "asm_topsis": {
+      "n": 36,
+      "parse_failures": 0,
+      "kendall_tau_mean": 0.6296,
+      "kendall_tau_ci95": [
+        0.3704,
+        0.8519
+      ],
+      "spearman_rho_mean": 0.6389,
+      "spearman_rho_ci95": [
+        0.375,
+        0.8611
+      ],
+      "top1_accuracy": 0.7778
+    }
+  }
+}

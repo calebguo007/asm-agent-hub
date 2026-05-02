@@ -1,0 +1,10 @@
+# ASM development + experiment dependencies
+# Run: pip install -r requirements.txt
+#
+# All experiment scripts work with Python 3.10+ stdlib alone.
+# These optional packages improve test coverage and CI parsing.
+
+pytest>=7.0           # scorer test runner (make test-py)
+scipy>=1.10           # Welch's t-test in experiments/analyze.py (auto-fallback to manual if absent)
+pyyaml>=6.0           # tasks_objective.yaml loader (auto-fallback to internal parser if absent)
+jsonschema>=4.0       # manifest validation (CONTRIBUTING.md "Adding a Service Manifest")

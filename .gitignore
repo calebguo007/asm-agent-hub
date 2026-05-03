@@ -37,3 +37,4 @@ paper/x-twitter-thread.md
 payments/benchmark-results/*.json
 !payments/benchmark-results/.gitkeep
 OUTREACH-PLAN.md
+LIVE-EVAL-PLAN.md

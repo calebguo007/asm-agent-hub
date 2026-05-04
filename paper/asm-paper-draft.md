@@ -834,9 +834,13 @@ The protocol exposes preference weights as a first-class input. Operators who ge
 
 Each directory contains `ranking_results.csv` (108 records: 36 tasks × 3 selectors), `ranking_summary.json`, and `ranking_report.md`. Raw HTML snapshots used by `llm_raw_doc` are cached at `experiments/expert_annotation/cache/raw_docs/`.
 
-### 6.8 External Preference Correlation: ASM Quality vs LM Arena Elo
+### 6.8 External Preference Correlation: A Stress Test, Not a Validation
 
-§6.6a maps natural-language requests to author-defined preference vectors; §6.7 defines ground truth from manifest fields themselves. A reviewer can reasonably ask whether the *quality* dimension ASM ships matches population-scale user preference at all. To answer this we correlate the quality scores in our 8 LLM-chat manifests (`ai.llm.chat`) against LM Arena Elo, derived from over **2 million pairwise human preference votes** [14]. Arena Elo is the closest publicly available signal of mass user preference for LLMs. Source: the Aug 2025 snapshot from `lmarena-ai/chatbot-arena-leaderboard` on Hugging Face Spaces, which contains 242 models with bootstrap Elo, vote counts, and rankings.
+§6.6a maps natural-language requests to author-defined preference vectors; §6.7 defines ground truth from manifest fields themselves. A reviewer can reasonably ask whether the *quality* dimension ASM ships has any relationship to external preference signals at all. We treat this section as a **stress test for the protocol's quality semantics**: if the rank order of declared quality scores aligns with an independent population-scale signal, ASM's quality dimension has external grounding; if not, the disagreement is informative about *which* signal the manifest claims to faithfully represent. We use two independent external sources — LM Arena Elo (pairwise human preference, §6.8.1) and OpenRouter usage volume (revealed production preference, §6.8.2).
+
+#### 6.8.1 ASM quality vs LM Arena Elo
+
+We correlate the quality scores in our 8 LLM-chat manifests (`ai.llm.chat`) against LM Arena Elo, derived from over **2 million pairwise human preference votes** [14]. Arena Elo is the closest publicly available signal of mass user preference for LLMs. Source: the Aug 2025 snapshot from `lmarena-ai/chatbot-arena-leaderboard` on Hugging Face Spaces, which contains 242 models with bootstrap Elo, vote counts, and rankings.
 
 **Setup.** For each ASM LLM manifest we identify the closest dated Arena variant (e.g., `claude-sonnet-4@4.0` → `claude-sonnet-4-20250514`; full mapping in `experiments/external_validation/correlate_arena_elo.py`). 8 of 8 manifests pair successfully. We compute Spearman's rho and Kendall's tau between manifest-declared quality and Arena Elo, with 2,000-iteration bootstrap CIs over the paired observations.
 
@@ -860,6 +864,16 @@ Each directory contains `ranking_results.csv` (108 records: 36 tasks × 3 select
 **Implication.** ASM's `quality.metrics[].name` and `benchmark` fields are load-bearing — they declare which population-preference signal each score is faithful to. A future selector should respect this semantic: when a user's preference is "best at chat" it should weight Elo-derived scores, and when it is "best at hard reasoning" it should weight AA-derived scores. The current TOPSIS engine treats them as commensurable; this is a known limitation surfaced again by §6.5b and §7.1.
 
 **Caveats.** N = 8 paired observations is small; the bootstrap CIs for the per-metric subsets are wide. The pickle-only Arena distribution requires `plotly<6` to deserialise, and the Aug 2025 snapshot pre-dates several of our manifest variants (DeepSeek-V4, Qwen3-Max, Kimi-K2.5, GLM-5) — we use closest dated predecessors and document the gap per pair. The full mapping, raw data, and bootstrap script are at `experiments/external_validation/correlate_arena_elo.py` and `experiments/results/external_validation/arena_elo_correlation.{csv,json,md}`. Reviewers can re-derive the headline numbers from a clean checkout in under one minute by pulling the `elo_results_*.pkl` from the linked Hugging Face Space.
+
+#### 6.8.2 ASM quality vs OpenRouter usage volume
+
+A second, independent external signal is OpenRouter's per-model 7-day token-volume rankings [15]. Where Arena Elo measures *what users say they prefer in head-to-head comparisons*, OpenRouter usage measures *what production agents and applications actually route to* — revealed preference under real economic constraints (price, latency, ecosystem fit). We snapshot the Aug 2025 / 2026-05 rankings page (421 model variants), match each ASM LLM manifest to its closest OpenRouter slug (e.g., `minimax/m2.7@2.7` → `minimax/minimax-m2.7-20260318`, rank 8 by prompt-tokens), and compute Spearman's rho between manifest declared quality and OpenRouter prompt-token rank. 7 of 8 manifests pair successfully (GLM-5 is not on OpenRouter at the snapshot date).
+
+**Result.** Spearman's rho between ASM quality and OpenRouter prompt-token volume is **0.143** (95% bootstrap CI [−0.536, 1.000]); against request count, ρ = **−0.143** [−0.786, 1.000]. The CIs comfortably bracket zero in both directions.
+
+**Reading the table.** A weak correlation between declared quality and production usage is the expected result, not a falsification of the protocol. Production traffic is jointly determined by quality, price, latency, free-tier availability, marketing, ecosystem maturity, and integration cost; quality is one factor among many. The §6.5b live-execution finding makes this concrete: MiniMax M2.7 ranks #8 by OpenRouter prompt-tokens (high usage) yet is the worst performer on judge-rated output quality (mean 6.0 vs 9.8+) — users buy MiniMax for cost, not quality. The protocol cannot, and is not designed to, recover quality from usage signal alone.
+
+**What this section establishes.** Together, §6.8.1 and §6.8.2 do two things rather than one: (i) when manifest declared quality matches the construct of a high-N preference signal — Arena Elo for chat, in our case — the rank correlation is exact (ρ = 1.0 within the LMSYS\_Elo subset); (ii) when manifest declared quality is on a different construct (AA Intelligence vs Arena chat preference, or any quality metric vs production usage), the rank correlation is weak. This is the same finding §6.5b/§7.1 surface from the other direction: ASM is a thin layer over the manifest's declared metrics, and treating different benchmarks as commensurable scalars is hazardous. Reproducibility for §6.8.2: `experiments/external_validation/fetch_openrouter_rankings.py` (extracts records from the cached OpenRouter rankings page) and `correlate_openrouter.py` (computes correlations).
 
 ---
 
@@ -958,3 +972,5 @@ The protocol, reference implementation, all 75 service manifests, audit data, ev
 [13] C.L. Hwang and K. Yoon. Multiple Attribute Decision Making: Methods and Applications. Springer, 1981.
 
 [14] LMSYS Chatbot Arena (LM Arena). 2024–2025 leaderboard snapshots (`elo_results_*.pkl`). https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
+
+[15] OpenRouter Model Rankings, 7-day token volume per model variant. https://openrouter.ai/rankings

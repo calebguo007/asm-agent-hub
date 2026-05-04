@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-05-04T11:41:32Z",
+  "openrouter_snapshot": "2026-05-04T11:41:31Z",
+  "n_manifests_attempted": 8,
+  "n_paired": 7,
+  "quality_vs_prompt_tokens": {
+    "spearman_rho": 0.1429,
+    "spearman_ci95": [
+      -0.5357,
+      1.0
+    ],
+    "kendall_tau": 0.1429
+  },
+  "quality_vs_request_count": {
+    "spearman_rho": -0.1429,
+    "spearman_ci95": [
+      -0.7857,
+      1.0
+    ],
+    "kendall_tau": -0.0476
+  },
+  "rows": [
+    {
+      "asm_service_id": "openai/gpt-4o@2024-11-20",
+      "asm_quality_metric": "LMSYS_Elo",
+      "asm_quality_score": 1285.0,
+      "or_permaslug": "openai/gpt-4o",
+      "or_slug": "openai/gpt-4o",
+      "or_prompt_tokens": 16344359362,
+      "or_count": 6572541,
+      "or_rank_by_prompt_tokens": 95,
+      "gap_note": "Closest GPT-4o family entry on OpenRouter; OR has multiple dated variants."
+    },
+    {
+      "asm_service_id": "anthropic/claude-sonnet-4@4.0",
+      "asm_quality_metric": "LMSYS_Elo",
+      "asm_quality_score": 1290.0,
+      "or_permaslug": "anthropic/claude-4.6-sonnet-20260217",
+      "or_slug": "anthropic/claude-4.6-sonnet",
+      "or_prompt_tokens": 1324638993706,
+      "or_count": 37214202,
+      "or_rank_by_prompt_tokens": 3,
+      "gap_note": "Sonnet 4 family match."
+    },
+    {
+      "asm_service_id": "google/gemini-2.5-pro@2.5",
+      "asm_quality_metric": "LMSYS_Elo",
+      "asm_quality_score": 1300.0,
+      "or_permaslug": "google/gemini-2.5-pro",
+      "or_slug": "google/gemini-2.5-pro",
+      "or_prompt_tokens": 65996799161,
+      "or_count": 6805172,
+      "or_rank_by_prompt_tokens": 54,
+      "gap_note": "Direct match."
+    },
+    {
+      "asm_service_id": "deepseek/deepseek-v4-flash@4.0",
+      "asm_quality_metric": "Artificial_Analysis_Intelligence",
+      "asm_quality_score": 53.0,
+      "or_permaslug": "deepseek/deepseek-v4-flash-20260423",
+      "or_slug": "deepseek/deepseek-v4-flash",
+      "or_prompt_tokens": 675731394701,
+      "or_count": 45561398,
+      "or_rank_by_prompt_tokens": 9,
+      "gap_note": "Direct match."
+    },
+    {
+      "asm_service_id": "qwen/qwen3-max@3.0",
+      "asm_quality_metric": "Artificial_Analysis_Intelligence",
+      "asm_quality_score": 56.0,
+      "or_permaslug": "qwen/qwen3-max",
+      "or_slug": "qwen/qwen3-max",
+      "or_prompt_tokens": 1746380404,
+      "or_count": 215494,
+      "or_rank_by_prompt_tokens": 179,
+      "gap_note": "Direct match."
+    },
+    {
+      "asm_service_id": "moonshot/kimi-k2.5@2.5",
+      "asm_quality_metric": "Artificial_Analysis_Intelligence",
+      "asm_quality_score": 60.0,
+      "or_permaslug": "moonshotai/kimi-k2.5-0127",
+      "or_slug": "moonshotai/kimi-k2.5-0127",
+      "or_prompt_tokens": 270166516457,
+      "or_count": 13224950,
+      "or_rank_by_prompt_tokens": 23,
+      "gap_note": "Author rewritten moonshot -> moonshotai per OpenRouter convention."
+    },
+    {
+      "asm_service_id": "minimax/m2.7@2.7",
+      "asm_quality_metric": "MMLU",
+      "asm_quality_score": 78.0,
+      "or_permaslug": "minimax/minimax-m2.7-20260318",
+      "or_slug": "minimax/minimax-m2.7",
+      "or_prompt_tokens": 711691395135,
+      "or_count": 25796726,
+      "or_rank_by_prompt_tokens": 8,
+      "gap_note": "Direct match (with double-prefixed slug per OpenRouter convention)."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+asm_service_id,asm_quality_metric,asm_quality_score,or_permaslug,or_slug,or_prompt_tokens,or_count,or_rank_by_prompt_tokens,gap_note
+openai/gpt-4o@2024-11-20,LMSYS_Elo,1285.0,openai/gpt-4o,openai/gpt-4o,16344359362,6572541,95,Closest GPT-4o family entry on OpenRouter; OR has multiple dated variants.
+anthropic/claude-sonnet-4@4.0,LMSYS_Elo,1290.0,anthropic/claude-4.6-sonnet-20260217,anthropic/claude-4.6-sonnet,1324638993706,37214202,3,Sonnet 4 family match.
+google/gemini-2.5-pro@2.5,LMSYS_Elo,1300.0,google/gemini-2.5-pro,google/gemini-2.5-pro,65996799161,6805172,54,Direct match.
+deepseek/deepseek-v4-flash@4.0,Artificial_Analysis_Intelligence,53.0,deepseek/deepseek-v4-flash-20260423,deepseek/deepseek-v4-flash,675731394701,45561398,9,Direct match.
+qwen/qwen3-max@3.0,Artificial_Analysis_Intelligence,56.0,qwen/qwen3-max,qwen/qwen3-max,1746380404,215494,179,Direct match.
+moonshot/kimi-k2.5@2.5,Artificial_Analysis_Intelligence,60.0,moonshotai/kimi-k2.5-0127,moonshotai/kimi-k2.5-0127,270166516457,13224950,23,Author rewritten moonshot -> moonshotai per OpenRouter convention.
+minimax/m2.7@2.7,MMLU,78.0,minimax/minimax-m2.7-20260318,minimax/minimax-m2.7,711691395135,25796726,8,Direct match (with double-prefixed slug per OpenRouter convention).

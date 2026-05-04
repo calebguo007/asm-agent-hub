@@ -1,44 +1,44 @@
 {
-  "run_at": "2026-05-02T12:41:01Z",
-  "manifests": 70,
+  "run_at": "2026-05-04T10:23:12Z",
+  "manifests": 75,
   "seed": 2024,
   "experiments": {
     "glm-1": {
       "experiment": "glm-1_trust_delta_ablation",
-      "generated_at": "2026-05-02T12:41:00Z",
+      "generated_at": "2026-05-04T10:23:11Z",
       "tasks": 200,
       "evaluated": 200,
-      "tau_mean": 0.95,
+      "tau_mean": 0.9429,
       "tau_ci95": [
-        0.9,
-        0.99
+        0.895,
+        0.9832
       ],
-      "top1_agreement_rate": 0.975,
-      "mean_max_rank_change": 0.03,
+      "top1_agreement_rate": 0.97,
+      "mean_max_rank_change": 0.1,
       "interpretation": "tau > 0.9 means trust delta is a tiebreaker; tau < 0.5 means trust delta is load-bearing"
     },
     "glm-2": {
       "experiment": "glm-2_topsis_vs_weighted_average",
-      "generated_at": "2026-05-02T12:41:01Z",
+      "generated_at": "2026-05-04T10:23:12Z",
       "tasks": 200,
       "evaluated": 200,
-      "kendall_tau_mean": 0.6133,
+      "kendall_tau_mean": 0.6258,
       "kendall_tau_ci95": [
-        0.5067,
-        0.7167
+        0.5219,
+        0.7254
       ],
-      "spearman_rho_mean": 0.6175,
+      "spearman_rho_mean": 0.6336,
       "spearman_rho_ci95": [
-        0.51,
-        0.72
+        0.5314,
+        0.7327
       ],
-      "top1_disagreement_rate": 0.225,
-      "mean_wa_regret": 0.0963,
+      "top1_disagreement_rate": 0.23,
+      "mean_wa_regret": 0.0937,
       "interpretation": "High tau (>0.8) + low disagreement (<20%): methods agree often; non-zero regret shows TOPSIS adds value on margin"
     },
     "glm-3": {
       "experiment": "glm_3_io_ratio_sensitivity",
-      "generated_at": "2026-05-02T12:41:01Z",
+      "generated_at": "2026-05-04T10:23:12Z",
       "io_ratios_swept": [
         0.1,
         0.2,
@@ -71,25 +71,25 @@
           "n_comparisons": 80
         },
         "0.3->0.5": {
-          "tau_mean": 1.0,
+          "tau_mean": 0.9991,
           "ci95": [
-            1.0,
+            0.9973,
             1.0
           ],
           "n_comparisons": 80
         },
         "0.5->0.8": {
-          "tau_mean": 0.9833,
+          "tau_mean": 0.9955,
           "ci95": [
-            0.9583,
+            0.9866,
             1.0
           ],
           "n_comparisons": 80
         },
         "0.8->1.0": {
-          "tau_mean": 0.9917,
+          "tau_mean": 0.9964,
           "ci95": [
-            0.975,
+            0.9902,
             1.0
           ],
           "n_comparisons": 80
@@ -100,7 +100,7 @@
         "end": 1.0,
         "note": "tau >= 0.9 considered stable"
       },
-      "total_rankings": 1032,
+      "total_rankings": 1152,
       "interpretation": "Rankings remain stable across the valid [0.1, 1.0] range; io_ratio is safe to expose as a task hint rather than a precomputed field"
     }
   }

@@ -53,24 +53,24 @@ python experiments/mcp_value_metadata_audit.py \
 ```
 Or via Make: `make value-audit-full`.
 
-### §6.1 — Pricing heterogeneity over 70 manifests
+### §6.1 — Pricing heterogeneity over 75 manifests
 
 | Claim | Source |
 |---|---|
-| 70 manifests across 47 taxonomies, 8 distinct billing models | `manifests/*.asm.json` (`grep '"taxonomy"' manifests/*.asm.json \| awk '{print $NF}' \| sort -u`) |
+| 75 manifests across 47 taxonomies, 8 distinct billing models | `manifests/*.asm.json` (`grep '"taxonomy"' manifests/*.asm.json \| awk '{print $NF}' \| sort -u`) |
 
 ### §6.2 — Scoring across preference profiles
 
 | Claim | Command | Output |
 |---|---|---|
-| Same candidate set → different optimal selection under different profiles | embedded in `make eval` | `experiments/results/ab_test_results.csv` |
+| Same candidate set -> different optimal selection under different profiles | embedded in `make eval` | `experiments/results/ab_test_results.csv` |
 
 ### §6.3 — Trust delta + §6.3a — Component ablations
 
 | Claim | Command | Output |
 |---|---|---|
-| Removing trust delta: tau = 0.95, top-1 agreement 97.5% | `make ablations` | `experiments/results/ablation_trust.{csv,json,md}` |
-| TOPSIS vs weighted average: tau 0.61, top-1 disagreement 22.5% | same | `experiments/results/ablation_aggregator.{csv,json,md}` |
+| Removing trust delta: tau = 0.94, top-1 agreement 97.0% | `make ablations` | `experiments/results/ablation_trust.{csv,json,md}` |
+| TOPSIS vs weighted average: tau 0.63, top-1 disagreement 23.0% | same | `experiments/results/ablation_aggregator.{csv,json,md}` |
 | io_ratio sensitivity: stable across [0.1, 1.0] | same | `experiments/results/ablation_io_ratio.{csv,json,md,_pairwise.csv}` |
 
 ### §6.4 — Protocol overhead
@@ -88,26 +88,35 @@ These are reported in `experiments/results/ab_test_analysis.json` under `selecto
 | 23.1% utility gain vs random ($p < 10^{-6}$) | `make eval` | `experiments/results/ab_test_analysis.json` |
 | 59.2% cost reduction vs most-expensive ($p < 10^{-6}$) | same | same |
 
+### §6.5b — Live-API execution (30 tasks, Chinese-LLM gateway)
+
+| Claim | Command | Output |
+|---|---|---|
+| Naive 5-candidate run exposes MiniMax/MMLU quality-normalisation failure | shipped result snapshot | `experiments/live_execution/results_naive_5candidate/live_summary.json` |
+| Same-benchmark 4-candidate run restores ASM-TOPSIS to 9.27 judge mean at $0.0064 execution cost | `python experiments/live_execution/compare_runs.py` | `experiments/live_execution/results/comparison.{csv,md}` |
+
+The underlying live calls require TokenDance gateway credentials and are not part of `make reproduce`. The checked-in `results/` and `results_naive_5candidate/` directories preserve the paper runs.
+
 ### §6.6 — Selection regret (200 tasks, 7 baselines)
 
 | Claim | Command | Output |
 |---|---|---|
 | ASM-TOPSIS zero-regret by construction | `python experiments/selection_baselines.py` | `experiments/results/selection_baselines.{csv,json,md}` |
-| Weighted average leaves 0.0787 mean regret | same | same |
+| Weighted average leaves 0.0720 mean regret | same | same |
 
 ### §6.6a — Preference alignment (20 NL requests)
 
 | Claim | Command | Output |
 |---|---|---|
 | ASM 100% zero-regret on 20 NL user requests | `make preference-alignment` | `experiments/results/preference_alignment.{csv,json,md}` |
-| Weighted-avg 95%, single-axis 35–75% | same | same |
+| Weighted-avg 95%, single-axis 35-75% | same | same |
 
 ### §6.7 — LLM-as-selector across 3 LLMs (36 tasks)
 
 | Claim | Command | Output |
 |---|---|---|
-| Manifest surface → 100% top-1 across all three LLMs | `make llm-eval-live` (per LLM) | `experiments/expert_annotation/results_objective*/` |
-| Raw-doc surface → 63.9–72.2% top-1 | same | same |
+| Manifest surface -> 100% top-1 across all three LLMs | `make llm-eval-live` (per LLM) | `experiments/expert_annotation/results_objective*/` |
+| Raw-doc surface -> 63.9-72.2% top-1 | same | same |
 | Quality-axis profile sensitivity (5/5 with pure-quality vs 0/5 with quality-leaning) | reproduced by switching `AXIS_TO_PREFS` weights in `run_ranking_experiment.py` | – |
 
 `make llm-eval-live` requires API credentials. The headline run used the TokenDance gateway with three models; provider/model/base-url are env-configurable:
@@ -121,11 +130,20 @@ make llm-eval-live
 
 The LLM dry-run (`make llm-eval`) generates prompts and runs only `asm_topsis` deterministically — useful for reviewers without API credentials.
 
+### §6.8 — External preference correlation (LM Arena Elo)
+
+| Claim | Command | Output |
+|---|---|---|
+| Pooled heterogeneous quality metrics are uninformative (rho = -0.2143) | `python experiments/external_validation/correlate_arena_elo.py --elo-pkl path/to/arena_elo.pkl` | `experiments/results/external_validation/arena_elo_correlation.{csv,json,md}` |
+| Within-metric LMSYS_Elo subset aligns with Arena Elo (n=3, rho = 1.0) | same | same |
+
+The Arena pickle is not committed because it is an external LM Arena artifact. Reviewers can alternatively pass `--arena-csv model,elo,battles,rank` with the same mapped model names documented in the output JSON.
+
 ## File layout
 
 ```
 asm-spec/
-├── manifests/                              # 70 ASM manifests (JSON)
+├── manifests/                              # 75 ASM manifests (JSON)
 ├── schema/asm-v0.3.schema.json             # protocol spec
 ├── scorer/                                 # Python TOPSIS engine + tests
 ├── registry/                               # TypeScript MCP server + tests
@@ -138,6 +156,8 @@ asm-spec/
 │   ├── preference_alignment_tasks.json     # 20 NL requests
 │   ├── mcp_ecosystem_audit.py              # §6.0
 │   ├── mcp_value_metadata_audit.py         # §6.0a
+│   ├── live_execution/                     # §6.5b live API execution snapshots
+│   ├── external_validation/                # §6.8 Arena Elo correlation
 │   └── expert_annotation/
 │       ├── run_ranking_experiment.py       # §6.7 runner
 │       ├── tasks_objective.yaml            # 36 single-axis tasks

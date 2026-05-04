@@ -13,13 +13,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 2,tool.productivity.spreadsheet,quality_first,highest_quality_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 2,tool.productivity.spreadsheet,quality_first,most_expensive_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 2,tool.productivity.spreadsheet,quality_first,random,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
-3,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-3,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-3,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-3,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-3,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-3,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-3,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
+3,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+3,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+3,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+3,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+3,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+3,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+3,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
 4,infra.compute.gpu,cost_first,asm_topsis,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 4,infra.compute.gpu,cost_first,weighted_average,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 4,infra.compute.gpu,cost_first,cheapest_first,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
@@ -55,13 +55,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 8,tool.devops.ci,balanced,highest_quality_first,github/actions@v2,GitHub Actions,0.4967,0.5033,0.0066,0.008,15.0,0.62,0.998
 8,tool.devops.ci,balanced,most_expensive_first,github/actions@v2,GitHub Actions,0.4967,0.5033,0.0066,0.008,15.0,0.62,0.998
 8,tool.devops.ci,balanced,random,circleci/cloud@v2,CircleCI,0.5033,0.5033,0.0,0.0006,10.0,0.043,0.999
-9,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-9,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-9,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-9,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-9,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-9,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-9,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
+9,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+9,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+9,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+9,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+9,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+9,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+9,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
 10,ai.llm.embedding,cost_first,asm_topsis,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9671,0.9671,0.0,1.3e-07,0.1,0.6459999999999999,0.999
 10,ai.llm.embedding,cost_first,weighted_average,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9671,0.9671,0.0,1.3e-07,0.1,0.6459999999999999,0.999
 10,ai.llm.embedding,cost_first,cheapest_first,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9671,0.9671,0.0,1.3e-07,0.1,0.6459999999999999,0.999
@@ -139,20 +139,20 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 20,tool.communication.email,cost_first,highest_quality_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 20,tool.communication.email,cost_first,most_expensive_first,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
 20,tool.communication.email,cost_first,random,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
-21,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-21,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-21,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-21,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-21,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-21,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-21,ai.video.generation,balanced,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-22,ai.vision.image_generation,balanced,asm_topsis,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
-22,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-22,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-22,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-22,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-22,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-22,ai.vision.image_generation,balanced,random,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
+21,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+21,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+21,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+21,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+21,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+21,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+21,ai.video.generation,balanced,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+22,ai.vision.image_generation,balanced,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+22,ai.vision.image_generation,balanced,random,google/imagen-3@3.0,Imagen 3,0.35,0.9934,0.6434,0.04,10.0,0.72,0.999
 23,infra.compute.gpu,quality_first,asm_topsis,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 23,infra.compute.gpu,quality_first,weighted_average,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 23,infra.compute.gpu,quality_first,cheapest_first,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
@@ -181,13 +181,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 26,infra.database.vector,cost_first,highest_quality_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 26,infra.database.vector,cost_first,most_expensive_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 26,infra.database.vector,cost_first,random,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
-27,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-27,ai.vision.image_generation,speed_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
+27,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+27,ai.vision.image_generation,speed_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
 28,tool.automation.browser,cost_first,asm_topsis,steel/browser@v1,Steel Browser,0.9991,0.9991,0.0,0.005,1.5,1,0.995
 28,tool.automation.browser,cost_first,weighted_average,steel/browser@v1,Steel Browser,0.9991,0.9991,0.0,0.005,1.5,1,0.995
 28,tool.automation.browser,cost_first,cheapest_first,steel/browser@v1,Steel Browser,0.9991,0.9991,0.0,0.005,1.5,1,0.995
@@ -195,13 +195,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 28,tool.automation.browser,cost_first,highest_quality_first,steel/browser@v1,Steel Browser,0.9991,0.9991,0.0,0.005,1.5,1,0.995
 28,tool.automation.browser,cost_first,most_expensive_first,browserbase/api@v1,Browserbase,0.0009,0.9991,0.9982,0.01,2.0,0.96,0.998
 28,tool.automation.browser,cost_first,random,steel/browser@v1,Steel Browser,0.9991,0.9991,0.0,0.005,1.5,1,0.995
-29,ai.video.generation,quality_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.5
-29,ai.video.generation,quality_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-29,ai.video.generation,quality_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.5
-29,ai.video.generation,quality_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-29,ai.video.generation,quality_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-29,ai.video.generation,quality_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-29,ai.video.generation,quality_first,random,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
+29,ai.video.generation,quality_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.996
+29,ai.video.generation,quality_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+29,ai.video.generation,quality_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.996
+29,ai.video.generation,quality_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+29,ai.video.generation,quality_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+29,ai.video.generation,quality_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+29,ai.video.generation,quality_first,random,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
 30,tool.data.search,cost_first,asm_topsis,tavily/search-api@v1,Tavily Search,0.9436,0.9436,0.0,0.001,0.8,0.92,0.998
 30,tool.data.search,cost_first,weighted_average,tavily/search-api@v1,Tavily Search,0.9436,0.9436,0.0,0.001,0.8,0.92,0.998
 30,tool.data.search,cost_first,cheapest_first,tavily/search-api@v1,Tavily Search,0.9436,0.9436,0.0,0.001,0.8,0.92,0.998
@@ -251,13 +251,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 36,tool.productivity.spreadsheet,balanced,highest_quality_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 36,tool.productivity.spreadsheet,balanced,most_expensive_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 36,tool.productivity.spreadsheet,balanced,random,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
-37,ai.llm.chat,cost_first,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-37,ai.llm.chat,cost_first,weighted_average,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-37,ai.llm.chat,cost_first,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-37,ai.llm.chat,cost_first,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-37,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-37,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2148,0.9083,0.6935,1.14e-05,0.8,0.8166666666666667,0.999
-37,ai.llm.chat,cost_first,random,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
+37,ai.llm.chat,cost_first,asm_topsis,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+37,ai.llm.chat,cost_first,weighted_average,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+37,ai.llm.chat,cost_first,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+37,ai.llm.chat,cost_first,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+37,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.3691,0.9483,0.5792,7.375e-06,1.5,0.8333333333333334,0.999
+37,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.1018,0.9483,0.8465,1.14e-05,0.8,0.8166666666666667,0.999
+37,ai.llm.chat,cost_first,random,openai/gpt-4o@2024-11-20,GPT-4o,0.3433,0.9483,0.605,7.75e-06,0.6,0.8083333333333333,0.999
 38,ai.audio.stt,cost_first,asm_topsis,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
 38,ai.audio.stt,cost_first,weighted_average,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
 38,ai.audio.stt,cost_first,cheapest_first,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
@@ -349,13 +349,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 50,tool.data.search,cost_first,highest_quality_first,exa/search-api@v1,Exa Search,0.0564,0.9436,0.8872,0.003,0.6,0.95,0.997
 50,tool.data.search,cost_first,most_expensive_first,exa/search-api@v1,Exa Search,0.0564,0.9436,0.8872,0.003,0.6,0.95,0.997
 50,tool.data.search,cost_first,random,exa/search-api@v1,Exa Search,0.0564,0.9436,0.8872,0.003,0.6,0.95,0.997
-51,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-51,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-51,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-51,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-51,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-51,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-51,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
+51,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+51,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+51,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+51,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+51,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+51,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+51,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
 52,ai.nlp.translation,cost_first,asm_topsis,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 52,ai.nlp.translation,cost_first,weighted_average,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 52,ai.nlp.translation,cost_first,cheapest_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
@@ -384,13 +384,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 55,ai.code.completion,balanced,highest_quality_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 55,ai.code.completion,balanced,most_expensive_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 55,ai.code.completion,balanced,random,github/copilot@v1,GitHub Copilot,1.0,1.0,0.0,0,0.15,0.5,0.999
-56,ai.vision.image_generation,balanced,asm_topsis,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
-56,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-56,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-56,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-56,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-56,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-56,ai.vision.image_generation,balanced,random,openai/dall-e-3@3.0,DALL-E 3,0.4891,0.6017,0.1126,0.04,12.0,0.67,0.999
+56,ai.vision.image_generation,balanced,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+56,ai.vision.image_generation,balanced,random,openai/dall-e-3@3.0,DALL-E 3,0.0066,0.9934,0.9868,0.04,12.0,0.67,0.999
 57,tool.devops.ci,cost_first,asm_topsis,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
 57,tool.devops.ci,cost_first,weighted_average,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
 57,tool.devops.ci,cost_first,cheapest_first,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
@@ -398,13 +398,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 57,tool.devops.ci,cost_first,highest_quality_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 57,tool.devops.ci,cost_first,most_expensive_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 57,tool.devops.ci,cost_first,random,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
-58,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-58,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-58,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-58,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-58,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-58,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-58,ai.video.generation,balanced,random,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
+58,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+58,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+58,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+58,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+58,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+58,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+58,ai.video.generation,balanced,random,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
 59,tool.devops.ci,cost_first,asm_topsis,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
 59,tool.devops.ci,cost_first,weighted_average,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
 59,tool.devops.ci,cost_first,cheapest_first,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
@@ -412,13 +412,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 59,tool.devops.ci,cost_first,highest_quality_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 59,tool.devops.ci,cost_first,most_expensive_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 59,tool.devops.ci,cost_first,random,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
-60,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-60,ai.vision.image_generation,speed_first,random,google/imagen-3@3.0,Imagen 3,0.5104,0.7963,0.2859,0.04,10.0,0.72,0.999
+60,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+60,ai.vision.image_generation,speed_first,random,google/imagen-3@3.0,Imagen 3,0.4797,0.9982,0.5185,0.04,10.0,0.72,0.999
 61,tool.productivity.spreadsheet,cost_first,asm_topsis,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 61,tool.productivity.spreadsheet,cost_first,weighted_average,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 61,tool.productivity.spreadsheet,cost_first,cheapest_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
@@ -489,13 +489,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 70,ai.nlp.translation,balanced,highest_quality_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 70,ai.nlp.translation,balanced,most_expensive_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 70,ai.nlp.translation,balanced,random,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
-71,ai.llm.chat,cost_first,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-71,ai.llm.chat,cost_first,weighted_average,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-71,ai.llm.chat,cost_first,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-71,ai.llm.chat,cost_first,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-71,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-71,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2148,0.9083,0.6935,1.14e-05,0.8,0.8166666666666667,0.999
-71,ai.llm.chat,cost_first,random,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2148,0.9083,0.6935,1.14e-05,0.8,0.8166666666666667,0.999
+71,ai.llm.chat,cost_first,asm_topsis,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+71,ai.llm.chat,cost_first,weighted_average,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+71,ai.llm.chat,cost_first,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+71,ai.llm.chat,cost_first,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+71,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.3691,0.9483,0.5792,7.375e-06,1.5,0.8333333333333334,0.999
+71,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.1018,0.9483,0.8465,1.14e-05,0.8,0.8166666666666667,0.999
+71,ai.llm.chat,cost_first,random,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.3691,0.9483,0.5792,7.375e-06,1.5,0.8333333333333334,0.999
 72,tool.productivity.spreadsheet,cost_first,asm_topsis,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 72,tool.productivity.spreadsheet,cost_first,weighted_average,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 72,tool.productivity.spreadsheet,cost_first,cheapest_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
@@ -503,13 +503,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 72,tool.productivity.spreadsheet,cost_first,highest_quality_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 72,tool.productivity.spreadsheet,cost_first,most_expensive_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 72,tool.productivity.spreadsheet,cost_first,random,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
-73,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-73,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-73,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-73,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-73,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-73,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-73,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
+73,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+73,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+73,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+73,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+73,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+73,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+73,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
 74,ai.nlp.translation,speed_first,asm_topsis,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 74,ai.nlp.translation,speed_first,weighted_average,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 74,ai.nlp.translation,speed_first,cheapest_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
@@ -531,13 +531,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 76,tool.data.scraping,speed_first,highest_quality_first,firecrawl/scrape@v1,Firecrawl,0.0003,0.9997,0.9994,0.001,3.0,0.5,0.997
 76,tool.data.scraping,speed_first,most_expensive_first,firecrawl/scrape@v1,Firecrawl,0.0003,0.9997,0.9994,0.001,3.0,0.5,0.997
 76,tool.data.scraping,speed_first,random,jina/reader@v1,Jina Reader,0.9997,0.9997,0.0,0,2.0,0.5,0.996
-77,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-77,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-77,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-77,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-77,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-77,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-77,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
+77,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+77,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+77,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+77,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+77,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+77,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+77,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
 78,tool.productivity.spreadsheet,speed_first,asm_topsis,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 78,tool.productivity.spreadsheet,speed_first,weighted_average,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 78,tool.productivity.spreadsheet,speed_first,cheapest_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
@@ -552,13 +552,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 79,tool.communication.email,cost_first,highest_quality_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 79,tool.communication.email,cost_first,most_expensive_first,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
 79,tool.communication.email,cost_first,random,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
-80,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-80,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-80,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-80,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-80,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-80,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-80,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
+80,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+80,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+80,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+80,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+80,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+80,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+80,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
 81,infra.database.postgres,speed_first,asm_topsis,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
 81,infra.database.postgres,speed_first,weighted_average,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
 81,infra.database.postgres,speed_first,cheapest_first,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
@@ -566,13 +566,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 81,infra.database.postgres,speed_first,highest_quality_first,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
 81,infra.database.postgres,speed_first,most_expensive_first,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
 81,infra.database.postgres,speed_first,random,neon/serverless-postgres@v1,Neon Serverless Postgres,1.0,1.0,0.0,0,0.008,0.5,0.999
-82,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-82,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-82,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-82,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-82,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-82,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-82,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
+82,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+82,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+82,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+82,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+82,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+82,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+82,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
 83,tool.automation.browser,speed_first,asm_topsis,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
 83,tool.automation.browser,speed_first,weighted_average,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
 83,tool.automation.browser,speed_first,cheapest_first,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
@@ -594,13 +594,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 85,infra.database.vector,balanced,highest_quality_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 85,infra.database.vector,balanced,most_expensive_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 85,infra.database.vector,balanced,random,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
-86,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-86,ai.vision.image_generation,speed_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
+86,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+86,ai.vision.image_generation,speed_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
 87,ai.audio.tts,cost_first,asm_topsis,openai/tts-1@1.0,OpenAI TTS,0.9414,0.9414,0.0,1.5e-05,0.5,0.75,0.999
 87,ai.audio.tts,cost_first,weighted_average,openai/tts-1@1.0,OpenAI TTS,0.9414,0.9414,0.0,1.5e-05,0.5,0.75,0.999
 87,ai.audio.tts,cost_first,cheapest_first,openai/tts-1@1.0,OpenAI TTS,0.9414,0.9414,0.0,1.5e-05,0.5,0.75,0.999
@@ -727,13 +727,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 104,ai.nlp.translation,balanced,highest_quality_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 104,ai.nlp.translation,balanced,most_expensive_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 104,ai.nlp.translation,balanced,random,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
-105,ai.llm.chat,balanced,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9318,0.9318,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-105,ai.llm.chat,balanced,weighted_average,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.4367,0.9318,0.4951,7.375e-06,1.5,0.8333333333333334,0.999
-105,ai.llm.chat,balanced,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.4367,0.9318,0.4951,7.375e-06,1.5,0.8333333333333334,0.999
-105,ai.llm.chat,balanced,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9318,0.9318,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-105,ai.llm.chat,balanced,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.4367,0.9318,0.4951,7.375e-06,1.5,0.8333333333333334,0.999
-105,ai.llm.chat,balanced,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.4913,0.9318,0.4405,1.14e-05,0.8,0.8166666666666667,0.999
-105,ai.llm.chat,balanced,random,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.4367,0.9318,0.4951,7.375e-06,1.5,0.8333333333333334,0.999
+105,ai.llm.chat,balanced,asm_topsis,minimax/m2.7@2.7,MiniMax M2.7,0.8868,0.8868,0.0,7.291999999999999e-07,0.9,0.78,0.997
+105,ai.llm.chat,balanced,weighted_average,openai/gpt-4o@2024-11-20,GPT-4o,0.42,0.8868,0.4668,7.75e-06,0.6,0.8083333333333333,0.999
+105,ai.llm.chat,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.8266,0.8868,0.0602,3.024e-07,0.55,0.53,0.997
+105,ai.llm.chat,balanced,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.8266,0.8868,0.0602,3.024e-07,0.55,0.53,0.997
+105,ai.llm.chat,balanced,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.374,0.8868,0.5128,7.375e-06,1.5,0.8333333333333334,0.999
+105,ai.llm.chat,balanced,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2361,0.8868,0.6507,1.14e-05,0.8,0.8166666666666667,0.999
+105,ai.llm.chat,balanced,random,zhipu/glm-5@5.0,Z.ai GLM-5,0.7617,0.8868,0.1251,1.5455999999999997e-06,1.1,0.58,0.998
 106,tool.automation.browser,speed_first,asm_topsis,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
 106,tool.automation.browser,speed_first,weighted_average,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
 106,tool.automation.browser,speed_first,cheapest_first,steel/browser@v1,Steel Browser,0.9984,0.9984,0.0,0.005,1.5,1,0.995
@@ -762,13 +762,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 109,ai.audio.stt,quality_first,highest_quality_first,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
 109,ai.audio.stt,quality_first,most_expensive_first,openai/whisper@v1,OpenAI Whisper,0.0,1.0,1.0,0.006,3.0,0.5,0.999
 109,ai.audio.stt,quality_first,random,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
-110,ai.vision.image_generation,balanced,asm_topsis,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
-110,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-110,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-110,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-110,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-110,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-110,ai.vision.image_generation,balanced,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
+110,ai.vision.image_generation,balanced,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+110,ai.vision.image_generation,balanced,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
 111,infra.database.vector,cost_first,asm_topsis,qdrant/cloud@v1,Qdrant,0.9984,0.9984,0.0,0,0.01,0.5,0.998
 111,infra.database.vector,cost_first,weighted_average,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 111,infra.database.vector,cost_first,cheapest_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
@@ -776,13 +776,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 111,infra.database.vector,cost_first,highest_quality_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 111,infra.database.vector,cost_first,most_expensive_first,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
 111,infra.database.vector,cost_first,random,pinecone/index@v3,Pinecone,0.0016,0.9984,0.9968,0,0.02,0.5,0.999
-112,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-112,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-112,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-112,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-112,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-112,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-112,ai.video.generation,balanced,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
+112,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+112,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+112,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+112,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+112,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+112,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+112,ai.video.generation,balanced,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
 113,tool.communication.email,balanced,asm_topsis,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 113,tool.communication.email,balanced,weighted_average,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 113,tool.communication.email,balanced,cheapest_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
@@ -804,13 +804,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 115,tool.communication.email,cost_first,highest_quality_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 115,tool.communication.email,cost_first,most_expensive_first,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
 115,tool.communication.email,cost_first,random,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
-116,ai.vision.image_generation,balanced,asm_topsis,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
-116,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-116,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-116,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-116,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-116,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5109,0.6017,0.0908,0.04,8.0,0.904,0.5
-116,ai.vision.image_generation,balanced,random,google/imagen-3@3.0,Imagen 3,0.6017,0.6017,0.0,0.04,10.0,0.72,0.999
+116,ai.vision.image_generation,balanced,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9934,0.9934,0.0,0.04,8.0,0.904,0.995
+116,ai.vision.image_generation,balanced,random,google/imagen-3@3.0,Imagen 3,0.35,0.9934,0.6434,0.04,10.0,0.72,0.999
 117,tool.devops.ci,balanced,asm_topsis,circleci/cloud@v2,CircleCI,0.5033,0.5033,0.0,0.0006,10.0,0.043,0.999
 117,tool.devops.ci,balanced,weighted_average,circleci/cloud@v2,CircleCI,0.5033,0.5033,0.0,0.0006,10.0,0.043,0.999
 117,tool.devops.ci,balanced,cheapest_first,circleci/cloud@v2,CircleCI,0.5033,0.5033,0.0,0.0006,10.0,0.043,0.999
@@ -818,13 +818,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 117,tool.devops.ci,balanced,highest_quality_first,github/actions@v2,GitHub Actions,0.4967,0.5033,0.0066,0.008,15.0,0.62,0.998
 117,tool.devops.ci,balanced,most_expensive_first,github/actions@v2,GitHub Actions,0.4967,0.5033,0.0066,0.008,15.0,0.62,0.998
 117,tool.devops.ci,balanced,random,circleci/cloud@v2,CircleCI,0.5033,0.5033,0.0,0.0006,10.0,0.043,0.999
-118,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-118,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-118,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-118,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-118,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-118,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-118,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
+118,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+118,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+118,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+118,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+118,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+118,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+118,ai.video.generation,speed_first,random,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
 119,tool.devops.deployment,speed_first,asm_topsis,vercel/platform@v1,Vercel,1.0,1.0,0.0,0,1.0,0.5,0.999
 119,tool.devops.deployment,speed_first,weighted_average,vercel/platform@v1,Vercel,1.0,1.0,0.0,0,1.0,0.5,0.999
 119,tool.devops.deployment,speed_first,cheapest_first,vercel/platform@v1,Vercel,1.0,1.0,0.0,0,1.0,0.5,0.999
@@ -839,13 +839,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 120,tool.data.scraping,cost_first,highest_quality_first,firecrawl/scrape@v1,Firecrawl,0.0001,0.9999,0.9998,0.001,3.0,0.5,0.997
 120,tool.data.scraping,cost_first,most_expensive_first,firecrawl/scrape@v1,Firecrawl,0.0001,0.9999,0.9998,0.001,3.0,0.5,0.997
 120,tool.data.scraping,cost_first,random,firecrawl/scrape@v1,Firecrawl,0.0001,0.9999,0.9998,0.001,3.0,0.5,0.997
-121,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-121,ai.vision.image_generation,quality_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
+121,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+121,ai.vision.image_generation,quality_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
 122,infra.compute.gpu,quality_first,asm_topsis,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 122,infra.compute.gpu,quality_first,weighted_average,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 122,infra.compute.gpu,quality_first,cheapest_first,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
@@ -881,20 +881,20 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 126,tool.devops.ci,cost_first,highest_quality_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 126,tool.devops.ci,cost_first,most_expensive_first,github/actions@v2,GitHub Actions,0.3136,0.6864,0.3728,0.008,15.0,0.62,0.998
 126,tool.devops.ci,cost_first,random,circleci/cloud@v2,CircleCI,0.6864,0.6864,0.0,0.0006,10.0,0.043,0.999
-127,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-127,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.4257,0.6809,0.2552,0.04,10.0,0.72,0.999
-128,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.7963,0.7963,0.0,0.04,8.0,0.904,0.5
-128,ai.vision.image_generation,speed_first,random,google/imagen-3@3.0,Imagen 3,0.5104,0.7963,0.2859,0.04,10.0,0.72,0.999
+127,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+127,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.2797,0.9968,0.7171,0.04,10.0,0.72,0.999
+128,ai.vision.image_generation,speed_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9982,0.9982,0.0,0.04,8.0,0.904,0.995
+128,ai.vision.image_generation,speed_first,random,google/imagen-3@3.0,Imagen 3,0.4797,0.9982,0.5185,0.04,10.0,0.72,0.999
 129,tool.data.scraping,quality_first,asm_topsis,jina/reader@v1,Jina Reader,0.9991,0.9991,0.0,0,2.0,0.5,0.996
 129,tool.data.scraping,quality_first,weighted_average,jina/reader@v1,Jina Reader,0.9991,0.9991,0.0,0,2.0,0.5,0.996
 129,tool.data.scraping,quality_first,cheapest_first,jina/reader@v1,Jina Reader,0.9991,0.9991,0.0,0,2.0,0.5,0.996
@@ -923,13 +923,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 132,infra.compute.gpu,speed_first,highest_quality_first,replicate/gpu-serverless@1.0,Replicate Serverless GPU,0.0,1.0,1.0,0.000225,5.0,0.5,0.995
 132,infra.compute.gpu,speed_first,most_expensive_first,replicate/gpu-serverless@1.0,Replicate Serverless GPU,0.0,1.0,1.0,0.000225,5.0,0.5,0.995
 132,infra.compute.gpu,speed_first,random,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
-133,ai.video.generation,quality_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.5
-133,ai.video.generation,quality_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-133,ai.video.generation,quality_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.5
-133,ai.video.generation,quality_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-133,ai.video.generation,quality_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-133,ai.video.generation,quality_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
-133,ai.video.generation,quality_first,random,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.5
+133,ai.video.generation,quality_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.996
+133,ai.video.generation,quality_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+133,ai.video.generation,quality_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.6769,0.6769,0.0,0.029,60.0,0.835,0.996
+133,ai.video.generation,quality_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+133,ai.video.generation,quality_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+133,ai.video.generation,quality_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
+133,ai.video.generation,quality_first,random,google/veo-3.1@3.1,Veo 3.1,0.3231,0.6769,0.3538,0.2,45.0,0.847,0.997
 134,tool.communication.email,cost_first,asm_topsis,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 134,tool.communication.email,cost_first,weighted_average,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 134,tool.communication.email,cost_first,cheapest_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
@@ -1007,13 +1007,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 144,ai.code.completion,cost_first,highest_quality_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 144,ai.code.completion,cost_first,most_expensive_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 144,ai.code.completion,cost_first,random,github/copilot@v1,GitHub Copilot,1.0,1.0,0.0,0,0.15,0.5,0.999
-145,ai.llm.chat,speed_first,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9821,0.9821,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-145,ai.llm.chat,speed_first,weighted_average,openai/gpt-4o@2024-11-20,GPT-4o,0.9821,0.9821,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-145,ai.llm.chat,speed_first,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.1238,0.9821,0.8583,7.375e-06,1.5,0.8333333333333334,0.999
-145,ai.llm.chat,speed_first,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9821,0.9821,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-145,ai.llm.chat,speed_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.1238,0.9821,0.8583,7.375e-06,1.5,0.8333333333333334,0.999
-145,ai.llm.chat,speed_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.7472,0.9821,0.2349,1.14e-05,0.8,0.8166666666666667,0.999
-145,ai.llm.chat,speed_first,random,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.1238,0.9821,0.8583,7.375e-06,1.5,0.8333333333333334,0.999
+145,ai.llm.chat,speed_first,asm_topsis,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.8716,0.8716,0.0,3.024e-07,0.55,0.53,0.997
+145,ai.llm.chat,speed_first,weighted_average,openai/gpt-4o@2024-11-20,GPT-4o,0.713,0.8716,0.1586,7.75e-06,0.6,0.8083333333333333,0.999
+145,ai.llm.chat,speed_first,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.8716,0.8716,0.0,3.024e-07,0.55,0.53,0.997
+145,ai.llm.chat,speed_first,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.8716,0.8716,0.0,3.024e-07,0.55,0.53,0.997
+145,ai.llm.chat,speed_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.2027,0.8716,0.6689,7.375e-06,1.5,0.8333333333333334,0.999
+145,ai.llm.chat,speed_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.5416,0.8716,0.33,1.14e-05,0.8,0.8166666666666667,0.999
+145,ai.llm.chat,speed_first,random,qwen/qwen3-max@3.0,Qwen3 Max,0.6287,0.8716,0.2429,1.736e-06,0.95,0.56,1.0
 146,tool.productivity.todo,quality_first,asm_topsis,todoist/api@v2,Todoist,0.8911,0.8911,0.0,0,0.12,0.044000000000000004,0.999
 146,tool.productivity.todo,quality_first,weighted_average,ticktick/api@v2,TickTick,0.6608,0.8911,0.2303,0,0.15,0.045,0.998
 146,tool.productivity.todo,quality_first,cheapest_first,google/tasks-api@v1,Google Tasks,0.0021,0.8911,0.889,0,0.2,0.042,0.9995
@@ -1021,13 +1021,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 146,tool.productivity.todo,quality_first,highest_quality_first,ticktick/api@v2,TickTick,0.6608,0.8911,0.2303,0,0.15,0.045,0.998
 146,tool.productivity.todo,quality_first,most_expensive_first,google/tasks-api@v1,Google Tasks,0.0021,0.8911,0.889,0,0.2,0.042,0.9995
 146,tool.productivity.todo,quality_first,random,todoist/api@v2,Todoist,0.8911,0.8911,0.0,0,0.12,0.044000000000000004,0.999
-147,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-147,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-147,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.5
-147,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-147,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-147,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
-147,ai.video.generation,balanced,random,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.5
+147,ai.video.generation,balanced,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+147,ai.video.generation,balanced,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+147,ai.video.generation,balanced,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.8635,0.8635,0.0,0.029,60.0,0.835,0.996
+147,ai.video.generation,balanced,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+147,ai.video.generation,balanced,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+147,ai.video.generation,balanced,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
+147,ai.video.generation,balanced,random,google/veo-3.1@3.1,Veo 3.1,0.1365,0.8635,0.727,0.2,45.0,0.847,0.997
 148,tool.productivity.spreadsheet,quality_first,asm_topsis,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 148,tool.productivity.spreadsheet,quality_first,weighted_average,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
 148,tool.productivity.spreadsheet,quality_first,cheapest_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
@@ -1056,13 +1056,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 151,tool.communication.email,cost_first,highest_quality_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 151,tool.communication.email,cost_first,most_expensive_first,twilio/sendgrid@v3,SendGrid,0.0,1.0,1.0,0.00035,0.4,0.04,0.999
 151,tool.communication.email,cost_first,random,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
-152,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-152,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-152,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-152,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-152,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-152,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-152,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
+152,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+152,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+152,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+152,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+152,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+152,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+152,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
 153,infra.compute.gpu,balanced,asm_topsis,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 153,infra.compute.gpu,balanced,weighted_average,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
 153,infra.compute.gpu,balanced,cheapest_first,runpod/gpu-serverless@1.0,RunPod Serverless GPU,1.0,1.0,0.0,0.00019,3.0,0.5,0.998
@@ -1077,13 +1077,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 154,tool.data.scraping,balanced,highest_quality_first,firecrawl/scrape@v1,Firecrawl,0.0005,0.9995,0.999,0.001,3.0,0.5,0.997
 154,tool.data.scraping,balanced,most_expensive_first,firecrawl/scrape@v1,Firecrawl,0.0005,0.9995,0.999,0.001,3.0,0.5,0.997
 154,tool.data.scraping,balanced,random,firecrawl/scrape@v1,Firecrawl,0.0005,0.9995,0.999,0.001,3.0,0.5,0.997
-155,ai.llm.chat,quality_first,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9113,0.9113,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-155,ai.llm.chat,quality_first,weighted_average,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.216,0.9113,0.6953,7.375e-06,1.5,0.8333333333333334,0.999
-155,ai.llm.chat,quality_first,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.216,0.9113,0.6953,7.375e-06,1.5,0.8333333333333334,0.999
-155,ai.llm.chat,quality_first,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9113,0.9113,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-155,ai.llm.chat,quality_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.216,0.9113,0.6953,7.375e-06,1.5,0.8333333333333334,0.999
-155,ai.llm.chat,quality_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.692,0.9113,0.2193,1.14e-05,0.8,0.8166666666666667,0.999
-155,ai.llm.chat,quality_first,random,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.216,0.9113,0.6953,7.375e-06,1.5,0.8333333333333334,0.999
+155,ai.llm.chat,quality_first,asm_topsis,minimax/m2.7@2.7,MiniMax M2.7,0.7871,0.7871,0.0,7.291999999999999e-07,0.9,0.78,0.997
+155,ai.llm.chat,quality_first,weighted_average,openai/gpt-4o@2024-11-20,GPT-4o,0.682,0.7871,0.1051,7.75e-06,0.6,0.8083333333333333,0.999
+155,ai.llm.chat,quality_first,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.5314,0.7871,0.2557,3.024e-07,0.55,0.53,0.997
+155,ai.llm.chat,quality_first,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.5314,0.7871,0.2557,3.024e-07,0.55,0.53,0.997
+155,ai.llm.chat,quality_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.5268,0.7871,0.2603,7.375e-06,1.5,0.8333333333333334,0.999
+155,ai.llm.chat,quality_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.564,0.7871,0.2231,1.14e-05,0.8,0.8166666666666667,0.999
+155,ai.llm.chat,quality_first,random,openai/gpt-4o@2024-11-20,GPT-4o,0.682,0.7871,0.1051,7.75e-06,0.6,0.8083333333333333,0.999
 156,ai.llm.embedding,speed_first,asm_topsis,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9783,0.9783,0.0,1.3e-07,0.1,0.6459999999999999,0.999
 156,ai.llm.embedding,speed_first,weighted_average,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9783,0.9783,0.0,1.3e-07,0.1,0.6459999999999999,0.999
 156,ai.llm.embedding,speed_first,cheapest_first,openai/text-embedding-3-large@3.0,text-embedding-3-large,0.9783,0.9783,0.0,1.3e-07,0.1,0.6459999999999999,0.999
@@ -1098,13 +1098,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 157,tool.productivity.spreadsheet,balanced,highest_quality_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 157,tool.productivity.spreadsheet,balanced,most_expensive_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 157,tool.productivity.spreadsheet,balanced,random,google/sheets-api@v4,Google Sheets,1.0,1.0,0.0,0,0.1,0.5,0.9995
-158,ai.vision.image_generation,cost_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
-158,ai.vision.image_generation,cost_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.5972,0.5972,0.0,0.04,8.0,0.904,0.5
+158,ai.vision.image_generation,cost_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
+158,ai.vision.image_generation,cost_first,random,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9953,0.9953,0.0,0.04,8.0,0.904,0.995
 159,ai.nlp.translation,quality_first,asm_topsis,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 159,ai.nlp.translation,quality_first,weighted_average,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
 159,ai.nlp.translation,quality_first,cheapest_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
@@ -1119,13 +1119,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 160,ai.llm.embedding,speed_first,highest_quality_first,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0217,0.9783,0.9566,1.8e-07,0.15,0.662,0.998
 160,ai.llm.embedding,speed_first,most_expensive_first,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0217,0.9783,0.9566,1.8e-07,0.15,0.662,0.998
 160,ai.llm.embedding,speed_first,random,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0217,0.9783,0.9566,1.8e-07,0.15,0.662,0.998
-161,ai.llm.chat,cost_first,asm_topsis,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-161,ai.llm.chat,cost_first,weighted_average,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-161,ai.llm.chat,cost_first,cheapest_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-161,ai.llm.chat,cost_first,fastest_first,openai/gpt-4o@2024-11-20,GPT-4o,0.9083,0.9083,0.0,7.75e-06,0.6,0.8083333333333333,0.999
-161,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.7394,0.9083,0.1689,7.375e-06,1.5,0.8333333333333334,0.999
-161,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2148,0.9083,0.6935,1.14e-05,0.8,0.8166666666666667,0.999
-161,ai.llm.chat,cost_first,random,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.2148,0.9083,0.6935,1.14e-05,0.8,0.8166666666666667,0.999
+161,ai.llm.chat,cost_first,asm_topsis,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+161,ai.llm.chat,cost_first,weighted_average,minimax/m2.7@2.7,MiniMax M2.7,0.9483,0.9483,0.0,7.291999999999999e-07,0.9,0.78,0.997
+161,ai.llm.chat,cost_first,cheapest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+161,ai.llm.chat,cost_first,fastest_first,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
+161,ai.llm.chat,cost_first,highest_quality_first,google/gemini-2.5-pro@2.5,Gemini 2.5 Pro,0.3691,0.9483,0.5792,7.375e-06,1.5,0.8333333333333334,0.999
+161,ai.llm.chat,cost_first,most_expensive_first,anthropic/claude-sonnet-4@4.0,Claude Sonnet 4,0.1018,0.9483,0.8465,1.14e-05,0.8,0.8166666666666667,0.999
+161,ai.llm.chat,cost_first,random,deepseek/deepseek-v4-flash@4.0,DeepSeek V4 Flash,0.9095,0.9483,0.0388,3.024e-07,0.55,0.53,0.997
 162,infra.database.vector,speed_first,asm_topsis,qdrant/cloud@v1,Qdrant,0.9997,0.9997,0.0,0,0.01,0.5,0.998
 162,infra.database.vector,speed_first,weighted_average,qdrant/cloud@v1,Qdrant,0.9997,0.9997,0.0,0,0.01,0.5,0.998
 162,infra.database.vector,speed_first,cheapest_first,pinecone/index@v3,Pinecone,0.0003,0.9997,0.9994,0,0.02,0.5,0.999
@@ -1175,13 +1175,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 168,ai.nlp.translation,quality_first,highest_quality_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 168,ai.nlp.translation,quality_first,most_expensive_first,deepl/translate@v2,DeepL Translate,0.0,1.0,1.0,2e-05,0.2,0.5,0.999
 168,ai.nlp.translation,quality_first,random,google/translate@v3,Google Cloud Translation,1.0,1.0,0.0,2e-05,0.15,0.5,0.999
-169,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-169,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-169,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-169,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-169,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-169,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-169,ai.video.generation,cost_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
+169,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+169,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+169,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+169,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+169,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+169,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+169,ai.video.generation,cost_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
 170,tool.communication.email,cost_first,asm_topsis,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 170,tool.communication.email,cost_first,weighted_average,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
 170,tool.communication.email,cost_first,cheapest_first,resend/email-api@v1,Resend,1.0,1.0,0.0,0.00028,0.3,0.985,0.999
@@ -1196,13 +1196,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 171,ai.llm.embedding,cost_first,highest_quality_first,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0329,0.9671,0.9342,1.8e-07,0.15,0.662,0.998
 171,ai.llm.embedding,cost_first,most_expensive_first,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0329,0.9671,0.9342,1.8e-07,0.15,0.662,0.998
 171,ai.llm.embedding,cost_first,random,voyageai/voyage-3-large@3.0,Voyage 3 Large,0.0329,0.9671,0.9342,1.8e-07,0.15,0.662,0.998
-172,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-172,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.4257,0.6809,0.2552,0.04,10.0,0.72,0.999
+172,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+172,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.2797,0.9968,0.7171,0.04,10.0,0.72,0.999
 173,ai.audio.stt,balanced,asm_topsis,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
 173,ai.audio.stt,balanced,weighted_average,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
 173,ai.audio.stt,balanced,cheapest_first,deepgram/nova@v2,Deepgram Nova-2,1.0,1.0,0.0,0.0043,0.2,0.5,0.999
@@ -1294,13 +1294,13 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 185,ai.code.completion,quality_first,highest_quality_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 185,ai.code.completion,quality_first,most_expensive_first,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
 185,ai.code.completion,quality_first,random,cursor/editor@v1,Cursor,0.0,1.0,1.0,0,0.2,0.5,0.998
-186,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-186,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-186,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.5
-186,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-186,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-186,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
-186,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.5
+186,ai.video.generation,cost_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+186,ai.video.generation,cost_first,weighted_average,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+186,ai.video.generation,cost_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.9585,0.9585,0.0,0.029,60.0,0.835,0.996
+186,ai.video.generation,cost_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+186,ai.video.generation,cost_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+186,ai.video.generation,cost_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
+186,ai.video.generation,cost_first,random,google/veo-3.1@3.1,Veo 3.1,0.0415,0.9585,0.917,0.2,45.0,0.847,0.997
 187,tool.data.scraping,speed_first,asm_topsis,jina/reader@v1,Jina Reader,0.9997,0.9997,0.0,0,2.0,0.5,0.996
 187,tool.data.scraping,speed_first,weighted_average,jina/reader@v1,Jina Reader,0.9997,0.9997,0.0,0,2.0,0.5,0.996
 187,tool.data.scraping,speed_first,cheapest_first,jina/reader@v1,Jina Reader,0.9997,0.9997,0.0,0,2.0,0.5,0.996
@@ -1378,20 +1378,20 @@ task_id,taxonomy,profile,strategy,service_id,display_name,utility,best_utility,r
 197,tool.productivity.spreadsheet,balanced,highest_quality_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 197,tool.productivity.spreadsheet,balanced,most_expensive_first,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
 197,tool.productivity.spreadsheet,balanced,random,airtable/api@v1,Airtable,0.0,1.0,1.0,0,0.12,0.5,0.999
-198,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-198,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-198,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-198,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-198,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-198,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.5
-198,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.5
-199,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.6809,0.6809,0.0,0.04,8.0,0.904,0.5
-199,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.4257,0.6809,0.2552,0.04,10.0,0.72,0.999
+198,ai.video.generation,speed_first,asm_topsis,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+198,ai.video.generation,speed_first,weighted_average,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+198,ai.video.generation,speed_first,cheapest_first,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+198,ai.video.generation,speed_first,fastest_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+198,ai.video.generation,speed_first,highest_quality_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+198,ai.video.generation,speed_first,most_expensive_first,google/veo-3.1@3.1,Veo 3.1,0.4643,0.5357,0.0714,0.2,45.0,0.847,0.997
+198,ai.video.generation,speed_first,random,kuaishou/kling-3.0@3.0,Kling 3.0,0.5357,0.5357,0.0,0.029,60.0,0.835,0.996
+199,ai.vision.image_generation,quality_first,asm_topsis,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,weighted_average,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,cheapest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,fastest_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,highest_quality_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,most_expensive_first,black-forest-labs/flux-1.1-pro@1.1,FLUX 1.1 Pro,0.9968,0.9968,0.0,0.04,8.0,0.904,0.995
+199,ai.vision.image_generation,quality_first,random,google/imagen-3@3.0,Imagen 3,0.2797,0.9968,0.7171,0.04,10.0,0.72,0.999
 200,infra.database.vector,quality_first,asm_topsis,qdrant/cloud@v1,Qdrant,0.9988,0.9988,0.0,0,0.01,0.5,0.998
 200,infra.database.vector,quality_first,weighted_average,qdrant/cloud@v1,Qdrant,0.9988,0.9988,0.0,0,0.01,0.5,0.998
 200,infra.database.vector,quality_first,cheapest_first,pinecone/index@v3,Pinecone,0.0012,0.9988,0.9976,0,0.02,0.5,0.999

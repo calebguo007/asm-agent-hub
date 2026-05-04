@@ -4,198 +4,198 @@ task_id,taxonomy,profile,n_candidates,topsis_rank_full,topsis_rank_no_trust,kend
 3,tool.productivity.spreadsheet,quality_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
 4,ai.llm.embedding,cost_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
 5,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-6,ai.llm.chat,balanced,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-7,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-8,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-9,infra.database.vector,cost_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-10,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-11,ai.nlp.translation,quality_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-12,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-13,ai.vision.image_generation,speed_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-14,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-15,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-16,ai.audio.tts,cost_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-17,ai.code.completion,quality_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-18,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-19,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
-20,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-21,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
-22,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-23,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
-24,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-25,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-26,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-27,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-28,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-29,tool.automation.browser,speed_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-30,ai.llm.embedding,speed_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-31,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-32,ai.video.generation,speed_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-33,tool.productivity.spreadsheet,quality_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
-34,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-35,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-36,ai.audio.tts,quality_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-37,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-38,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-39,ai.nlp.translation,speed_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-40,tool.productivity.todo,quality_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-41,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-42,tool.productivity.todo,quality_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-43,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-44,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-45,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-46,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
-47,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-48,tool.automation.browser,cost_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-49,ai.video.generation,cost_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-50,tool.devops.deployment,speed_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-51,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-52,ai.video.generation,cost_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-53,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-54,tool.data.scraping,speed_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-55,infra.database.postgres,quality_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-56,tool.productivity.todo,quality_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-57,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-58,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-59,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-60,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-61,ai.nlp.translation,quality_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-62,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-63,tool.productivity.spreadsheet,quality_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
-64,tool.automation.browser,balanced,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-65,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
-66,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-67,ai.llm.chat,cost_first,3,"[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",1.0,True,0
-68,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-69,ai.nlp.translation,quality_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-70,tool.automation.browser,cost_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-71,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-72,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-73,tool.productivity.spreadsheet,balanced,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
-74,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-75,ai.llm.embedding,quality_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-76,ai.llm.embedding,cost_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-77,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-78,infra.database.vector,quality_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-79,ai.llm.embedding,speed_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-80,ai.video.generation,speed_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-81,ai.video.generation,quality_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-82,ai.nlp.translation,quality_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-83,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-84,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-85,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-86,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
-87,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-88,ai.audio.stt,quality_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-89,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-90,ai.nlp.translation,speed_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-91,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-92,tool.communication.email,quality_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-93,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-94,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-95,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-96,ai.nlp.translation,speed_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-97,infra.compute.gpu,quality_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-98,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-99,infra.database.vector,speed_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-100,tool.communication.email,balanced,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-101,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-102,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-103,tool.communication.chat,quality_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-104,ai.llm.chat,quality_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-105,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-106,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-107,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-108,infra.compute.gpu,quality_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-109,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-110,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-111,ai.llm.chat,balanced,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-112,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
-113,tool.devops.deployment,balanced,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-114,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-115,tool.productivity.todo,cost_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-116,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-117,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-118,tool.data.search,speed_first,2,"[""exa/search-api@v1"", ""tavily/search-api@v1""]","[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,True,0
-119,ai.llm.chat,speed_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-120,ai.llm.chat,speed_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-121,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+6,ai.llm.chat,balanced,8,"[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",0.9285714285714286,True,1
+7,infra.database.vector,balanced,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+8,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+9,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+10,tool.automation.browser,balanced,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+11,infra.database.vector,speed_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+12,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
+13,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+14,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+15,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+16,ai.llm.chat,cost_first,8,"[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""qwen/qwen3-max@3.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]",0.7857142857142857,True,2
+17,tool.devops.ci,balanced,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
+18,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+19,ai.llm.embedding,speed_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+20,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+21,ai.audio.stt,quality_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+22,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+23,tool.productivity.spreadsheet,speed_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+24,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+25,tool.devops.ci,speed_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+26,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+27,tool.devops.ci,speed_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
+28,tool.devops.deployment,speed_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+29,ai.vision.image_generation,cost_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+30,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+31,ai.audio.tts,quality_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+32,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+33,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+34,ai.audio.tts,quality_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+35,tool.productivity.spreadsheet,quality_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+36,tool.productivity.spreadsheet,speed_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+37,ai.llm.embedding,quality_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+38,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+39,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+40,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+41,tool.devops.ci,speed_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
+42,tool.productivity.todo,cost_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+43,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+44,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+45,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+46,tool.communication.chat,balanced,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+47,ai.llm.embedding,speed_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+48,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+49,ai.llm.chat,speed_first,8,"[""deepseek/deepseek-v4-flash@4.0"", ""openai/gpt-4o@2024-11-20"", ""minimax/m2.7@2.7"", ""qwen/qwen3-max@3.0"", ""anthropic/claude-sonnet-4@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""google/gemini-2.5-pro@2.5""]","[""deepseek/deepseek-v4-flash@4.0"", ""openai/gpt-4o@2024-11-20"", ""minimax/m2.7@2.7"", ""qwen/qwen3-max@3.0"", ""anthropic/claude-sonnet-4@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
+50,ai.video.generation,quality_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+51,tool.devops.ci,speed_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+52,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+53,ai.vision.image_generation,speed_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+54,infra.database.postgres,quality_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+55,tool.communication.email,balanced,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+56,infra.database.vector,quality_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+57,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+58,infra.compute.gpu,balanced,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+59,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+60,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+61,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+62,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+63,tool.communication.chat,balanced,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+64,ai.code.completion,cost_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+65,infra.database.postgres,quality_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+66,tool.data.search,speed_first,2,"[""exa/search-api@v1"", ""tavily/search-api@v1""]","[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,True,0
+67,ai.audio.tts,cost_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+68,tool.communication.chat,balanced,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+69,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+70,ai.video.generation,quality_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+71,tool.devops.ci,balanced,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+72,ai.code.completion,speed_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+73,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+74,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+75,ai.llm.chat,balanced,8,"[""deepseek/deepseek-v4-flash@4.0"", ""minimax/m2.7@2.7"", ""zhipu/glm-5@5.0"", ""qwen/qwen3-max@3.0"", ""moonshot/kimi-k2.5@2.5"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",0.8571428571428571,False,1
+76,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+77,tool.communication.email,speed_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+78,infra.database.vector,balanced,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+79,ai.llm.chat,speed_first,8,"[""deepseek/deepseek-v4-flash@4.0"", ""openai/gpt-4o@2024-11-20"", ""minimax/m2.7@2.7"", ""qwen/qwen3-max@3.0"", ""anthropic/claude-sonnet-4@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""google/gemini-2.5-pro@2.5""]","[""deepseek/deepseek-v4-flash@4.0"", ""openai/gpt-4o@2024-11-20"", ""minimax/m2.7@2.7"", ""qwen/qwen3-max@3.0"", ""anthropic/claude-sonnet-4@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
+80,ai.vision.image_generation,cost_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+81,tool.devops.ci,balanced,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+82,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+83,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+84,ai.vision.image_generation,cost_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+85,tool.devops.ci,speed_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
+86,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+87,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+88,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+89,ai.llm.chat,balanced,8,"[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",0.9285714285714286,True,1
+90,tool.productivity.todo,quality_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+91,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+92,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+93,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+94,ai.code.completion,cost_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+95,ai.code.completion,cost_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+96,ai.llm.chat,quality_first,8,"[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""google/gemini-2.5-pro@2.5"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0""]","[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""google/gemini-2.5-pro@2.5"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5""]",0.8571428571428571,True,1
+97,tool.devops.ci,quality_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""github/actions@v2"", ""circleci/cloud@v2""]",1.0,True,0
+98,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+99,ai.video.generation,speed_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+100,ai.audio.stt,quality_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+101,tool.automation.browser,cost_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+102,tool.devops.deployment,balanced,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+103,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+104,ai.video.generation,balanced,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+105,infra.compute.gpu,balanced,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+106,infra.database.vector,speed_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+107,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+108,infra.database.vector,balanced,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+109,infra.database.vector,cost_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+110,tool.productivity.todo,speed_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+111,ai.code.completion,cost_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+112,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+113,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+114,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+115,tool.productivity.todo,quality_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+116,ai.llm.chat,quality_first,8,"[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""google/gemini-2.5-pro@2.5"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0""]","[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""google/gemini-2.5-pro@2.5"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5""]",0.8571428571428571,True,1
+117,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+118,tool.communication.chat,quality_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+119,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+120,infra.compute.gpu,balanced,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+121,ai.llm.embedding,quality_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
 122,tool.automation.browser,balanced,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-123,ai.audio.tts,balanced,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-124,tool.communication.email,quality_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-125,ai.nlp.translation,quality_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-126,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-127,infra.compute.gpu,cost_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-128,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-129,tool.devops.ci,quality_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""github/actions@v2"", ""circleci/cloud@v2""]",1.0,True,0
-130,ai.llm.chat,speed_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-131,infra.database.vector,cost_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-132,ai.audio.tts,quality_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-133,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-134,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-135,ai.video.generation,speed_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-136,tool.productivity.todo,speed_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-137,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-138,ai.code.completion,speed_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-139,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-140,tool.productivity.todo,cost_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-141,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-142,ai.llm.chat,cost_first,3,"[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",1.0,True,0
-143,ai.llm.chat,speed_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-144,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-145,ai.audio.stt,cost_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-146,ai.audio.tts,cost_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-147,infra.database.vector,speed_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-148,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-149,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-150,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-151,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-152,tool.communication.chat,cost_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-153,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-154,ai.llm.embedding,cost_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-155,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-156,ai.audio.stt,speed_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-157,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-158,tool.productivity.todo,speed_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-159,ai.code.completion,quality_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-160,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-161,ai.audio.tts,balanced,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-162,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-163,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-164,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-165,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-166,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-167,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-168,ai.vision.image_generation,cost_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-169,ai.llm.embedding,quality_first,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
-170,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-171,ai.nlp.translation,balanced,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
-172,ai.code.completion,speed_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-173,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-174,tool.productivity.todo,cost_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
-175,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
-176,infra.database.vector,cost_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
-177,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
-178,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-179,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
-180,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-181,ai.audio.tts,balanced,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
-182,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-183,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-184,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
-185,ai.llm.chat,quality_first,3,"[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]","[""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""google/gemini-2.5-pro@2.5""]",1.0,True,0
-186,tool.communication.email,balanced,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-187,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-188,tool.communication.chat,balanced,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
-189,tool.productivity.spreadsheet,cost_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
-190,tool.automation.browser,balanced,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
-191,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
-192,tool.communication.email,balanced,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-193,tool.data.scraping,speed_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
-194,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
-195,tool.communication.email,cost_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
-196,ai.video.generation,cost_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
-197,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
-198,ai.code.completion,quality_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
-199,ai.llm.chat,cost_first,3,"[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]","[""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",1.0,True,0
-200,tool.productivity.spreadsheet,speed_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+123,tool.productivity.spreadsheet,speed_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+124,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+125,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+126,infra.compute.gpu,speed_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+127,tool.data.scraping,balanced,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+128,infra.compute.gpu,quality_first,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+129,ai.audio.tts,balanced,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+130,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+131,ai.audio.tts,quality_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+132,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+133,tool.data.search,speed_first,2,"[""exa/search-api@v1"", ""tavily/search-api@v1""]","[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,True,0
+134,ai.llm.chat,cost_first,8,"[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""qwen/qwen3-max@3.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]",0.8571428571428571,True,2
+135,ai.audio.stt,quality_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+136,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+137,ai.audio.tts,speed_first,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+138,ai.llm.chat,cost_first,8,"[""minimax/m2.7@2.7"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""qwen/qwen3-max@3.0"", ""deepseek/deepseek-v4-flash@4.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""qwen/qwen3-max@3.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]",0.7857142857142857,True,3
+139,ai.llm.chat,balanced,8,"[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""moonshot/kimi-k2.5@2.5"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""google/gemini-2.5-pro@2.5"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0""]","[""minimax/m2.7@2.7"", ""deepseek/deepseek-v4-flash@4.0"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5"", ""openai/gpt-4o@2024-11-20"", ""google/gemini-2.5-pro@2.5"", ""anthropic/claude-sonnet-4@4.0""]",0.7857142857142857,True,2
+140,infra.database.vector,cost_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+141,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+142,infra.database.postgres,balanced,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+143,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+144,tool.automation.browser,quality_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+145,tool.communication.chat,speed_first,2,"[""discord/api@v10"", ""slack/web-api@v2""]","[""discord/api@v10"", ""slack/web-api@v2""]",1.0,True,0
+146,tool.devops.ci,cost_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+147,ai.code.completion,quality_first,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+148,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+149,ai.audio.stt,balanced,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+150,tool.productivity.todo,balanced,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+151,tool.data.scraping,quality_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+152,tool.communication.email,speed_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+153,tool.communication.email,speed_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+154,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+155,tool.automation.browser,speed_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+156,tool.data.scraping,balanced,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+157,tool.productivity.spreadsheet,speed_first,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+158,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+159,tool.automation.browser,speed_first,2,"[""steel/browser@v1"", ""browserbase/api@v1""]","[""steel/browser@v1"", ""browserbase/api@v1""]",1.0,True,0
+160,tool.data.search,balanced,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+161,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+162,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+163,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+164,tool.data.search,speed_first,2,"[""exa/search-api@v1"", ""tavily/search-api@v1""]","[""exa/search-api@v1"", ""tavily/search-api@v1""]",1.0,True,0
+165,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+166,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+167,tool.productivity.spreadsheet,balanced,2,"[""google/sheets-api@v4"", ""airtable/api@v1""]","[""google/sheets-api@v4"", ""airtable/api@v1""]",1.0,True,0
+168,infra.compute.gpu,balanced,2,"[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]","[""runpod/gpu-serverless@1.0"", ""replicate/gpu-serverless@1.0""]",1.0,True,0
+169,ai.llm.embedding,balanced,2,"[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]","[""openai/text-embedding-3-large@3.0"", ""voyageai/voyage-3-large@3.0""]",1.0,True,0
+170,tool.devops.ci,speed_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",-1.0,False,1
+171,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+172,ai.nlp.translation,cost_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
+173,ai.vision.image_generation,cost_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+174,ai.audio.tts,balanced,2,"[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]","[""openai/tts-1@1.0"", ""elevenlabs/tts-v2@2.0""]",1.0,True,0
+175,ai.nlp.translation,cost_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
+176,tool.data.scraping,speed_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+177,tool.data.search,quality_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+178,tool.communication.email,quality_first,2,"[""resend/email-api@v1"", ""twilio/sendgrid@v3""]","[""resend/email-api@v1"", ""twilio/sendgrid@v3""]",1.0,True,0
+179,infra.database.vector,speed_first,2,"[""qdrant/cloud@v1"", ""pinecone/index@v3""]","[""qdrant/cloud@v1"", ""pinecone/index@v3""]",1.0,True,0
+180,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+181,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+182,ai.vision.image_generation,balanced,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+183,tool.devops.deployment,cost_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+184,tool.devops.deployment,quality_first,2,"[""vercel/platform@v1"", ""fly/machines@v1""]","[""vercel/platform@v1"", ""fly/machines@v1""]",1.0,True,0
+185,tool.data.search,cost_first,2,"[""tavily/search-api@v1"", ""exa/search-api@v1""]","[""tavily/search-api@v1"", ""exa/search-api@v1""]",1.0,True,0
+186,tool.data.scraping,cost_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+187,tool.devops.ci,quality_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""github/actions@v2"", ""circleci/cloud@v2""]",1.0,True,0
+188,tool.devops.ci,balanced,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+189,ai.vision.image_generation,quality_first,3,"[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]","[""black-forest-labs/flux-1.1-pro@1.1"", ""google/imagen-3@3.0"", ""openai/dall-e-3@3.0""]",1.0,True,0
+190,ai.llm.chat,quality_first,8,"[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""google/gemini-2.5-pro@2.5"", ""qwen/qwen3-max@3.0"", ""moonshot/kimi-k2.5@2.5"", ""zhipu/glm-5@5.0""]","[""minimax/m2.7@2.7"", ""openai/gpt-4o@2024-11-20"", ""anthropic/claude-sonnet-4@4.0"", ""deepseek/deepseek-v4-flash@4.0"", ""google/gemini-2.5-pro@2.5"", ""qwen/qwen3-max@3.0"", ""zhipu/glm-5@5.0"", ""moonshot/kimi-k2.5@2.5""]",0.9285714285714286,True,1
+191,ai.audio.stt,quality_first,2,"[""deepgram/nova@v2"", ""openai/whisper@v1""]","[""deepgram/nova@v2"", ""openai/whisper@v1""]",1.0,True,0
+192,ai.code.completion,balanced,2,"[""github/copilot@v1"", ""cursor/editor@v1""]","[""github/copilot@v1"", ""cursor/editor@v1""]",1.0,True,0
+193,ai.nlp.translation,speed_first,2,"[""google/translate@v3"", ""deepl/translate@v2""]","[""google/translate@v3"", ""deepl/translate@v2""]",1.0,True,0
+194,tool.devops.ci,quality_first,2,"[""github/actions@v2"", ""circleci/cloud@v2""]","[""github/actions@v2"", ""circleci/cloud@v2""]",1.0,True,0
+195,tool.data.scraping,speed_first,2,"[""jina/reader@v1"", ""firecrawl/scrape@v1""]","[""jina/reader@v1"", ""firecrawl/scrape@v1""]",1.0,True,0
+196,tool.productivity.todo,cost_first,3,"[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]","[""todoist/api@v2"", ""ticktick/api@v2"", ""google/tasks-api@v1""]",1.0,True,0
+197,infra.database.postgres,cost_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0
+198,tool.devops.ci,speed_first,2,"[""circleci/cloud@v2"", ""github/actions@v2""]","[""circleci/cloud@v2"", ""github/actions@v2""]",1.0,True,0
+199,ai.video.generation,speed_first,2,"[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]","[""kuaishou/kling-3.0@3.0"", ""google/veo-3.1@3.1""]",1.0,True,0
+200,infra.database.postgres,speed_first,2,"[""neon/serverless-postgres@v1"", ""supabase/database@v2""]","[""neon/serverless-postgres@v1"", ""supabase/database@v2""]",1.0,True,0

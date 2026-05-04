@@ -84,7 +84,7 @@ All experiment scripts are in `experiments/`. Results write to `experiments/resu
 python experiments/ab_test.py
 ```
 
-Generates 200 synthetic tasks over 70 manifests, compares ASM-TOPSIS vs Random vs Most-Expensive. Output: `experiments/results/ablation_*.csv|.json|.md`.
+Generates 200 synthetic tasks over 75 manifests, compares ASM-TOPSIS vs Random vs Most-Expensive. Output: `experiments/results/ablation_*.csv|.json|.md`.
 
 Also available as:
 ```bash
@@ -161,7 +161,7 @@ make audit
 ```
 asm-spec/
 ├── schema/                    # JSON Schema definitions (v0.2 legacy, v0.3 current)
-├── manifests/                 # 70 service manifests (.asm.json)
+├── manifests/                 # 75 service manifests (.asm.json)
 ├── scorer/                    # Python scoring engine (TOPSIS + weighted avg)
 │   ├── scorer.py              # Main module
 │   └── test_scorer.py         # Unit tests

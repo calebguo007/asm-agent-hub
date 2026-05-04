@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Autonomous agents increasingly choose among competing AI services before they execute or pay. Existing protocols cover capability discovery (MCP), inter-agent communication (A2A), and payment execution (AP2), but a settlement layer is missing: agents can see what tools do, yet cannot compute what services are worth. We present **Agent Service Manifest (ASM)**, a lightweight settlement protocol — a JSON Schema giving agents standardised value descriptors across pricing, quality, SLA, provenance, verification, and payment. Two audits ground the gap: 0/50 MCP-related GitHub repositories and 0/14,519 entries across five MCP registries and directories (including the full MCPCorpus dataset) expose all four core value classes simultaneously. We validate ASM with **70 manifests across 47 taxonomies** and a two-stage selection engine (constraint filter + TOPSIS). On 200 synthetic tasks ASM improves preference-weighted utility by **23.1%** over random and cuts cost **59.2%** vs. most-expensive ($p < 10^{-6}$, < 5 ms scoring overhead); on 20 natural-language user requests, ASM is zero-regret on 100% vs. 75% for the strongest single-axis policy. Across three frontier LLMs (DeepSeek-V4-flash, Qwen3-Max, Kimi K2.5), swapping raw HTML for ASM manifests raises top-1 selection accuracy from **63.9–72.2% to 100.0%** with non-overlapping 95% CIs. A live-execution follow-up over 30 real tasks routed through five Chinese-LLM endpoints shows ASM-TOPSIS matching the strongest deterministic baseline on judge-rated quality at the same realised cost — but only after enforcing a same-benchmark candidate-set constraint, providing direct in-the-wild evidence of the protocol's quality-normalisation limitation. ASM's contribution is the surface change — brittle HTML parsing becomes deterministic numerical comparison — and its honest caveat is that the protocol inherits the data quality of the manifests it is fed.
+Autonomous agents increasingly choose among competing AI services before they execute or pay. Existing protocols cover capability discovery (MCP), inter-agent communication (A2A), and payment execution (AP2), but a settlement layer is missing: agents can see what tools do, yet cannot compute what services are worth. We present **Agent Service Manifest (ASM)**, a lightweight settlement protocol: a JSON Schema giving agents standardised value descriptors across pricing, quality, SLA, provenance, verification, and payment. Two audits ground the gap: 0/50 MCP-related GitHub repositories and 0/14,519 entries across five MCP registries and directories (including the full MCPCorpus dataset) expose all four core value classes simultaneously. We validate ASM with **75 manifests across 47 taxonomies** and a two-stage selection engine (constraint filter + TOPSIS). On 200 synthetic tasks ASM improves preference-weighted utility by **23.1%** over random and cuts cost **59.2%** vs. most-expensive ($p < 10^{-6}$, < 5 ms scoring overhead); on 20 natural-language user requests, ASM is zero-regret on 100% vs. 75% for the strongest single-axis policy. Across three frontier LLMs (DeepSeek-V4-flash, Qwen3-Max, Kimi K2.5), swapping raw HTML for ASM manifests raises top-1 selection accuracy from **63.9-72.2% to 100.0%** with non-overlapping 95% CIs. A live-execution follow-up over 30 real tasks routed through five Chinese-LLM endpoints shows ASM-TOPSIS matching the strongest deterministic baseline on judge-rated quality at the same realised cost, but only after enforcing a same-benchmark candidate-set constraint, providing direct in-the-wild evidence of the protocol's quality-normalisation limitation. ASM's contribution is the surface change: brittle HTML parsing becomes deterministic numerical comparison, and its honest caveat is that the protocol inherits the data quality of the manifests it is fed.
 
 ---
 
@@ -40,7 +40,7 @@ In this paper, we present **Agent Service Manifest (ASM)**, an open settlement p
 
 4. **An MCP-compatible integration path** — ASM can be deployed as an independent `.well-known/asm` endpoint (Phase 1), embedded as `x-asm` annotations in MCP ToolAnnotations (Phase 2), or adopted as native MCP fields (Phase 3), ensuring zero breaking changes at each stage.
 
-We validate ASM with **70 real-world service manifests spanning 47 taxonomies**, all carrying explicit provenance metadata, and with two ecosystem audits (n=50 GitHub repositories and n=14,519 registry / directory entries) showing that structured value metadata is absent in current practice. A 200-task A/B evaluation, a 7-baseline regret analysis, a 20-request natural-language preference-alignment suite, and a three-LLM ranking experiment all converge on the same finding: when value metadata is structured, selection becomes deterministic and cross-LLM-stable; when it is not, even frontier LLMs leave 28–36 percentage points of top-1 accuracy on the table. Our framing throughout this paper is therefore not "ASM is faster or cheaper than X"; it is **"without structured value metadata, agent service selection is not reproducible — and ASM is a runnable, reproducible, integrable layer that fixes this".**
+We validate ASM with **75 real-world service manifests spanning 47 taxonomies**, all carrying explicit provenance metadata, and with two ecosystem audits (n=50 GitHub repositories and n=14,519 registry / directory entries) showing that structured value metadata is absent in current practice. A 200-task A/B evaluation, a 7-baseline regret analysis, a 20-request natural-language preference-alignment suite, a three-LLM ranking experiment, a live-execution follow-up, and an external Arena-Elo correlation study all converge on the same finding: when value metadata is structured and semantically comparable, selection becomes deterministic and cross-LLM-stable; when it is not, even frontier LLMs leave 28-36 percentage points of top-1 accuracy on the table or propagate bad benchmark assumptions. Our framing throughout this paper is therefore not "ASM is faster or cheaper than X"; it is **"without structured value metadata, agent service selection is not reproducible - and ASM is a runnable, reproducible, integrable layer that fixes this".**
 
 The remainder of this paper is organized as follows. Section 2 formalizes the service selection problem. Section 3 surveys related work. Section 4 presents the ASM protocol design. Section 5 describes the reference implementation. Section 6 evaluates ASM across multiple scenarios. Section 7 discusses limitations, trust mechanisms, and future directions. Section 8 concludes.
 
@@ -480,7 +480,7 @@ Each scenario demonstrates that the same candidate set produces different optima
 
 ## 6. Evaluation
 
-We evaluate ASM along seven dimensions: evidence of the missing value layer in current MCP repositories (§6.0), coverage of real-world pricing heterogeneity (§6.1), scoring behavior across preference profiles (§6.2), trust delta effectiveness (§6.3), protocol overhead (§6.4), a controlled A/B comparison against baseline selection policies (§6.5), and selection regret against stronger heuristic baselines (§6.6).
+We evaluate ASM along twelve dimensions: evidence of the missing value layer in current MCP repositories (Section 6.0), registry-level value-metadata coverage (Section 6.0a), coverage of real-world pricing heterogeneity (Section 6.1), scoring behavior across preference profiles (Section 6.2), trust delta effectiveness (Section 6.3), component ablations (Section 6.3a), protocol overhead (Section 6.4), a controlled A/B comparison against baseline selection policies (Section 6.5), live-API execution (Section 6.5b), selection regret and preference alignment (Sections 6.6-6.6a), LLM-as-selector behavior (Section 6.7), and external preference correlation (Section 6.8).
 
 ### 6.0 Evidence of the Missing Value Layer in Current MCP Repositories
 
@@ -547,7 +547,7 @@ Key observations:
 - **Conditional pricing** appears in Gemini 2.5 Pro (price doubles above 200K context)
 - **Tiered pricing** appears in DALL-E 3 (resolution-dependent)
 
-All 70 manifests validate against the ASM v0.3 JSON Schema, confirming that the schema's open billing dimensions and recommended unit conventions are sufficient to represent current production pricing models across both AI services and the broader developer-tooling ecosystem.
+All 75 manifests validate against the ASM v0.3 JSON Schema, confirming that the schema's open billing dimensions and recommended unit conventions are sufficient to represent current production pricing models across both AI services and the broader developer-tooling ecosystem.
 
 ### 6.2 Scoring Accuracy Across Preference Profiles
 
@@ -596,20 +596,19 @@ We evaluated the trust delta mechanism using simulated receipt data with control
 
 To understand which mechanisms in the scoring engine carry weight versus serve as tiebreakers, we ran three controlled ablations on the same 200-task workload as §6.5 (seed = 2024). Bootstrap CIs use 2,000 percentile resamples with replacement.
 
-**Trust-delta ablation.** We compare full TOPSIS scoring against a variant where `trust_delta_score = 0` for all services. Mean Kendall's tau between the two rankings is **0.95 [0.90, 0.99]** with top-1 agreement on **97.5%** of tasks. The mean rank-position change per service across all tasks is 0.03 positions. Trust delta is therefore acting as a tiebreaker rather than a primary driver in the current registry — consistent with the receipt corpus being seeded from honest declarations. The mechanism becomes load-bearing only when receipts diverge from declarations (§6.3).
+**Trust-delta ablation.** We compare full TOPSIS scoring against a variant where `trust_delta_score = 0` for all services. Mean Kendall's tau between the two rankings is **0.94 [0.90, 0.98]** with top-1 agreement on **97.0%** of tasks. The mean maximum rank-position change per task is 0.10 positions. Trust delta is therefore acting as a tiebreaker rather than a primary driver in the current registry - consistent with the receipt corpus being seeded from honest declarations. The mechanism becomes load-bearing only when receipts diverge from declarations (Section 6.3).
 
-**Aggregator ablation: TOPSIS vs weighted average.** Replacing TOPSIS with a simpler weighted-average aggregator yields Kendall's tau **0.61 [0.51, 0.72]** between the two methods' rankings, with **22.5%** top-1 disagreement and a mean weighted-average regret (against TOPSIS-defined utility) of **0.096**. TOPSIS contributes non-trivial selection behaviour beyond what additive weighting captures: the disagreement concentrates on tasks where one candidate Pareto-dominates on a non-preferred axis, which weighted averages happily accept and TOPSIS's negative-ideal distance penalises.
+**Aggregator ablation: TOPSIS vs weighted average.** Replacing TOPSIS with a simpler weighted-average aggregator yields Kendall's tau **0.63 [0.52, 0.73]** between the two methods' rankings, with **23.0%** top-1 disagreement and a mean weighted-average regret (against TOPSIS-defined utility) of **0.094**. TOPSIS contributes non-trivial selection behaviour beyond what additive weighting captures: the disagreement concentrates on tasks where one candidate Pareto-dominates on a non-preferred axis, which weighted averages happily accept and TOPSIS's negative-ideal distance penalises.
 
-**`io_ratio` sensitivity.** Token-billed services use the operator-supplied input/output ratio to collapse two-dimensional pricing into a single scalar. Sweeping `io_ratio ∈ {0.1, 0.2, 0.3, 0.5, 0.8, 1.0, 2.0}` and computing pairwise Kendall's tau between adjacent rankings:
+**`io_ratio` sensitivity.** Token-billed services use the operator-supplied input/output ratio to collapse two-dimensional pricing into a single scalar. Sweeping `io_ratio` across {0.1, 0.2, 0.3, 0.5, 0.8, 1.0} and computing pairwise Kendall's tau between adjacent rankings:
 
 | Pair | Kendall's tau | 95% CI |
 |---|---:|---|
 | 0.1 → 0.2 | 1.000 | [1.000, 1.000] |
 | 0.2 → 0.3 | 1.000 | [1.000, 1.000] |
-| 0.3 → 0.5 | 1.000 | [1.000, 1.000] |
-| 0.5 → 0.8 | 0.983 | [0.958, 1.000] |
-| 0.8 → 1.0 | 0.992 | [0.975, 1.000] |
-| 1.0 → 2.0 | 0.950 | [0.883, 1.000] |
+| 0.3 -> 0.5 | 0.999 | [0.997, 1.000] |
+| 0.5 -> 0.8 | 0.996 | [0.987, 1.000] |
+| 0.8 -> 1.0 | 0.996 | [0.990, 1.000] |
 
 Rankings are stable across the entire tested range (adjacent tau ≥ 0.95). The default `io_ratio = 0.3` (chat workload) and the `io_ratio = 0.5` (translation/summarisation workload) preset both fall in the most-stable band. This validates the design choice to expose `io_ratio` as a per-task hint rather than a precomputed cost field. Reproducibility: `experiments/ablation_experiments.py`, output under `experiments/results/ablation_*`.
 
@@ -670,7 +669,7 @@ The reproducibility script and raw selection records are available at `experimen
 
 The §6.5 A/B comparison runs over manifest-declared pricing, latency, and quality. The natural follow-up is whether ASM-guided selection still works when the candidates are actually invoked, and what happens when manifest data is *not* uniformly clean. We therefore extended ASM with five Chinese-LLM manifests (DeepSeek V4 Flash, Qwen3 Max, Moonshot Kimi K2.5, Z.ai GLM-5, MiniMax M2.7) all routable through the TokenDance OpenAI-compatible gateway, designed 30 real-world tasks split across translation, code generation, and summarisation, and ran 6 selectors per task with realised cost (from token usage), realised latency (wall clock), and realised quality (independent judge model, GLM-4.7) recorded for each call.
 
-**Setup.** Tasks span four preference axes (cost / latency / quality / balanced) with optional hard constraints (`max_cost_usd`, `max_latency_s`, `min_quality_score`). The six selectors are: `asm_topsis`, `weighted_average`, `cheapest_first`, `random`, `llm_picker_manifest` (a separate LLM reads compact ASM manifests and chooses), `llm_picker_raw_doc` (same LLM reads short provider descriptions only). Cost accounting separates execution cost (the candidate-LLM call), picker cost (the LLM-selector call when applicable), and judge cost so that selection-time overhead is not conflated with task cost. The full task set, prompts, manifests, and per-call records are at `experiments/live_execution/`.
+**Setup.** Tasks span four preference axes (cost / latency / quality / balanced) with optional hard constraints (`max_cost_usd`, `max_latency_s`, `min_quality_score`). The six selectors are: `asm_topsis`, `weighted_average`, `cheapest_first`, `random`, `llm_picker_manifest` (a separate LLM reads compact ASM manifests and chooses), `llm_picker_description` (same LLM reads short provider descriptions only; earlier result files used the legacy name `llm_picker_raw_doc`). Cost accounting separates execution cost (the candidate-LLM call), picker cost (the LLM-selector call when applicable), and judge cost so that selection-time overhead is not conflated with task cost. The full task set, prompts, manifests, and per-call records are at `experiments/live_execution/`.
 
 **Naive run (5 candidates, n=180).** ASM-TOPSIS underperformed every other selector on judge score:
 
@@ -678,7 +677,7 @@ The §6.5 A/B comparison runs over manifest-declared pricing, latency, and quali
 
 | Selector | n | Judge mean | Total execution cost (USD) | Mean latency (s) |
 |---|---:|---:|---:|---:|
-| llm_picker_raw_doc  | 30 | **9.97** | $0.0068 | 5.74 |
+| llm_picker_description | 30 | **9.97** | $0.0068 | 5.74 |
 | llm_picker_manifest | 30 | 9.60 | $0.0411 | 17.55 |
 | cheapest_first      | 30 | 9.50 | $0.0054 | 7.39 |
 | random              | 29 | 9.28 | $0.0392 | 18.45 |
@@ -698,7 +697,7 @@ The §6.5 A/B comparison runs over manifest-declared pricing, latency, and quali
 | cheapest_first      | 9.50 | 9.65 | +0.15 |
 | random              | 9.28 | 9.21 | -0.07 |
 | llm_picker_manifest | 9.60 | 9.21 | -0.39 |
-| llm_picker_raw_doc  | 9.97 | 9.23 | -0.73 |
+| llm_picker_description | 9.97 | 9.23 | -0.73 |
 
 In the same-benchmark run all six selectors are within ~0.5 judge points (9.21–9.65) and ASM-TOPSIS execution cost ($0.0064) matches the cheapest-first baseline. The asymmetry in deltas is itself informative: ASM-TOPSIS and weighted-average — both manifest-driven scoring — gain dramatically when manifest quality data is consistent, while LLM-picker selectors lose slightly because in the naive run they correctly avoided the MiniMax trap that TOPSIS fell into (raw-doc descriptions don't reveal MMLU 78, only the manifest's structured `quality` block does, and the picker LLM was conservative).
 
@@ -708,7 +707,7 @@ In the same-benchmark run all six selectors are within ~0.5 judge points (9.21�
 
 2. **(Critical)** ASM is a thin layer over manifest data; it inherits the data's limitations. Heterogeneous benchmark scales caused a 1.3-point judge-score drop in our naive run because TOPSIS interpreted MMLU 78 as commensurable with AA Intelligence 60. **The protocol does not detect or correct this — it propagates it.** Production deployments must enforce same-benchmark constraints at registry time, similar to how database schemas enforce type compatibility.
 
-3. **(Negative)** ASM-TOPSIS does *not* dominate `llm_picker_raw_doc` on this 30-task suite (9.27 vs 9.23 in the same-benchmark run). When the candidate set is small (4) and the LLM has provider names + descriptions, frontier LLMs can already rank competitively. ASM's value is structured, deterministic, sub-millisecond settlement — not necessarily a higher absolute score on small candidate sets. The §6.7 36-task ranking experiment showed the gap widens for harder tasks; the live-execution evidence here suggests the gap narrows for easier tasks.
+3. **(Negative)** ASM-TOPSIS does *not* dominate `llm_picker_description` on this 30-task suite (9.27 vs 9.23 in the same-benchmark run). When the candidate set is small (4) and the LLM has provider names + descriptions, frontier LLMs can already rank competitively. ASM's value is structured, deterministic, sub-millisecond settlement - not necessarily a higher absolute score on small candidate sets. The Section 6.7 36-task ranking experiment showed the gap widens for harder tasks; the live-execution evidence here suggests the gap narrows for easier tasks.
 
 **Reproducibility.** All raw responses, judge ratings, token counts, and per-task records are at `experiments/live_execution/results_naive_5candidate/` and `experiments/live_execution/results/`. The comparison table above was auto-generated by `experiments/live_execution/compare_runs.py`; the experiment runner is `run_live_execution.py`. Total cash cost for both runs combined: < $0.30 in gateway fees plus judge-model calls.
 
@@ -724,15 +723,15 @@ where $U$ is the task's preference-weighted TOPSIS utility, $s^*$ is the best fe
 
 | Strategy | Utility mean | Regret mean | Zero-regret rate | Cost mean | Latency mean | Quality mean |
 |----------|-------------:|------------:|-----------------:|----------:|-------------:|-------------:|
-| ASM-TOPSIS | **0.9071** | **0.0000** | **100.0%** | 0.0058011640 | 6.8914 | 0.6199 |
-| Fastest-first | 0.8369 | 0.0703 | 83.0% | 0.0212652890 | **5.4919** | 0.6289 |
-| Weighted average | 0.8285 | 0.0787 | 79.0% | 0.0178044554 | 5.8205 | 0.6283 |
-| Cheapest-first | 0.6406 | 0.2665 | 68.5% | **0.0057811528** | 6.8900 | 0.6240 |
-| Random | 0.5329 | 0.3742 | 51.5% | 0.0154392470 | 6.3357 | 0.5892 |
-| Highest-quality-first | 0.4089 | 0.4982 | 31.0% | 0.0216596447 | 5.9288 | **0.6564** |
-| Most-expensive-first | 0.1980 | 0.7091 | 13.0% | 0.0220168655 | 6.0715 | 0.5780 |
+| ASM-TOPSIS | **0.9265** | **0.0000** | **100.0%** | 0.0058009512 | 6.8586 | 0.6215 |
+| Fastest-first | 0.8559 | 0.0706 | 82.5% | 0.0212650656 | **5.4904** | 0.6205 |
+| Weighted average | 0.8545 | 0.0720 | 82.0% | 0.0178043594 | 5.8025 | 0.6272 |
+| Cheapest-first | 0.6724 | 0.2541 | 71.0% | **0.0057809406** | 6.8615 | 0.6149 |
+| Random | 0.5422 | 0.3843 | 51.0% | 0.0154391178 | 6.3242 | 0.5850 |
+| Highest-quality-first | 0.4270 | 0.4995 | 33.0% | 0.0216596447 | 5.9288 | **0.6564** |
+| Most-expensive-first | 0.2154 | 0.7112 | 15.0% | 0.0220168655 | 6.0715 | 0.5780 |
 
-The result clarifies the role of ASM: single-objective heuristics can optimize their own dimension, but they systematically incur regret when user preferences span cost, quality, speed, and reliability. Weighted average is a much stronger baseline than random, yet still leaves mean regret of 0.0787 because it does not account for distance to both ideal and anti-ideal services. The reproducibility script and raw records are available at `experiments/selection_baselines.py` and `experiments/results/selection_baselines.*`.
+The result clarifies the role of ASM: single-objective heuristics can optimize their own dimension, but they systematically incur regret when user preferences span cost, quality, speed, and reliability. Weighted average is a much stronger baseline than random, yet still leaves mean regret of 0.0720 because it does not account for distance to both ideal and anti-ideal services. The reproducibility script and raw records are available at `experiments/selection_baselines.py` and `experiments/results/selection_baselines.*`.
 
 ### 6.6a Preference Alignment on Natural-Language User Requests
 
@@ -900,7 +899,7 @@ This positions ASM not as a marketplace itself, but as the data layer that enabl
 
 ### 7.4 Future Directions
 
-**Live execution benchmark.** The strongest external validation is to run ASM-selected, heuristic-selected, and LLM-selected services against the same real workload — measuring realised cost, latency, constraint violations, output quality (LLM-judged or with category-appropriate metrics), and reproducibility across repeated runs. This is the natural next deliverable on top of the §6.5 / §6.6 / §6.7 evaluations.
+**Live execution benchmark.** Section 6.5b reports a first live-execution benchmark over 30 Chinese-LLM tasks; the stronger next step is to repeat it across more categories, repeated runs, and non-LLM services while measuring realised cost, latency, constraint violations, output quality, and reproducibility.
 
 **External-annotator preference alignment.** §6.6a maps 20 natural-language requests to preference vectors using author judgment. A stronger experiment recruits 3+ external annotators per task, measures inter-annotator agreement on weights, and reports whether ASM selects the majority-preferred service.
 
@@ -920,13 +919,13 @@ This positions ASM not as a marketplace itself, but as the data layer that enabl
 
 We have presented Agent Service Manifest (ASM), an open protocol for the missing value layer in the agent infrastructure stack. The central claim is empirical: across two independent ecosystem audits (n=50 GitHub repositories and n=14,519 registry/directory entries), zero entries expose all four core economic value classes (pricing, SLA, quality, payment) in machine-actionable form; across three independent frontier LLMs reading the same provider HTML, top-1 selection accuracy on a 36-task ranking suite is 63.9–72.2%, while the same LLMs given structured ASM manifests reach 100%. **Without structured value metadata, agent service selection is not reproducible. ASM is a runnable, reproducible, integrable layer that fixes this** — not a competing alternative to MCP / A2A / AP2, but the value-metadata layer those protocols leave room for.
 
-ASM provides a minimal schema, a provenance-aware manifest format, a trust model that connects declarations to signed receipts, and a two-stage settlement engine that combines hard constraints with preference-weighted TOPSIS ranking. The reference implementation includes a Python scorer, a dual-protocol registry, an MCP integration path, two audit scripts, four evaluation harnesses (A/B, regret, preference alignment, LLM-as-selector), 70 real-world manifests across 47 taxonomies, a Docker-based reproducibility image, and a one-command `make reproduce` target that re-derives every offline number in this paper.
+ASM provides a minimal schema, a provenance-aware manifest format, a trust model that connects declarations to signed receipts, and a two-stage settlement engine that combines hard constraints with preference-weighted TOPSIS ranking. The reference implementation includes a Python scorer, a dual-protocol registry, an MCP integration path, two audit scripts, six evaluation harnesses (A/B, regret, preference alignment, LLM-as-selector, live execution, external preference correlation), 75 real-world manifests across 47 taxonomies, a Docker-based reproducibility image, and a one-command `make reproduce` target that re-derives every offline number in this paper.
 
-The remaining work is adoption and harder external validation. Live execution experiments should compare ASM against LLM raw-document selectors on realised cost, latency, constraint violations, and reproducibility across repeated runs. External-annotator preference alignment should measure inter-annotator agreement on weights and whether ASM selects the majority-preferred service. Trust mechanisms should move from self-reported provenance toward third-party verification and receipt-backed updates.
+The remaining work is adoption and broader external validation. Live execution experiments should expand beyond the current 30-task Chinese-LLM slice to more categories, repeated runs, realised constraint violations, and non-LLM services. External-annotator preference alignment should measure inter-annotator agreement on weights and whether ASM selects the majority-preferred service. Trust mechanisms should move from self-reported provenance toward third-party verification and receipt-backed updates.
 
 If agents are to become economic actors, service selection cannot remain an unstructured browsing task. ASM makes settlement a computable, reproducible step in the agent stack.
 
-The protocol, reference implementation, all 70 service manifests, audit data, evaluation harnesses, and the artifact-evaluation Docker image are available at: <https://github.com/calebguo007/asm-spec>. Reproduction instructions are in `ARTIFACT.md`.
+The protocol, reference implementation, all 75 service manifests, audit data, evaluation harnesses, and the artifact-evaluation Docker image are available at: <https://github.com/calebguo007/asm-spec>. Reproduction instructions are in `ARTIFACT.md`.
 
 ---
 

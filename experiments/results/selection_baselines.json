@@ -1,72 +1,72 @@
 {
   "summary": {
-    "generated_at": "2026-04-28T09:58:42Z",
+    "generated_at": "2026-05-04T10:43:59Z",
     "task_count": 200,
     "seed": 2024,
     "strategy_count": 7,
     "summary": {
       "asm_topsis": {
         "count": 200,
-        "utility_mean": 0.9071,
+        "utility_mean": 0.9265,
         "regret_mean": 0.0,
         "zero_regret_rate": 1.0,
-        "cost_mean": 0.005801164,
-        "latency_mean": 6.8914,
-        "quality_mean": 0.6199
+        "cost_mean": 0.0058009512,
+        "latency_mean": 6.8586,
+        "quality_mean": 0.6215
       },
       "cheapest_first": {
         "count": 200,
-        "utility_mean": 0.6406,
-        "regret_mean": 0.2665,
-        "zero_regret_rate": 0.685,
-        "cost_mean": 0.0057811528,
-        "latency_mean": 6.89,
-        "quality_mean": 0.624
+        "utility_mean": 0.6724,
+        "regret_mean": 0.2541,
+        "zero_regret_rate": 0.71,
+        "cost_mean": 0.0057809406,
+        "latency_mean": 6.8615,
+        "quality_mean": 0.6149
       },
       "fastest_first": {
         "count": 200,
-        "utility_mean": 0.8369,
-        "regret_mean": 0.0703,
-        "zero_regret_rate": 0.83,
-        "cost_mean": 0.021265289,
-        "latency_mean": 5.4919,
-        "quality_mean": 0.6289
+        "utility_mean": 0.8559,
+        "regret_mean": 0.0706,
+        "zero_regret_rate": 0.825,
+        "cost_mean": 0.0212650656,
+        "latency_mean": 5.4904,
+        "quality_mean": 0.6205
       },
       "highest_quality_first": {
         "count": 200,
-        "utility_mean": 0.4089,
-        "regret_mean": 0.4982,
-        "zero_regret_rate": 0.31,
+        "utility_mean": 0.427,
+        "regret_mean": 0.4995,
+        "zero_regret_rate": 0.33,
         "cost_mean": 0.0216596447,
         "latency_mean": 5.9288,
         "quality_mean": 0.6564
       },
       "most_expensive_first": {
         "count": 200,
-        "utility_mean": 0.198,
-        "regret_mean": 0.7091,
-        "zero_regret_rate": 0.13,
+        "utility_mean": 0.2154,
+        "regret_mean": 0.7112,
+        "zero_regret_rate": 0.15,
         "cost_mean": 0.0220168655,
         "latency_mean": 6.0715,
         "quality_mean": 0.578
       },
       "random": {
         "count": 200,
-        "utility_mean": 0.5329,
-        "regret_mean": 0.3742,
-        "zero_regret_rate": 0.515,
-        "cost_mean": 0.015439247,
-        "latency_mean": 6.3357,
-        "quality_mean": 0.5892
+        "utility_mean": 0.5422,
+        "regret_mean": 0.3843,
+        "zero_regret_rate": 0.51,
+        "cost_mean": 0.0154391178,
+        "latency_mean": 6.3242,
+        "quality_mean": 0.585
       },
       "weighted_average": {
         "count": 200,
-        "utility_mean": 0.8285,
-        "regret_mean": 0.0787,
-        "zero_regret_rate": 0.79,
-        "cost_mean": 0.0178044554,
-        "latency_mean": 5.8205,
-        "quality_mean": 0.6283
+        "utility_mean": 0.8545,
+        "regret_mean": 0.072,
+        "zero_regret_rate": 0.82,
+        "cost_mean": 0.0178043594,
+        "latency_mean": 5.8025,
+        "quality_mean": 0.6272
       }
     }
   },
@@ -294,7 +294,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 3,
@@ -309,7 +309,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 3,
@@ -324,7 +324,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 3,
@@ -339,7 +339,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 3,
@@ -354,7 +354,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 3,
@@ -369,7 +369,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 3,
@@ -384,7 +384,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 4,
@@ -924,7 +924,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 9,
@@ -939,7 +939,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 9,
@@ -954,7 +954,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 9,
@@ -969,7 +969,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 9,
@@ -984,7 +984,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 9,
@@ -999,7 +999,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 9,
@@ -1014,7 +1014,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 10,
@@ -2184,7 +2184,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 21,
@@ -2199,7 +2199,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 21,
@@ -2214,7 +2214,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 21,
@@ -2229,7 +2229,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 21,
@@ -2244,7 +2244,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 21,
@@ -2259,7 +2259,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 21,
@@ -2274,22 +2274,22 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 22,
       "taxonomy": "ai.vision.image_generation",
       "profile": "balanced",
       "strategy": "asm_topsis",
-      "service_id": "google/imagen-3@3.0",
-      "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
+      "service_id": "black-forest-labs/flux-1.1-pro@1.1",
+      "display_name": "FLUX 1.1 Pro",
+      "utility": 0.9934,
+      "best_utility": 0.9934,
       "regret": 0.0,
       "cost_per_unit": 0.04,
-      "latency_seconds": 10.0,
-      "quality_score": 0.72,
-      "uptime": 0.999
+      "latency_seconds": 8.0,
+      "quality_score": 0.904,
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2298,13 +2298,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2313,13 +2313,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2328,13 +2328,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2343,13 +2343,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2358,13 +2358,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 22,
@@ -2373,9 +2373,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
-      "regret": 0.0,
+      "utility": 0.35,
+      "best_utility": 0.9934,
+      "regret": 0.6434,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -2808,13 +2808,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2823,13 +2823,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2838,13 +2838,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2853,13 +2853,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2868,13 +2868,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2883,13 +2883,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 27,
@@ -2898,13 +2898,13 @@
       "strategy": "random",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 28,
@@ -3024,7 +3024,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 29,
@@ -3039,7 +3039,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 29,
@@ -3054,7 +3054,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 29,
@@ -3069,7 +3069,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 29,
@@ -3084,7 +3084,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 29,
@@ -3099,7 +3099,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 29,
@@ -3114,7 +3114,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 30,
@@ -3856,60 +3856,60 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 37,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "weighted_average",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
+      "regret": 0.0,
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 37,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 37,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
-      "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 37,
@@ -3918,9 +3918,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
+      "utility": 0.3691,
+      "best_utility": 0.9483,
+      "regret": 0.5792,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -3933,9 +3933,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.2148,
-      "best_utility": 0.9083,
-      "regret": 0.6935,
+      "utility": 0.1018,
+      "best_utility": 0.9483,
+      "regret": 0.8465,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -3946,14 +3946,14 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "random",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
+      "service_id": "openai/gpt-4o@2024-11-20",
+      "display_name": "GPT-4o",
+      "utility": 0.3433,
+      "best_utility": 0.9483,
+      "regret": 0.605,
+      "cost_per_unit": 7.75e-06,
+      "latency_seconds": 0.6,
+      "quality_score": 0.8083333333333333,
       "uptime": 0.999
     },
     {
@@ -5334,7 +5334,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 51,
@@ -5349,7 +5349,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 51,
@@ -5364,7 +5364,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 51,
@@ -5379,7 +5379,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 51,
@@ -5394,7 +5394,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 51,
@@ -5409,7 +5409,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 51,
@@ -5424,7 +5424,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 52,
@@ -5851,15 +5851,15 @@
       "taxonomy": "ai.vision.image_generation",
       "profile": "balanced",
       "strategy": "asm_topsis",
-      "service_id": "google/imagen-3@3.0",
-      "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
+      "service_id": "black-forest-labs/flux-1.1-pro@1.1",
+      "display_name": "FLUX 1.1 Pro",
+      "utility": 0.9934,
+      "best_utility": 0.9934,
       "regret": 0.0,
       "cost_per_unit": 0.04,
-      "latency_seconds": 10.0,
-      "quality_score": 0.72,
-      "uptime": 0.999
+      "latency_seconds": 8.0,
+      "quality_score": 0.904,
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5868,13 +5868,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5883,13 +5883,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5898,13 +5898,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5913,13 +5913,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5928,13 +5928,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 56,
@@ -5943,9 +5943,9 @@
       "strategy": "random",
       "service_id": "openai/dall-e-3@3.0",
       "display_name": "DALL-E 3",
-      "utility": 0.4891,
-      "best_utility": 0.6017,
-      "regret": 0.1126,
+      "utility": 0.0066,
+      "best_utility": 0.9934,
+      "regret": 0.9868,
       "cost_per_unit": 0.04,
       "latency_seconds": 12.0,
       "quality_score": 0.67,
@@ -6069,7 +6069,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 58,
@@ -6084,7 +6084,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 58,
@@ -6099,7 +6099,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 58,
@@ -6114,7 +6114,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 58,
@@ -6129,7 +6129,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 58,
@@ -6144,7 +6144,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 58,
@@ -6159,7 +6159,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 59,
@@ -6273,13 +6273,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6288,13 +6288,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6303,13 +6303,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6318,13 +6318,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6333,13 +6333,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6348,13 +6348,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 60,
@@ -6363,9 +6363,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.5104,
-      "best_utility": 0.7963,
-      "regret": 0.2859,
+      "utility": 0.4797,
+      "best_utility": 0.9982,
+      "regret": 0.5185,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -7426,60 +7426,60 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 71,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "weighted_average",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
+      "regret": 0.0,
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 71,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 71,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
-      "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 71,
@@ -7488,9 +7488,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
+      "utility": 0.3691,
+      "best_utility": 0.9483,
+      "regret": 0.5792,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -7503,9 +7503,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.2148,
-      "best_utility": 0.9083,
-      "regret": 0.6935,
+      "utility": 0.1018,
+      "best_utility": 0.9483,
+      "regret": 0.8465,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -7516,14 +7516,14 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "random",
-      "service_id": "anthropic/claude-sonnet-4@4.0",
-      "display_name": "Claude Sonnet 4",
-      "utility": 0.2148,
-      "best_utility": 0.9083,
-      "regret": 0.6935,
-      "cost_per_unit": 1.14e-05,
-      "latency_seconds": 0.8,
-      "quality_score": 0.8166666666666667,
+      "service_id": "google/gemini-2.5-pro@2.5",
+      "display_name": "Gemini 2.5 Pro",
+      "utility": 0.3691,
+      "best_utility": 0.9483,
+      "regret": 0.5792,
+      "cost_per_unit": 7.375e-06,
+      "latency_seconds": 1.5,
+      "quality_score": 0.8333333333333334,
       "uptime": 0.999
     },
     {
@@ -7644,7 +7644,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 73,
@@ -7659,7 +7659,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 73,
@@ -7674,7 +7674,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 73,
@@ -7689,7 +7689,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 73,
@@ -7704,7 +7704,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 73,
@@ -7719,7 +7719,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 73,
@@ -7734,7 +7734,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 74,
@@ -8064,7 +8064,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 77,
@@ -8079,7 +8079,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 77,
@@ -8094,7 +8094,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 77,
@@ -8109,7 +8109,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 77,
@@ -8124,7 +8124,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 77,
@@ -8139,7 +8139,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 77,
@@ -8154,7 +8154,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 78,
@@ -8379,7 +8379,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 80,
@@ -8394,7 +8394,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 80,
@@ -8409,7 +8409,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 80,
@@ -8424,7 +8424,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 80,
@@ -8439,7 +8439,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 80,
@@ -8454,7 +8454,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 80,
@@ -8469,7 +8469,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 81,
@@ -8589,7 +8589,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 82,
@@ -8604,7 +8604,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 82,
@@ -8619,7 +8619,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 82,
@@ -8634,7 +8634,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 82,
@@ -8649,7 +8649,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 82,
@@ -8664,7 +8664,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 82,
@@ -8679,7 +8679,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 83,
@@ -9003,13 +9003,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9018,13 +9018,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9033,13 +9033,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9048,13 +9048,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9063,13 +9063,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9078,13 +9078,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 86,
@@ -9093,13 +9093,13 @@
       "strategy": "random",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 87,
@@ -10996,29 +10996,29 @@
       "taxonomy": "ai.llm.chat",
       "profile": "balanced",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9318,
-      "best_utility": 0.9318,
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.8868,
+      "best_utility": 0.8868,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 105,
       "taxonomy": "ai.llm.chat",
       "profile": "balanced",
       "strategy": "weighted_average",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.4367,
-      "best_utility": 0.9318,
-      "regret": 0.4951,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
+      "service_id": "openai/gpt-4o@2024-11-20",
+      "display_name": "GPT-4o",
+      "utility": 0.42,
+      "best_utility": 0.8868,
+      "regret": 0.4668,
+      "cost_per_unit": 7.75e-06,
+      "latency_seconds": 0.6,
+      "quality_score": 0.8083333333333333,
       "uptime": 0.999
     },
     {
@@ -11026,30 +11026,30 @@
       "taxonomy": "ai.llm.chat",
       "profile": "balanced",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.4367,
-      "best_utility": 0.9318,
-      "regret": 0.4951,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.8266,
+      "best_utility": 0.8868,
+      "regret": 0.0602,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 105,
       "taxonomy": "ai.llm.chat",
       "profile": "balanced",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9318,
-      "best_utility": 0.9318,
-      "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.8266,
+      "best_utility": 0.8868,
+      "regret": 0.0602,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 105,
@@ -11058,9 +11058,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.4367,
-      "best_utility": 0.9318,
-      "regret": 0.4951,
+      "utility": 0.374,
+      "best_utility": 0.8868,
+      "regret": 0.5128,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -11073,9 +11073,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.4913,
-      "best_utility": 0.9318,
-      "regret": 0.4405,
+      "utility": 0.2361,
+      "best_utility": 0.8868,
+      "regret": 0.6507,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -11086,15 +11086,15 @@
       "taxonomy": "ai.llm.chat",
       "profile": "balanced",
       "strategy": "random",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.4367,
-      "best_utility": 0.9318,
-      "regret": 0.4951,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "zhipu/glm-5@5.0",
+      "display_name": "Z.ai GLM-5",
+      "utility": 0.7617,
+      "best_utility": 0.8868,
+      "regret": 0.1251,
+      "cost_per_unit": 1.5455999999999997e-06,
+      "latency_seconds": 1.1,
+      "quality_score": 0.58,
+      "uptime": 0.998
     },
     {
       "task_id": 106,
@@ -11521,15 +11521,15 @@
       "taxonomy": "ai.vision.image_generation",
       "profile": "balanced",
       "strategy": "asm_topsis",
-      "service_id": "google/imagen-3@3.0",
-      "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
+      "service_id": "black-forest-labs/flux-1.1-pro@1.1",
+      "display_name": "FLUX 1.1 Pro",
+      "utility": 0.9934,
+      "best_utility": 0.9934,
       "regret": 0.0,
       "cost_per_unit": 0.04,
-      "latency_seconds": 10.0,
-      "quality_score": 0.72,
-      "uptime": 0.999
+      "latency_seconds": 8.0,
+      "quality_score": 0.904,
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11538,13 +11538,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11553,13 +11553,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11568,13 +11568,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11583,13 +11583,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11598,13 +11598,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 110,
@@ -11613,13 +11613,13 @@
       "strategy": "random",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 111,
@@ -11739,7 +11739,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 112,
@@ -11754,7 +11754,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 112,
@@ -11769,7 +11769,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 112,
@@ -11784,7 +11784,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 112,
@@ -11799,7 +11799,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 112,
@@ -11814,7 +11814,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 112,
@@ -11829,7 +11829,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 113,
@@ -12151,15 +12151,15 @@
       "taxonomy": "ai.vision.image_generation",
       "profile": "balanced",
       "strategy": "asm_topsis",
-      "service_id": "google/imagen-3@3.0",
-      "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
+      "service_id": "black-forest-labs/flux-1.1-pro@1.1",
+      "display_name": "FLUX 1.1 Pro",
+      "utility": 0.9934,
+      "best_utility": 0.9934,
       "regret": 0.0,
       "cost_per_unit": 0.04,
-      "latency_seconds": 10.0,
-      "quality_score": 0.72,
-      "uptime": 0.999
+      "latency_seconds": 8.0,
+      "quality_score": 0.904,
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12168,13 +12168,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12183,13 +12183,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12198,13 +12198,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12213,13 +12213,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12228,13 +12228,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5109,
-      "best_utility": 0.6017,
-      "regret": 0.0908,
+      "utility": 0.9934,
+      "best_utility": 0.9934,
+      "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 116,
@@ -12243,9 +12243,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.6017,
-      "best_utility": 0.6017,
-      "regret": 0.0,
+      "utility": 0.35,
+      "best_utility": 0.9934,
+      "regret": 0.6434,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -12369,7 +12369,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 118,
@@ -12384,7 +12384,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 118,
@@ -12399,7 +12399,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 118,
@@ -12414,7 +12414,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 118,
@@ -12429,7 +12429,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 118,
@@ -12444,7 +12444,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 118,
@@ -12459,7 +12459,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 119,
@@ -12678,13 +12678,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12693,13 +12693,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12708,13 +12708,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12723,13 +12723,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12738,13 +12738,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12753,13 +12753,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 121,
@@ -12768,13 +12768,13 @@
       "strategy": "random",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 122,
@@ -13308,13 +13308,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13323,13 +13323,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13338,13 +13338,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13353,13 +13353,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13368,13 +13368,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13383,13 +13383,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 127,
@@ -13398,9 +13398,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.4257,
-      "best_utility": 0.6809,
-      "regret": 0.2552,
+      "utility": 0.2797,
+      "best_utility": 0.9968,
+      "regret": 0.7171,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -13413,13 +13413,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13428,13 +13428,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13443,13 +13443,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13458,13 +13458,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13473,13 +13473,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13488,13 +13488,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.7963,
-      "best_utility": 0.7963,
+      "utility": 0.9982,
+      "best_utility": 0.9982,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 128,
@@ -13503,9 +13503,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.5104,
-      "best_utility": 0.7963,
-      "regret": 0.2859,
+      "utility": 0.4797,
+      "best_utility": 0.9982,
+      "regret": 0.5185,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -13944,7 +13944,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 133,
@@ -13959,7 +13959,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 133,
@@ -13974,7 +13974,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 133,
@@ -13989,7 +13989,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 133,
@@ -14004,7 +14004,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 133,
@@ -14019,7 +14019,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 133,
@@ -14034,7 +14034,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 134,
@@ -15196,15 +15196,15 @@
       "taxonomy": "ai.llm.chat",
       "profile": "speed_first",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9821,
-      "best_utility": 0.9821,
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.8716,
+      "best_utility": 0.8716,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 145,
@@ -15213,9 +15213,9 @@
       "strategy": "weighted_average",
       "service_id": "openai/gpt-4o@2024-11-20",
       "display_name": "GPT-4o",
-      "utility": 0.9821,
-      "best_utility": 0.9821,
-      "regret": 0.0,
+      "utility": 0.713,
+      "best_utility": 0.8716,
+      "regret": 0.1586,
       "cost_per_unit": 7.75e-06,
       "latency_seconds": 0.6,
       "quality_score": 0.8083333333333333,
@@ -15226,30 +15226,30 @@
       "taxonomy": "ai.llm.chat",
       "profile": "speed_first",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.1238,
-      "best_utility": 0.9821,
-      "regret": 0.8583,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.8716,
+      "best_utility": 0.8716,
+      "regret": 0.0,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 145,
       "taxonomy": "ai.llm.chat",
       "profile": "speed_first",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9821,
-      "best_utility": 0.9821,
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.8716,
+      "best_utility": 0.8716,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 145,
@@ -15258,9 +15258,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.1238,
-      "best_utility": 0.9821,
-      "regret": 0.8583,
+      "utility": 0.2027,
+      "best_utility": 0.8716,
+      "regret": 0.6689,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -15273,9 +15273,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.7472,
-      "best_utility": 0.9821,
-      "regret": 0.2349,
+      "utility": 0.5416,
+      "best_utility": 0.8716,
+      "regret": 0.33,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -15286,15 +15286,15 @@
       "taxonomy": "ai.llm.chat",
       "profile": "speed_first",
       "strategy": "random",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.1238,
-      "best_utility": 0.9821,
-      "regret": 0.8583,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "qwen/qwen3-max@3.0",
+      "display_name": "Qwen3 Max",
+      "utility": 0.6287,
+      "best_utility": 0.8716,
+      "regret": 0.2429,
+      "cost_per_unit": 1.736e-06,
+      "latency_seconds": 0.95,
+      "quality_score": 0.56,
+      "uptime": 1.0
     },
     {
       "task_id": 146,
@@ -15414,7 +15414,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 147,
@@ -15429,7 +15429,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 147,
@@ -15444,7 +15444,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 147,
@@ -15459,7 +15459,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 147,
@@ -15474,7 +15474,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 147,
@@ -15489,7 +15489,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 147,
@@ -15504,7 +15504,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 148,
@@ -15939,7 +15939,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 152,
@@ -15954,7 +15954,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 152,
@@ -15969,7 +15969,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 152,
@@ -15984,7 +15984,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 152,
@@ -15999,7 +15999,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 152,
@@ -16014,7 +16014,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 152,
@@ -16029,7 +16029,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 153,
@@ -16246,29 +16246,29 @@
       "taxonomy": "ai.llm.chat",
       "profile": "quality_first",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9113,
-      "best_utility": 0.9113,
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.7871,
+      "best_utility": 0.7871,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 155,
       "taxonomy": "ai.llm.chat",
       "profile": "quality_first",
       "strategy": "weighted_average",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.216,
-      "best_utility": 0.9113,
-      "regret": 0.6953,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
+      "service_id": "openai/gpt-4o@2024-11-20",
+      "display_name": "GPT-4o",
+      "utility": 0.682,
+      "best_utility": 0.7871,
+      "regret": 0.1051,
+      "cost_per_unit": 7.75e-06,
+      "latency_seconds": 0.6,
+      "quality_score": 0.8083333333333333,
       "uptime": 0.999
     },
     {
@@ -16276,30 +16276,30 @@
       "taxonomy": "ai.llm.chat",
       "profile": "quality_first",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.216,
-      "best_utility": 0.9113,
-      "regret": 0.6953,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.5314,
+      "best_utility": 0.7871,
+      "regret": 0.2557,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 155,
       "taxonomy": "ai.llm.chat",
       "profile": "quality_first",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9113,
-      "best_utility": 0.9113,
-      "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.5314,
+      "best_utility": 0.7871,
+      "regret": 0.2557,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 155,
@@ -16308,9 +16308,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.216,
-      "best_utility": 0.9113,
-      "regret": 0.6953,
+      "utility": 0.5268,
+      "best_utility": 0.7871,
+      "regret": 0.2603,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -16323,9 +16323,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.692,
-      "best_utility": 0.9113,
-      "regret": 0.2193,
+      "utility": 0.564,
+      "best_utility": 0.7871,
+      "regret": 0.2231,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -16336,14 +16336,14 @@
       "taxonomy": "ai.llm.chat",
       "profile": "quality_first",
       "strategy": "random",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.216,
-      "best_utility": 0.9113,
-      "regret": 0.6953,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
+      "service_id": "openai/gpt-4o@2024-11-20",
+      "display_name": "GPT-4o",
+      "utility": 0.682,
+      "best_utility": 0.7871,
+      "regret": 0.1051,
+      "cost_per_unit": 7.75e-06,
+      "latency_seconds": 0.6,
+      "quality_score": 0.8083333333333333,
       "uptime": 0.999
     },
     {
@@ -16563,13 +16563,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16578,13 +16578,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16593,13 +16593,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16608,13 +16608,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16623,13 +16623,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16638,13 +16638,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 158,
@@ -16653,13 +16653,13 @@
       "strategy": "random",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.5972,
-      "best_utility": 0.5972,
+      "utility": 0.9953,
+      "best_utility": 0.9953,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 159,
@@ -16876,60 +16876,60 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "asm_topsis",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
       "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 161,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "weighted_average",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "minimax/m2.7@2.7",
+      "display_name": "MiniMax M2.7",
+      "utility": 0.9483,
+      "best_utility": 0.9483,
+      "regret": 0.0,
+      "cost_per_unit": 7.291999999999999e-07,
+      "latency_seconds": 0.9,
+      "quality_score": 0.78,
+      "uptime": 0.997
     },
     {
       "task_id": 161,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "cheapest_first",
-      "service_id": "google/gemini-2.5-pro@2.5",
-      "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
-      "cost_per_unit": 7.375e-06,
-      "latency_seconds": 1.5,
-      "quality_score": 0.8333333333333334,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 161,
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "fastest_first",
-      "service_id": "openai/gpt-4o@2024-11-20",
-      "display_name": "GPT-4o",
-      "utility": 0.9083,
-      "best_utility": 0.9083,
-      "regret": 0.0,
-      "cost_per_unit": 7.75e-06,
-      "latency_seconds": 0.6,
-      "quality_score": 0.8083333333333333,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 161,
@@ -16938,9 +16938,9 @@
       "strategy": "highest_quality_first",
       "service_id": "google/gemini-2.5-pro@2.5",
       "display_name": "Gemini 2.5 Pro",
-      "utility": 0.7394,
-      "best_utility": 0.9083,
-      "regret": 0.1689,
+      "utility": 0.3691,
+      "best_utility": 0.9483,
+      "regret": 0.5792,
       "cost_per_unit": 7.375e-06,
       "latency_seconds": 1.5,
       "quality_score": 0.8333333333333334,
@@ -16953,9 +16953,9 @@
       "strategy": "most_expensive_first",
       "service_id": "anthropic/claude-sonnet-4@4.0",
       "display_name": "Claude Sonnet 4",
-      "utility": 0.2148,
-      "best_utility": 0.9083,
-      "regret": 0.6935,
+      "utility": 0.1018,
+      "best_utility": 0.9483,
+      "regret": 0.8465,
       "cost_per_unit": 1.14e-05,
       "latency_seconds": 0.8,
       "quality_score": 0.8166666666666667,
@@ -16966,15 +16966,15 @@
       "taxonomy": "ai.llm.chat",
       "profile": "cost_first",
       "strategy": "random",
-      "service_id": "anthropic/claude-sonnet-4@4.0",
-      "display_name": "Claude Sonnet 4",
-      "utility": 0.2148,
-      "best_utility": 0.9083,
-      "regret": 0.6935,
-      "cost_per_unit": 1.14e-05,
-      "latency_seconds": 0.8,
-      "quality_score": 0.8166666666666667,
-      "uptime": 0.999
+      "service_id": "deepseek/deepseek-v4-flash@4.0",
+      "display_name": "DeepSeek V4 Flash",
+      "utility": 0.9095,
+      "best_utility": 0.9483,
+      "regret": 0.0388,
+      "cost_per_unit": 3.024e-07,
+      "latency_seconds": 0.55,
+      "quality_score": 0.53,
+      "uptime": 0.997
     },
     {
       "task_id": 162,
@@ -17724,7 +17724,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 169,
@@ -17739,7 +17739,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 169,
@@ -17754,7 +17754,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 169,
@@ -17769,7 +17769,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 169,
@@ -17784,7 +17784,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 169,
@@ -17799,7 +17799,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 169,
@@ -17814,7 +17814,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 170,
@@ -18033,13 +18033,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18048,13 +18048,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18063,13 +18063,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18078,13 +18078,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18093,13 +18093,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18108,13 +18108,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 172,
@@ -18123,9 +18123,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.4257,
-      "best_utility": 0.6809,
-      "regret": 0.2552,
+      "utility": 0.2797,
+      "best_utility": 0.9968,
+      "regret": 0.7171,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,
@@ -19509,7 +19509,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 186,
@@ -19524,7 +19524,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 186,
@@ -19539,7 +19539,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 186,
@@ -19554,7 +19554,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 186,
@@ -19569,7 +19569,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 186,
@@ -19584,7 +19584,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 186,
@@ -19599,7 +19599,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 187,
@@ -20769,7 +20769,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 198,
@@ -20784,7 +20784,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 198,
@@ -20799,7 +20799,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 198,
@@ -20814,7 +20814,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 198,
@@ -20829,7 +20829,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 198,
@@ -20844,7 +20844,7 @@
       "cost_per_unit": 0.2,
       "latency_seconds": 45.0,
       "quality_score": 0.847,
-      "uptime": 0.5
+      "uptime": 0.997
     },
     {
       "task_id": 198,
@@ -20859,7 +20859,7 @@
       "cost_per_unit": 0.029,
       "latency_seconds": 60.0,
       "quality_score": 0.835,
-      "uptime": 0.5
+      "uptime": 0.996
     },
     {
       "task_id": 199,
@@ -20868,13 +20868,13 @@
       "strategy": "asm_topsis",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20883,13 +20883,13 @@
       "strategy": "weighted_average",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20898,13 +20898,13 @@
       "strategy": "cheapest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20913,13 +20913,13 @@
       "strategy": "fastest_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20928,13 +20928,13 @@
       "strategy": "highest_quality_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20943,13 +20943,13 @@
       "strategy": "most_expensive_first",
       "service_id": "black-forest-labs/flux-1.1-pro@1.1",
       "display_name": "FLUX 1.1 Pro",
-      "utility": 0.6809,
-      "best_utility": 0.6809,
+      "utility": 0.9968,
+      "best_utility": 0.9968,
       "regret": 0.0,
       "cost_per_unit": 0.04,
       "latency_seconds": 8.0,
       "quality_score": 0.904,
-      "uptime": 0.5
+      "uptime": 0.995
     },
     {
       "task_id": 199,
@@ -20958,9 +20958,9 @@
       "strategy": "random",
       "service_id": "google/imagen-3@3.0",
       "display_name": "Imagen 3",
-      "utility": 0.4257,
-      "best_utility": 0.6809,
-      "regret": 0.2552,
+      "utility": 0.2797,
+      "best_utility": 0.9968,
+      "regret": 0.7171,
       "cost_per_unit": 0.04,
       "latency_seconds": 10.0,
       "quality_score": 0.72,

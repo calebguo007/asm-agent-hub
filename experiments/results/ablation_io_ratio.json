@@ -1,6 +1,6 @@
 {
   "experiment": "glm_3_io_ratio_sensitivity",
-  "generated_at": "2026-05-02T12:41:01Z",
+  "generated_at": "2026-05-04T10:23:12Z",
   "io_ratios_swept": [
     0.1,
     0.2,
@@ -33,25 +33,25 @@
       "n_comparisons": 80
     },
     "0.3->0.5": {
-      "tau_mean": 1.0,
+      "tau_mean": 0.9991,
       "ci95": [
-        1.0,
+        0.9973,
         1.0
       ],
       "n_comparisons": 80
     },
     "0.5->0.8": {
-      "tau_mean": 0.9833,
+      "tau_mean": 0.9955,
       "ci95": [
-        0.9583,
+        0.9866,
         1.0
       ],
       "n_comparisons": 80
     },
     "0.8->1.0": {
-      "tau_mean": 0.9917,
+      "tau_mean": 0.9964,
       "ci95": [
-        0.975,
+        0.9902,
         1.0
       ],
       "n_comparisons": 80
@@ -62,6 +62,6 @@
     "end": 1.0,
     "note": "tau >= 0.9 considered stable"
   },
-  "total_rankings": 1032,
+  "total_rankings": 1152,
   "interpretation": "Rankings remain stable across the valid [0.1, 1.0] range; io_ratio is safe to expose as a task hint rather than a precomputed field"
 }

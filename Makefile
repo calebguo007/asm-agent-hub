@@ -1,4 +1,4 @@
-.PHONY: test test-py test-ts eval ablations preference-alignment llm-eval llm-eval-live audit value-audit value-audit-full paper-tables reproduce clean clean-cache help
+.PHONY: test test-py test-ts eval ablations selection-baselines preference-alignment llm-eval llm-eval-live audit value-audit value-audit-full paper-tables reproduce clean clean-cache help
 
 LLM_PROVIDER ?= deepseek
 LLM_MODEL ?= deepseek-chat
@@ -13,6 +13,7 @@ help:
 	@echo "  make test-ts       Run TypeScript MCP server tests only"
 	@echo "  make eval          Run A/B evaluation (Section 6.5)"
 	@echo "  make ablations     Run ablation studies (Section 6.3a)"
+	@echo "  make selection-baselines  Run 7-policy regret analysis (Section 6.6)"
 	@echo "  make preference-alignment  Run natural-language preference evaluation (Section 6.6a)"
 	@echo "  make llm-eval      LLM-as-selector dry-run (no API calls)"
 	@echo "  make llm-eval-live LLM-as-selector with live LLM (override LLM_PROVIDER/LLM_MODEL/LLM_BASE_URL/LLM_API_KEY_ENV)"
@@ -49,6 +50,9 @@ eval:
 
 ablations:
 	python experiments/ablation_experiments.py --seed 2024
+
+selection-baselines:
+	python experiments/selection_baselines.py
 
 preference-alignment:
 	python experiments/preference_alignment.py --seed 2024
@@ -89,18 +93,20 @@ paper-tables:
 	python experiments/generate_paper_tables.py
 
 reproduce:
-	@echo "==> [1/6] §6.0  GitHub repository audit (n=50)"
+	@echo "==> [1/7] §6.0  GitHub repository audit (n=50)"
 	python experiments/mcp_ecosystem_audit.py
-	@echo "==> [2/6] §6.0a Registry-level value-metadata audit (n=600)"
+	@echo "==> [2/7] §6.0a Registry-level value-metadata audit (n=600)"
 	python experiments/mcp_value_metadata_audit.py --sample-size 600 --seed 2026
-	@echo "==> [3/6] §6.5  Controlled A/B vs random/most-expensive"
+	@echo "==> [3/7] §6.5  Controlled A/B vs random/most-expensive"
 	python experiments/ab_test.py
 	python experiments/analyze.py
-	@echo "==> [4/6] §6.3a Component ablations (trust delta, TOPSIS vs WA, io_ratio)"
+	@echo "==> [4/7] §6.3a Component ablations (trust delta, TOPSIS vs WA, io_ratio)"
 	python experiments/ablation_experiments.py --seed 2024
-	@echo "==> [5/6] §6.6a Preference alignment over 20 NL requests"
+	@echo "==> [5/7] §6.6 Selection regret over 200 tasks"
+	python experiments/selection_baselines.py
+	@echo "==> [6/7] §6.6a Preference alignment over 20 NL requests"
 	python experiments/preference_alignment.py --seed 2024
-	@echo "==> [6/6] §6.7  LLM-as-selector dry-run (deterministic; no API)"
+	@echo "==> [7/7] §6.7  LLM-as-selector dry-run (deterministic; no API)"
 	python experiments/expert_annotation/run_ranking_experiment.py \
 	  --tasks-file experiments/expert_annotation/tasks_objective.yaml \
 	  --dry-run

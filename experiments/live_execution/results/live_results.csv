@@ -1,0 +1,1018 @@
+task_id,category,preference_axis,selector,service_id,selection_reason,response_text,judge_score,judge_rationale,latency_s,prompt_tokens,completion_tokens,cost_usd,cost_violation,latency_violation,quality_violation,success,error
+1,translation,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,Lottie 文件格式以 JSON 传输动画，可读性强，但在规模化时出现问题：一个 3 秒的加载旋转图标，一旦加入渐变和遮罩，体积可能膨胀到 1.2 MB。基于 Skia 的渲染器会解析文件一次，然后每帧分发 GPU 绘制调用，因此瓶颈从网络转移到冷启动时的上传带宽。服务器端光栅化速度更快，但会失去交互性——按钮停止响应悬停状态。正确的做法取决于你的动画是装饰性的还是位于点击路径中。,10.0,"The translation accurately preserves all technical terms and numbers, flows naturally in idiomatic Mandarin, and strictly adheres to the output-only constraint.",6.955,141,606,0.0002352,False,False,False,True,
+1,translation,quality,random,deepseek/deepseek-v4-flash@4.0,uniform random,Lottie 文件格式以 JSON 形式传输动画，这种格式人类可读，但在大规模应用时会出现问题：一个 3 秒的加载旋转图标，一旦加入渐变和遮罩，体积可能膨胀至 1.2 MB。基于 Skia 的渲染器会解析一次文件，然后每帧分派 GPU 绘制调用，因此瓶颈从网络转移到了冷启动时的上传带宽。服务端栅格化速度更快，但会失去交互性——按钮将不再响应悬停状态。正确的做法取决于你的动画是装饰性的还是位于点击路径中。,10.0,"The translation is idiomatic, preserves all technical terms and numbers accurately, and strictly adheres to the output-only constraint.",9.667,141,719,0.00027317,False,False,False,True,
+1,translation,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,Lottie 文件格式以 JSON 形式输出动画，这种格式人类可读，但在规模扩大时会出现问题：一个 3 秒的加载旋转图标，一旦加入渐变和遮罩，体积可能膨胀至 1.2 MB。基于 Skia 的渲染器会先解析文件，然后每帧分发 GPU 绘制调用，因此瓶颈从网络转移到了冷启动时的上传带宽。服务器端光栅化速度更快，但会失去交互性——按钮将不再响应悬停状态。正确的选择取决于你的动画是装饰性的，还是位于点击路径中。,10.0,"The translation is accurate, fluent, and correctly preserves technical terms like Skia, JSON, and GPU while adhering to the output-only constraint.",4.882,141,344,0.00014717,False,False,False,True,
+1,translation,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,Lottie 文件格式将动画打包为 JSON，人类可读却难以应对规模化场景：一段 3 秒的加载动画一旦引入渐变与蒙版，体积便可暴增至 1.2 MB。基于 Skia 的渲染器单次解析文件，随后每帧向 GPU 派发绘制调用，于是冷挂载时的瓶颈便从网络转移至上传带宽。服务端栅格化虽速度更快，却丧失了交互性——按钮不再响应悬停状态。究竟该采用何种方案，取决于动画仅为装饰用途，抑或处于点击路径之中。,10.0,"The translation is accurate, fluent, preserves all technical terms and numbers, and strictly adheres to the output-only constraint.",97.716,143,3212,0.0068715,False,True,False,True,
+1,translation,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest quality score (60) among all candidates, and its cost and latency (p99 5s < 30s) are within the specified constraints.",Lottie 文件格式将动画以 JSON 形式交付，这种格式虽人类可读，但在规模扩大时会不堪重负：一个 3 秒的加载指示器一旦加入渐变和遮罩，体积可能膨胀至 1.2 MB。基于 Skia 的渲染器只需解析一次文件，随后逐帧调度 GPU 绘制调用，因此冷挂载时的瓶颈从网络转移到了上传带宽。服务端栅格化更快，但会失去交互性——按钮不再响应悬停状态。正确的选择取决于你的动画是装饰性的，还是位于点击路径上。,10.0,"The translation accurately preserves all technical terms and numbers while rendering the English technical concepts into fluent, idiomatic Mandarin.",39.917,143,1420,0.00307246,False,True,False,True,
+1,translation,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is Alibaba's flagship model with strong multilingual support, making it best suited for high-quality, idiomatic translation while preserving technical content.",Lottie 文件格式以 JSON 形式分发动画，这种格式虽便于人类阅读，但在规模扩大时就会出现问题：一个 3 秒的加载旋转动画一旦包含渐变和蒙版，文件大小就可能膨胀到 1.2 MB。基于 Skia 的渲染器会先解析一次文件，然后逐帧发出 GPU 绘制调用，因此瓶颈便从网络传输转移到冷挂载（cold mounts）时的上传带宽上。服务端光栅化速度更快，但会丧失交互性——按钮将不再响应悬停状态。正确的选择取决于你的动画是装饰性的，还是位于用户点击路径中。,10.0,"The translation is technically accurate, preserves all required terms and numbers, maintains a natural professional flow, and strictly follows the output-only constraint.",6.972,143,138,0.0003892,False,False,False,True,
+2,translation,cost,asm_topsis,moonshot/kimi-k2.5@2.5,deterministic TOPSIS,代理必须在200毫秒内完成支付，否则收据作废。,10.0,"The translation is accurate, natural, and strictly adheres to the output-only constraint.",7.186,40,304,0.00066184,False,False,False,True,
+2,translation,cost,random,moonshot/kimi-k2.5@2.5,uniform random,代理必须在200毫秒内完成支付，否则收据无效。,10.0,The translation accurately conveys the meaning and tone of the original sentence while strictly following the output-only constraint.,20.584,40,805,0.00172396,False,False,False,True,
+2,translation,cost,cheapest_first,moonshot/kimi-k2.5@2.5,minimum estimated cost,,0.0,,8.94192930002464,0,0,0.0,False,False,False,False,[WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2,translation,cost,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,代理人必须在200毫秒内完成支付，否则收据无效。,10.0,"The translation is accurate, grammatically correct, and adheres strictly to the output-only constraint.",24.326,40,603,0.00129572,False,False,False,True,
+2,translation,cost,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"The estimated cost for translating a short sentence is well below $0.005, and the model's quality score of 60 (on a 0-100 scale) exceeds the minimum required quality threshold of 6.",,0.0,,13.783917599997949,0,0,0.0,False,False,False,False,[WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2,translation,cost,llm_picker_raw_doc,moonshot/kimi-k2.5@2.5,"All candidates are equally capable for this simple translation task, so the only available option is selected by default.",代理必须在200毫秒内完成支付，否则收据无效。,10.0,"The translation is accurate, natural, and follows the output-only constraint perfectly.",21.827,40,598,0.00128512,False,False,False,True,
+3,translation,latency,asm_topsis,moonshot/kimi-k2.5@2.5,deterministic TOPSIS,实时字幕对于现场会议的无障碍功能至关重要。,10.0,"The translation is accurate, natural, and strictly adheres to the output-only constraint.",21.891,30,806,0.00172174,False,True,False,True,
+3,translation,latency,random,moonshot/kimi-k2.5@2.5,uniform random,实时字幕对于现场会议的无障碍性至关重要。,10.0,"The translation accurately conveys the meaning of the source text using appropriate terminology for a professional context, and adheres to the output-only constraint.",49.76,30,784,0.0016751,False,True,False,True,
+3,translation,latency,cheapest_first,moonshot/kimi-k2.5@2.5,minimum estimated cost,实时字幕对于现场会议的无障碍性至关重要。,10.0,"The translation is accurate, uses appropriate terminology for accessibility and live meetings, and strictly adheres to the output-only constraint.",58.411,30,897,0.00191466,False,True,False,True,
+3,translation,latency,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,实时字幕对于现场会议的无障碍性至关重要。,10.0,"The translation is accurate, natural, and adheres strictly to the output-only constraint.",20.142,30,926,0.00197614,False,True,False,True,
+3,translation,latency,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It is the only candidate and meets the latency constraint with a p50 latency of 1.4s, which is under the 3s maximum allowed.",实时字幕对于现场会议的无障碍功能至关重要。,0.0,judge_error: <urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>,39.495,30,655,0.00140162,False,True,True,True,
+3,translation,latency,llm_picker_raw_doc,moonshot/kimi-k2.5@2.5,"Although no quantitative latency data is available, Moonshot Kimi K2.5's focus on real-time agent swarm and visual coding suggests optimization for low-latency tasks like live captioning.",实时字幕对于现场会议的无障碍性至关重要。,10.0,"The translation is accurate, uses correct terminology for accessibility and live meetings, and strictly follows the output-only constraint.",15.087,30,446,0.00095854,False,True,False,True,
+4,translation,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"China Mobile's 5G users exceeded 800 million in the first quarter of 2026, with a penetration rate of 67%. Among them, the number of IoT terminal connections increased by 32% year-on-year, mainly concentrated in three scenarios: Internet of Vehicles, smart manufacturing, and smart cities. Operators are accelerating the deployment of 5G-A (5G-Advanced) networks, aiming to achieve full coverage of key cities by 2027.",10.0,The translation accurately preserves all named entities and numerical values while maintaining a natural and professional English flow.,4.953,96,451,0.00017304,False,False,False,True,
+4,translation,balanced,random,qwen/qwen3-max@3.0,uniform random,"China Mobile's 5G subscriber base surpassed 800 million in the first quarter of 2026, achieving a penetration rate of 67%. Among these, IoT terminal connections grew by 32% year-over-year, primarily concentrated in three key scenarios: connected vehicles, smart manufacturing, and smart cities. The operator is accelerating the deployment of 5G-A (5G-Advanced) networks, aiming to achieve full coverage in major cities by 2027.",10.0,"The translation accurately preserves all named entities and numerical values while maintaining a natural, professional English style.",5.122,104,101,0.00028448,False,False,False,True,
+4,translation,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"China Mobile's 5G users exceeded 800 million in the first quarter of 2026, with a penetration rate of 67%. Among them, the number of IoT terminal connections grew 32% year-on-year, mainly concentrated in three scenarios: Internet of Vehicles, smart manufacturing, and smart cities. Operators are accelerating the deployment of 5G-A (5G-Advanced) networks, aiming to achieve full coverage of key cities by 2027.",10.0,"The translation is accurate, natural, and preserves all named entities and numerical values exactly as requested.",5.022,96,493,0.00018715,False,False,False,True,
+4,translation,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"China Mobile's 5G users exceeded 800 million in the first quarter of 2026, with a penetration rate of 67%. Among them, the number of IoT terminal connections grew 32% year-on-year, mainly concentrated in three scenarios: Internet of Vehicles, smart manufacturing, and smart cities. Operators are accelerating the deployment of 5G-A (5G-Advanced) networks, aiming to achieve full coverage of key cities by 2027.",10.0,"The translation accurately conveys the meaning in natural English while strictly preserving all named entities, technical terms, and numerical values.",9.932,96,871,0.00031416,False,False,False,True,
+4,translation,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, fast latency, and adequate quality for a straightforward translation task that doesn't require top-tier model intelligence.","China Mobile's 5G users surpassed 800 million in the first quarter of 2026, with a penetration rate of 67%. Among them, the number of IoT terminal connections grew 32% year-on-year, mainly concentrated in three major scenarios: Internet of Vehicles, smart manufacturing, and smart cities. Operators are accelerating the deployment of 5G-A (5G-Advanced) networks, aiming to achieve full coverage in key cities by 2027.",10.0,"The translation is accurate, flows naturally, and perfectly preserves all named entities and numerical values as instructed.",3.812,96,299,0.00012197,False,False,False,True,
+4,translation,balanced,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max offers strong multilingual support, making it best suited for accurate and natural Chinese-to-English translation while preserving named entities and numerical values.","China Mobile's 5G subscriber base surpassed 800 million in the first quarter of 2026, achieving a penetration rate of 67%. Among these, IoT terminal connections grew by 32% year-over-year, primarily concentrated in three key scenarios: connected vehicles, smart manufacturing, and smart cities. The operator is accelerating the deployment of 5G-A (5G-Advanced) networks, aiming for full coverage in major cities by 2027.",10.0,The translation accurately preserves all named entities and numerical values while maintaining a natural and professional English tone.,5.006,104,100,0.00028224,False,False,False,True,
+5,translation,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,被许可方不得直接或间接地对软件进行反向工程、反编译、反汇编或以其他方式试图获取其源代码，但若适用法律明确禁止该等限制，则尽管有本限制规定，在此范围内除外。,10.0,"The translation accurately captures all legal terms and the conditional exception structure using appropriate formal Chinese legal phrasing, ensuring enforceability and precision.",5.934,82,368,0.00014202,False,False,False,True,
+5,translation,quality,random,zhipu/glm-5@5.0,uniform random,,0.0,,120.49531619995832,0,0,0.0,False,False,False,False,The read operation timed out
+5,translation,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,被许可方不得直接或间接地对软件进行反向工程、反编译、反汇编或以其他方式试图获取软件的源代码，除非适用法律明确禁止该限制，尽管有本限制规定。,10.0,"The translation accurately captures all legal terminology and conditional logic, maintains the formal tone required for enforceability, and adheres to the literal structure of the original text.",5.525,82,408,0.00015546,False,False,False,True,
+5,translation,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,被许可方不得直接或间接地对软件进行反向工程、反编译、反汇编或以其他方式试图推导该软件的源代码，但在适用法律明确禁止该等限制的范围内除外。,10.0,"The translation accurately renders the legal clause using precise terminology and strict adherence to the original structure, ensuring it is enforceable.",55.377,89,2376,0.00507575,False,False,False,True,
+5,translation,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest quality score (60) on the Artificial_Analysis_Intelligence benchmark, which best satisfies the 'quality' preference for precise legal translation.",被许可方不得直接或间接地对软件进行反向工程、反编译、反汇编，或以其他方式试图推导该软件的源代码，但在该等限制被适用法律明确禁止的范围内除外，即使有本条款的限制。,10.0,"The translation accurately captures all legal nuances, including the scope of the prohibition, the specific technical actions, and the statutory carve-out, using precise legal terminology suitable for",52.39,89,2119,0.00453091,False,False,False,True,
+5,translation,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is Alibaba's flagship reasoning and coding model with strong multilingual support, making it best suited for precise, legally enforceable translation tasks requiring fidelity to literal phra",被许可方不得直接或间接对软件进行反向工程、反编译、反汇编，或以其他方式试图获取软件的源代码，但若适用法律明确禁止此类限制，则在该等禁止范围内不受本限制约束。,9.0,"The translation accurately renders all legal terminology and maintains the precise structure of the original clause, including the complex exception regarding applicable law.",3.982,88,52,0.00016576,False,False,False,True,
+6,translation,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,GPU现货价格在4小时内飙升了三倍；暂停非关键工作负载。,10.0,The translation accurately captures the technical meaning and urgency of the original English alert using appropriate terminology like 现货价格 and 工作负载.,3.937,28,181,6.709e-05,False,False,False,True,
+6,translation,cost,random,zhipu/glm-5@5.0,uniform random,GPU 现货价格在 4 小时内暴涨 3 倍；暂停非关键工作负载。,10.0,The translation accurately conveys the technical meaning and urgency of the original English message using appropriate terminology.,13.27,30,794,0.00161414,False,False,False,True,
+6,translation,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,GPU现货价格在4小时内飙升了三倍；暂停非关键工作负载。,10.0,The translation accurately conveys the technical meaning using correct terminology for 'spot price' and 'workloads' while maintaining the appropriate urgent tone.,3.919,28,179,6.642e-05,False,False,False,True,
+6,translation,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,GPU现货价格在4小时内飙升三倍；暂停非关键工作负载。,0.0,judge_error: HTTP Error 429: Too Many Requests,27.599,28,192,7.078e-05,False,False,False,True,
+6,translation,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.",GPU现货价格在四小时内飙升三倍；暂停非关键工作负载。,10.0,"The translation accurately conveys the technical terminology and urgency of the original English message in natural, professional Chinese.",3.106,28,170,6.339e-05,False,False,False,True,
+6,translation,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient inference, making it the best match for the 'cost' preference axis.",GPU现货价格在4小时内飙升3倍；暂停非关键工作负载。,0.0,judge_error: HTTP Error 429: Too Many Requests,3.49,28,233,8.456e-05,False,False,False,True,
+7,translation,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"Please help me export last week's sales report to CSV format, grouped by region and product line, with an additional year-over-year growth rate column.",0.0,judge_error: HTTP Error 429: Too Many Requests,2.063,37,112,4.592e-05,False,False,False,True,
+7,translation,balanced,random,zhipu/glm-5@5.0,uniform random,"Please help me export last week's sales report to CSV format, grouped by region and product line, with an added column for year-over-year growth rate.",10.0,"The response perfectly adheres to the output-only constraint and provides an accurate, grammatically correct English translation of the business instruction.",13.635,38,670,0.00136774,False,False,False,True,
+7,translation,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"Please help me export last week's sales report to CSV format, grouped by region and product line, with an additional year-over-year growth rate column.",10.0,The translation accurately captures all technical terms and instructions while adhering to the output-only constraint.,2.157,37,112,4.592e-05,False,False,False,True,
+7,translation,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"Please help me export last week's sales report to CSV format, grouped by region and product line, with a year-over-year growth rate column added.",10.0,"The translation is accurate, natural, and adheres strictly to the output-only constraint.",3.034,37,112,4.592e-05,False,False,False,True,
+7,translation,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, fast latency, and acceptable quality among the candidates.","Please help me export last week's sales report to CSV format, grouped by region and product line, with a year-over-year growth rate column added.",10.0,The translation accurately captures all technical details and instructions without adding any extraneous text.,2.999,37,112,4.592e-05,False,False,False,True,
+7,translation,balanced,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max offers strong multilingual support and robust tool calling, making it well-suited for accurately translating and interpreting structured data tasks like this request.","Please help me export last week's sales report in CSV format, grouped by region and product line, with an additional column for year-over-year growth rate.",10.0,"The translation accurately captures all nuances of the source text, including technical terms, and adheres to the output-only constraint.",50.57,43,31,9.352e-05,False,False,False,True,
+8,translation,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,在幽暗之中，这座城市不再是一个地方，而是一个疑问：每个角落都许诺一个答案，每条小巷又将答案吞回。行走于这些街道的暗探，已变得比街道本身更快，而街道，也生出了恐惧。,10.0,"The translation accurately captures the meaning and moody, literary atmosphere of the original text using evocative vocabulary such as '幽暗', '许诺', and '生出了恐惧'.",32.378,69,292,0.00011357,False,False,False,True,
+8,translation,quality,random,qwen/qwen3-max@3.0,uniform random,在微明之中，这座城市不再是一处所在，而成了一个疑问：每个转角都似许诺着答案，每条小巷却又将其吞没。行走于这些街巷的密探，其滋生之速竟逾街巷本身，而街巷亦因此生出了惧意。,9.0,"The translation effectively captures the literary tone and imagery with sophisticated vocabulary, although the specific interpretation of 'agents' as 'secret agents' and 'grown faster' as 'speed of br",33.064,73,64,0.00018424,False,False,False,True,
+8,translation,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,在半明半暗之中，这座城市不再是一个地方，而是一个疑问：每一个角落都许诺着一个答案，每一条巷弄又将答案吞噬回去。行走于这些街道上的特工，已变得比街道本身更快，而街道也已然变得恐惧。,9.0,The translation accurately captures the meaning and atmospheric tone of the original text using sophisticated vocabulary and sentence structures appropriate for a literary register.,12.828,69,251,9.979e-05,False,False,False,True,
+8,translation,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,半明半昧之中，这座城市已非地理之所，而是一道悬问：每个转角应许着答案，每条深巷又将其吞回。行走于这些街道上的特工，演变之速已逾于街道本身，而街道亦萌生了惧意。,10.0,"The translation accurately captures the meaning and evocative tone of the original, using sophisticated vocabulary and literary phrasing (e.g., ""半明半昧,"" ""悬问,"" ""萌生"") to effectively convey the noir-esque",39.318,73,1876,0.0040088,False,False,False,True,
+8,translation,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, best meeting the 'quality' preference for a nuanced literary translation task.",昏暝之中，这座城市不再是一处地方，而是一个疑问：每个角落都许诺着答案，每条巷弄又将它吞回。行走于这些街道上的势力，生长得比街道本身更快，而街道竟也生出了畏惧。,9.0,"The translation effectively captures the literary tone and atmosphere using sophisticated vocabulary like '昏暝' and '巷弄', though interpreting 'agents' as 'forces' instead of specific entities creates a",40.509,73,1987,0.00424412,False,False,False,True,
+8,translation,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is described as Alibaba's flagship reasoning and coding model with strong multilingual support, making it best suited for high-quality literary translation between English and Mandarin.",在微明之中，这座城市不再是一处所在，而成了一个疑问：每个街角都似许诺着答案，每条小巷却又将其吞没。行走于这些街巷的密探，其滋生之速竟已超过了街巷自身的延展，而街巷亦因此生出了惧意。,10.0,"The response accurately conveys the original meaning and personification while employing sophisticated, literary vocabulary in Chinese that perfectly captures the noir atmosphere and metaphorical dept",4.526,73,67,0.00019096,False,False,False,True,
+9,translation,latency,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,如果运费超过15美元，则取消订单。,10.0,The response provides an accurate and natural Chinese translation while strictly adhering to the output-only constraint.,6.51,26,67,2.834e-05,False,True,False,True,
+9,translation,latency,random,deepseek/deepseek-v4-flash@4.0,uniform random,如果运费超过15美元，则取消订单。,10.0,"The translation is accurate, grammatically correct, and adheres strictly to the output-only constraint.",1.906,26,67,2.834e-05,False,False,False,True,
+9,translation,latency,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,如果运费超过15美元，则取消订单。,10.0,"The translation is accurate, natural, and adheres strictly to the output-only constraint.",1.982,26,67,2.834e-05,False,False,False,True,
+9,translation,latency,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,如果运费超过15美元，则取消订单。,10.0,"The translation is accurate, natural, and adheres strictly to the output-only constraint.",35.842,26,150,5.622e-05,False,True,False,True,
+9,translation,latency,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest latency (p50: 550ms, p99: 2.2s), well under the 4s constraint, making it best for fast translation.",如果运费超过15美元，则取消订单。,10.0,"The translation is accurate, natural, and strictly follows the instruction to output only the Chinese text.",2.482,26,64,2.733e-05,False,False,False,True,
+9,translation,latency,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a fast inference variant optimized for speed and cost-efficiency, making it best suited for low-latency tasks like quick translation.",如果运费超过15美元，则取消订单。,10.0,"The response provides only the accurate Chinese translation as requested, without any additional text or explanation.",2.293,26,67,2.834e-05,False,False,False,True,
+10,translation,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,服务不可用，请在60秒后重试。,10.0,"The translation is accurate and natural, perfectly adhering to the one-line and output-only constraints.",2.064,26,90,3.606e-05,False,False,False,True,
+10,translation,cost,random,deepseek/deepseek-v4-flash@4.0,uniform random,服务不可用，请在60秒后重试。,10.0,"The translation is accurate, natural, and strictly adheres to the one-line output-only constraint.",3.191,26,72,3.002e-05,False,False,False,True,
+10,translation,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,服务不可用，请在60秒后重试。,10.0,"The translation is accurate, naturally phrased with appropriate politeness for a technical message, and strictly adheres to the one-line, output-only constraint.",3.416,26,72,3.002e-05,False,False,False,True,
+10,translation,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,服务不可用，请在60秒后重试。,10.0,"The translation is accurate, strictly adheres to the one-line output constraint, and uses appropriate terminology for a system error message.",29.021,26,90,3.606e-05,False,False,False,True,
+10,translation,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.",服务不可用，请在60秒后重试。,10.0,"The translation is accurate, technically correct, and adheres strictly to the output-only constraint.",6.54,26,90,3.606e-05,False,False,False,True,
+10,translation,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as tuned for cost-efficient inference, making it the best match for the 'cost' preference axis.",服务不可用，请在60秒后重试。,10.0,"The translation is accurate, idiomatic for technical contexts, and strictly adheres to the formatting constraints.",2.356,26,90,3.606e-05,False,False,False,True,
+11,code,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```python
+import re
+
+def parse_iso8601_duration(s: str) -> int:
+    """"""
+    Parse an ISO 8601 duration string and return total seconds.
+
+    Handles days, hours, minutes, seconds. Returns 0 on parse failure.
+
+    >>> parse_iso8601_duration('PT1H30M')
+    5400
+    >>> parse_iso8601_duration('P1DT2H')
+    93600
+    >>> parse_iso8601_duration('PT45S')
+    45
+    >>> parse_iso8601_duration('')
+    0
+    >>> parse_iso8601_duration('P1Y2M')  # unsupported components
+    0
+    >>> parse_iso8601_duration('P0D')  # zero days
+    0
+    """"""
+    pattern = r'^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$'
+    match = re.fullmatch(pattern, s)
+    if not match:
+        return 0
+    days, hours, minutes, seconds = match.groups()
+    total = 0
+    if days:
+        total += int(days) * 86400
+    if hours:
+        total += int(hours) * 3600
+    if minutes:
+        total += int(minutes) * 60
+    if seconds:
+        total += int(seconds)
+    return total
+```",10.0,"The response fully complies with instructions: correct parsing logic, returns 0 on failure, includes exactly 4 doctest examples as required, and outputs only code.",9.685,97,665,0.00024517,False,False,False,True,
+11,code,quality,random,deepseek/deepseek-v4-flash@4.0,uniform random,"```python
+import re
+
+def parse_iso8601_duration(s: str) -> int:
+    """"""
+    Parse an ISO 8601 duration string and return total seconds.
+    Returns 0 on parse failure.
+
+    >>> parse_iso8601_duration('PT1H30M')
+    5400
+    >>> parse_iso8601_duration('P1DT2H')
+    93600
+    >>> parse_iso8601_duration('PT45S')
+    45
+    >>> parse_iso8601_duration('P')
+    0
+    """"""
+    pattern = r'^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$'
+    match = re.match(pattern, s)
+    if not match:
+        return 0
+    days = int(match.group(1)) if match.group(1) else 0
+    hours = int(match.group(2)) if match.group(2) else 0
+    minutes = int(match.group(3)) if match.group(3) else 0
+    seconds = int(match.group(4)) if match.group(4) else 0
+    return days * 86400 + hours * 3600 + minutes * 60 + seconds
+```",10.0,"The code correctly implements the parsing logic with a robust regex, accurately converts to seconds, includes the required four doctests (including an edge case), and strictly adheres to the output-on",14.574,97,1200,0.00042493,False,False,False,True,
+11,code,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```python
+def parse_iso8601_duration(s: str) -> int:
+    """"""
+    Parse an ISO 8601 duration string and return total seconds.
+    Returns 0 on parse failure.
+
+    >>> parse_iso8601_duration('PT1H30M')
+    5400
+    >>> parse_iso8601_duration('P1DT2H')
+    93600
+    >>> parse_iso8601_duration('PT45S')
+    45
+    >>> parse_iso8601_duration('P0D')
+    0
+    """"""
+    if not s or not s.startswith('P'):
+        return 0
+
+    # Split into date and time parts
+    time_part = ''
+    if 'T' in s:
+        parts = s.split('T', 1)
+        date_part = parts[0][1:]  # remove leading 'P'
+        time_part = parts[1]
+    else:
+        date_part = s[1:]  # remove leading 'P'
+
+    days = 0
+    hours = 0
+    minutes = 0
+    seconds = 0
+
+    # Parse date part (only days)
+    if date_part:
+        if date_part.endswith('D'):
+            try:
+                days = int(date_part[:-1])
+            except ValueError:
+                return 0
+        else:
+            # If there is a date part but not ending with D, invalid
+            return 0
+
+    # Parse time part
+    if time_part:
+        # Expect components in order H, M, S
+        # Use regex or manual parsing
+        import re
+        # Pattern: optional H, optional M, optional S, but at least one
+        match = re.fullmatch(r'(\d+)H)?(\d+)M)?(\d+)S)?', time_part)
+        if not match:
+            return 0
+        # match groups: 1=H, 2=M, 3=S
+        h_str, m_str, s_str = match.groups()
+        if h_str:
+            hours = int(h_str)
+        if m_str:
+            minutes = int(m_str)
+        if s_str:
+            seconds = int(s_str)
+        # Ensure at least one time component present (already enforced by regex)
+    else:
+        # No time part, but if there was a 'T' without time components, invalid
+        if 'T' in s:
+            return 0
+
+    total = days * 86400 + hours * 3600 + minutes * 60 + seconds
+    return total
+```",2.0,"The function fails to parse ISO 8601 durations correctly because the regex pattern captures the unit letters together with digits, causing int conversion to raise ValueError, violating the requirement",16.175,97,1006,0.00035974,False,False,False,True,
+11,code,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,,0.0,,127.4946053000167,0,0,0.0,False,False,False,False,The read operation timed out
+11,code,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, which best satisfies the 'quality' preference axis.",,0.0,,128.48470029997407,0,0,0.0,False,False,False,False,The read operation timed out
+11,code,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is explicitly described as a flagship reasoning + coding model with strong capabilities, making it best suited for high-quality code generation on a precise parsing task like ISO 8601 durati","```python
+import re
+
+def parse_iso8601_duration(s: str) -> int:
+    """"""
+    Parse an ISO 8601 duration string and return total seconds.
+    
+    >>> parse_iso8601_duration('PT1H30M')
+    5400
+    >>> parse_iso8601_duration('P1DT2H')
+    93600
+    >>> parse_iso8601_duration('PT45S')
+    45
+    >>> parse_iso8601_duration('invalid')
+    0
+    """"""
+    if not s or not s.startswith('P'):
+        return 0
+    
+    # Remove the 'P' prefix
+    s = s[1:]
+    
+    # Check if there's a time part (after 'T')
+    if 'T' in s:
+        date_part, time_part = s.split('T', 1)
+    else:
+        date_part = s
+        time_part = ''
+    
+    total_seconds = 0
+    
+    # Parse date part (only days supported per problem statement)
+    date_match = re.match(r'^(\d+)D$', date_part) if date_part else None
+    if date_part and not date_match:
+        return 0
+    if date_match:
+        days = int(date_match.group(1))
+        total_seconds += days * 86400
+    
+    # Parse time part
+    if time_part:
+        # Match hours, minutes, seconds in any combination
+        time_pattern = r'^(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$'
+        time_match = re.match(time_pattern, time_part)
+        if not time_match:
+            return 0
+        
+        hours = int(time_match.group(1)) if time_match.group(1) else 0
+        minutes = int(time_match.group(2)) if time_match.group(2) else 0
+        seconds = int(time_match.group(3)) if time_match.group(3) else 0
+        
+        total_seconds += hours * 3600 + minutes * 60 + seconds
+    
+    return total_seconds
+```",10.0,"The implementation correctly parses ISO 8601 durations for days, hours, minutes, and seconds, includes the required doctests, handles errors by returning 0, and adheres to the output-only constraint.",15.291,105,459,0.00108696,False,False,False,True,
+12,code,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"sorted(lst, key=lambda x: (0 if x[1] >= 18 else 1, x[0]))",10.0,"The expression correctly sorts the list with adults first (by mapping to 0) and minors second (by mapping to 1), using the name as the secondary sort key, and adheres to the output-only constraint.",3.214,52,200,7.885e-05,False,False,False,True,
+12,code,cost,random,moonshot/kimi-k2.5@2.5,uniform random,"sorted(lst, key=lambda x: (x[1] < 18, x[0]))",10.0,"The lambda function correctly creates a tuple key where adults (False for <18) come before minors (True), and both groups are sorted by name (x[0]), satisfying all requirements in a one-line expressio",37.741,56,1365,0.0029181,False,False,False,True,
+12,code,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"sorted(lst, key=lambda t: (t[1] < 18, t[0]))",10.0,"The lambda function correctly creates a sort key that prioritizes adults (age >= 18) over minors by using t[1] < 18, then sorts each group by name using t[0], producing exactly the requested ordering ",9.99,52,653,0.00023106,False,False,False,True,
+12,code,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"sorted(lst, key=lambda x: (x[1] < 18, x[0]))",10.0,"The expression correctly implements the sorting logic using a tuple key that prioritizes adults (False) over minors (True) and sorts by name as the secondary criterion, adhering strictly to the output",38.487,52,303,0.00011346,False,False,False,True,
+12,code,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs, making it the most cost-effective option under the $0.01 budget constraint.","sorted(lst, key=lambda x: (0 if x[1] >= 18 else 1, x[0]))",10.0,"The expression correctly sorts the list using a tuple key that prioritizes age group (adults as 0, minors as 1) followed by name, adhering to all formatting constraints.",6.28,52,372,0.00013664,False,False,False,True,
+12,code,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient coding, making it the best match for a simple, one-line Python expression task under the 'cost' preference.","sorted(lst, key=lambda x: (x[1] < 18, x[0]))",10.0,"The one-line expression correctly sorts the list with adults first (using the boolean condition x[1] < 18 which puts False before True), then within each group sorts by name, with no extra explanation",6.99,52,377,0.00013832,False,False,False,True,
+13,code,latency,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",10.0,"The code correctly implements a debounce function using an arrow function for the outer definition and a standard function for the inner one to preserve context, fulfilling all technical requirements.",7.135,31,486,0.00017024,False,True,False,True,
+13,code,latency,random,deepseek/deepseek-v4-flash@4.0,uniform random,"```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",10.0,"The implementation is technically correct, properly preserving the `this` context and arguments, and adheres to the arrow function requirement.",9.776,31,479,0.00016789,False,True,False,True,
+13,code,latency,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",10.0,"The code correctly implements a robust debounce function that preserves context and arguments, and adheres to the output constraint by providing only the code block.",5.809,31,428,0.00015075,False,True,False,True,
+13,code,latency,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",10.0,"The code correctly implements a robust debounce function using an arrow function as requested, properly handles context and arguments, and contains no extraneous text.",5.592,31,456,0.00016016,False,True,False,True,
+13,code,latency,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest latency (p50: 550ms, p99: 2.2s), well under the 5s constraint, making it best for the 'latency' preference.","```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",0.0,judge_error: HTTP Error 429: Too Many Requests,7.702,31,478,0.00016755,False,True,False,True,
+13,code,latency,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a 'fast inference variant,' making it best suited for low-latency responses on simple coding tasks like implementing a debounce function.","```javascript
+const debounce = (fn, ms) => {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
+```",10.0,"The code correctly implements the debounce logic using a closure, preserves context and arguments with `apply`, and fulfills the arrow function requirement for the main definition.",8.078,31,491,0.00017192,False,True,False,True,
+14,code,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```python
+def rolling_average(values, window):
+    return [sum(values[i:i+window]) / window for i in range(len(values) - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure the window size is maintained and adheres to the output-only constraint.,6.367,53,310,0.00011603,False,False,False,True,
+14,code,balanced,random,zhipu/glm-5@5.0,uniform random,"```python
+def rolling_average(values, window):
+    if window <= 0:
+        raise ValueError(""window must be positive"")
+    n = len(values)
+    return [sum(values[i:i+window]) / window for i in range(n - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure the window fits within the list bounds and adheres strictly to the output-only constraint.,97.543,53,3292,0.00666042,False,False,False,True,
+14,code,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```python
+def rolling_average(values, window):
+    return [sum(values[i:i+window]) / window for i in range(len(values) - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure the window size is maintained throughout the iteration and adheres to the output-only constraint.,5.045,53,470,0.00016979,False,False,False,True,
+14,code,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"```python
+def rolling_average(values, window):
+    return [sum(values[i:i+window]) / window for i in range(len(values) - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure full windows are processed and adheres strictly to the output-only constraint.,7.385,53,412,0.0001503,False,False,False,True,
+14,code,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, acceptable quality (53), and lowest latency (550ms p50) among the candidates.","```python
+def rolling_average(values, window):
+    return [sum(values[i:i+window]) / window for i in range(len(values) - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure only full windows are processed and adheres strictly to the output-only constraint.,5.67,53,394,0.00014426,False,False,False,True,
+14,code,balanced,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max offers strong reasoning and coding capabilities with multilingual support, making it well-suited for accurately identifying and fixing subtle bugs in Python code.","```python
+def rolling_average(values, window):
+    return [sum(values[i:i+window]) / window for i in range(len(values) - window + 1)]
+```",10.0,The response correctly fixes the off-by-one error in the range calculation to ensure the window is always full and adheres strictly to the output-only constraint.,2.502,56,36,0.000112,False,False,False,True,
+15,code,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+cache = LRUCache(2)
+cache.put(1, 1)
+cache.put(2, 2)
+assert cache.get(1) == 1
+cache.put(3, 3)  # evicts key 2
+assert cache.get(2) == -1
+cache.put(4, 4)  # evicts key 1
+assert cache.get(1) == -1
+assert cache.get(3) == 3
+assert cache.get(4) == 4
+
+cache2 = LRUCache(2)
+cache2.put(1, 1)
+cache2.put(2, 2)
+cache2.put(1, 10)  # update
+assert cache2.get(1) == 10
+cache2.put(3, 3)  # evicts key 2
+assert cache2.get(2) == -1
+
+cache3 = LRUCache(1)
+cache3.put(1, 1)
+assert cache3.get(1) == 1
+cache3.put(2, 2)
+assert cache3.get(1) == -1
+assert cache3.get(2) == 2
+```",10.0,"The response correctly implements LRUCache with O(1) get and put using OrderedDict, includes three assert-based unit tests, and outputs only the code as required.",11.307,58,883,0.00030968,False,False,False,True,
+15,code,quality,random,deepseek/deepseek-v4-flash@4.0,uniform random,"```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+if __name__ == ""__main__"":
+    cache = LRUCache(2)
+    cache.put(1, 1)
+    cache.put(2, 2)
+    assert cache.get(1) == 1
+    cache.put(3, 3)  # evicts key 2
+    assert cache.get(2) == -1
+    cache.put(4, 4)  # evicts key 1
+    assert cache.get(1) == -1
+    assert cache.get(3) == 3
+    assert cache.get(4) == 4
+```",9.0,"The LRUCache implementation is correct and efficient using OrderedDict, but the response includes markdown code fences despite the instruction for output-only code and provides 5 unit tests instead of",9.669,58,718,0.00025424,False,False,False,True,
+15,code,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+if __name__ == ""__main__"":
+    # Test 1: Basic get after put
+    cache = LRUCache(2)
+    cache.put(1, 1)
+    cache.put(2, 2)
+    assert cache.get(1) == 1
+
+    # Test 2: Eviction of least recently used
+    cache.put(3, 3)  # evicts key 2
+    assert cache.get(2) == -1
+
+    # Test 3: Update and eviction order
+    cache.put(1, 10)  # update key 1, making it most recent
+    cache.put(4, 4)   # evicts key 3 (least recently used)
+    assert cache.get(3) == -1
+```",10.0,"The implementation correctly uses OrderedDict for O(1) get/put, includes three short unit tests, and follows the output-only code requirement.",12.798,58,1139,0.0003957,False,False,False,True,
+15,code,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,"```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+cache = LRUCache(2)
+cache.put(1, 1)
+cache.put(2, 2)
+assert cache.get(1) == 1
+cache.put(3, 3)
+assert cache.get(2) == -1
+cache.put(4, 4)
+assert cache.get(1) == -1
+```",0.0,judge_error: HTTP Error 429: Too Many Requests,65.99,62,2378,0.00506827,False,False,False,True,
+15,code,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, which best satisfies the 'quality' preference axis.","```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+cache = LRUCache(2)
+cache.put(1, 10)
+assert cache.get(1) == 10
+cache.put(2, 20)
+cache.put(3, 30)
+assert cache.get(1) == -1
+cache.get(2)
+cache.put(4, 40)
+assert cache.get(3) == -1
+```",10.0,The code correctly implements an LRU cache using OrderedDict with O(1) operations and includes three valid unit tests verifying functionality.,38.451,62,1428,0.00305427,False,False,False,True,
+15,code,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is explicitly described as a flagship reasoning + coding model with strong capabilities, making it best suited for high-quality implementation of algorithmic tasks like an LRU cache.","from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+# Unit tests
+assert LRUCache(2).get(1) == -1
+
+cache = LRUCache(2)
+cache.put(1, 1)
+cache.put(2, 2)
+assert cache.get(1) == 1
+cache.put(3, 3)
+assert cache.get(2) == -1
+
+cache = LRUCache(2)
+cache.put(2, 1)
+cache.put(1, 1)
+cache.put(2, 3)
+cache.put(4, 4)
+assert cache.get(1) == -1",9.0,"The LRUCache implementation and unit tests are technically correct and efficient, but the response violates the ""output only code"" constraint by appending the text ""Score:"" at the end.",9.164,61,249,0.00059192,False,False,False,True,
+16,code,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```sql
+SELECT 
+    c.id AS customer_id,
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_value
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+WHERE o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY c.id, c.name
+ORDER BY total_value DESC
+LIMIT 5;
+```",0.0,judge_error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>,7.825,66,363,0.00013675,False,False,False,True,
+16,code,cost,random,zhipu/glm-5@5.0,uniform random,"```sql
+SELECT
+    c.id AS customer_id,
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_value
+FROM
+    customers c
+JOIN
+    orders o ON c.id = o.customer_id
+WHERE
+    o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY
+    c.id, c.name
+ORDER BY
+    total_value DESC
+LIMIT 5;
+```",0.0,judge_error: HTTP Error 429: Too Many Requests,19.915,67,717,0.00147549,False,False,False,True,
+16,code,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```sql
+SELECT 
+    c.id AS customer_id,
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_value
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+WHERE o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY c.id, c.name
+ORDER BY total_value DESC
+LIMIT 5;
+```",10.0,"The query is technically correct using valid Postgres syntax, accurately filters for the last 30 days, aggregates correctly, limits to 5, and respects the output-only constraint by providing only the ",6.837,66,374,0.00014045,False,False,False,True,
+16,code,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"```sql
+SELECT 
+    c.id AS customer_id,
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_value
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+WHERE o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY c.id, c.name
+ORDER BY total_value DESC
+LIMIT 5;
+```",10.0,"The query is syntactically correct for Postgres, accurately implements the business logic to sum and rank customers, and strictly adheres to the output-only constraint.",4.795,66,364,0.00013709,False,False,False,True,
+16,code,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.","```sql
+SELECT 
+    c.id AS customer_id, 
+    c.name AS customer_name, 
+    SUM(o.total_amount) AS total_value
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+WHERE o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY c.id, c.name
+ORDER BY total_value DESC
+LIMIT 5;
+```",10.0,"The query correctly implements the aggregation and filtering logic using specific Postgres syntax, orders by the calculated value, and limits the results to 5 as requested.",5.885,66,386,0.00014448,False,False,False,True,
+16,code,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient coding and reasoning, making it the best match for a simple SQL generation task under the 'cost' preference.","```sql
+SELECT 
+    c.id AS customer_id,
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_value
+FROM customers c
+JOIN orders o ON c.id = o.customer_id
+WHERE o.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY c.id, c.name
+ORDER BY total_value DESC
+LIMIT 5;
+```",9.0,"The SQL logic is technically correct and uses proper Postgres syntax, but the response includes Markdown code block fences which technically violates the 'output only the SQL' instruction.",3.866,66,315,0.00012062,False,False,False,True,
+17,code,latency,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```python
+import re
+
+pattern = r'^\d+\.\d+\.\d+(?:-[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)?(?:\+[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)?$'
+test_string = '2.0.0+build.42'
+match = re.match(pattern, test_string)
+print(match is not None)
+```",10.0,"The regex correctly matches the required semantic versioning patterns, the code provides a valid test using `re.match`, and the output contains only the requested code without explanatory text.",5.767,61,580,0.00020854,False,False,False,True,
+17,code,latency,random,moonshot/kimi-k2.5@2.5,uniform random,"```python
+import re
+
+pattern = r'^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+re.match(pattern, '2.0.0+build.42')
+```",10.0,"The response provides a strictly correct regex for semantic versioning and includes the requested test case, adhering to the output-only constraint.",61.691,64,2372,0.00505642,False,True,False,True,
+17,code,latency,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```python
+import re
+
+pattern = r'^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+
+test_string = '2.0.0+build.42'
+match = re.match(pattern, test_string)
+print(match is not None)
+```",10.0,"The regex correctly captures the semantic versioning format (including major, minor, patch, optional pre-release, and optional build metadata), the code demonstrates a valid test using re.match, and t",43.48,61,1497,0.00051666,False,True,False,True,
+17,code,latency,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"```python
+import re
+
+pattern = r'^\d+\.\d+\.\d+(-[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?$'
+
+test_string = '0.10.0-rc.1'
+match = re.match(pattern, test_string)
+print(match is not None)
+```",10.0,"The regex accurately matches semantic versioning formats including core, pre-release, and build metadata, and the response provides a correct implementation with a single test case without extraneous ",11.985,61,929,0.00032581,False,True,False,True,
+17,code,latency,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest p50 latency (550ms) and p99 latency (2.2s), well under the 6-second limit, making it best for minimizing latency.","```python
+import re
+
+pattern = r'^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$'
+
+# Test with a semantic version string
+match = re.match(pattern, '1.2.3')
+print(match.group(0) if match else 'No match')
+```",10.0,"The regex correctly handles the specified semantic versioning formats including optional pre-release and build metadata, the test code is valid Python using `re.match`, and the response adheres to the",12.78,61,719,0.00025525,False,True,False,True,
+17,code,latency,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a 'fast inference variant,' making it best suited for low-latency tasks like generating concise code snippets.","```python
+import re
+
+pattern = r'^\d+\.\d+\.\d+(?:-[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)?(?:\+[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)?$'
+test_string = '0.10.0-rc.1'
+match = re.match(pattern, test_string)
+print(bool(match))
+```",10.0,"The regex accurately matches semantic version formats including pre-release and build metadata, the code includes a valid test using re.match, and the response adheres strictly to the output-only cons",43.563,61,800,0.00028246,False,True,False,True,
+18,code,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,[item.normalize() for item in data if item.is_valid()]  # List of normalized items from valid data entries,10.0,"The response perfectly refactors the loop into a single Python comprehension that maintains the same functionality, includes a concise explanatory comment, and follows the output-only constraint.",5.705,55,216,8.49e-05,False,False,False,True,
+18,code,balanced,random,qwen/qwen3-max@3.0,uniform random,"```python
+results = [item.normalize() for item in data if item.is_valid()]  # Creates a list of normalized valid items from data
+```",10.0,"The response perfectly refactors the loop into a syntactically correct list comprehension that preserves the filtering and mapping logic, includes the variable assignment for completeness, and provide",2.8,57,31,0.00010136,False,False,False,True,
+18,code,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"[item.normalize() for item in data if item.is_valid()]
+# Creates a list of normalized items from valid items in data.",10.0,The model correctly refactored the loop into a list comprehension and provided an accurate one-line comment as instructed.,3.943,55,252,9.699e-05,False,False,False,True,
+18,code,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"[item.normalize() for item in data if item.is_valid()]
+# Creates a list of normalized items from valid items in data.",10.0,"The response correctly transforms the loop into a list comprehension with accurate filtering and mapping logic, and strictly adheres to the output constraint by providing only the code and a clear one",6.119,55,371,0.00013698,False,False,False,True,
+18,code,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, lowest latency, and acceptable quality among the candidates.","```python
+results = [item.normalize() for item in data if item.is_valid()]  # Creates a list of normalized items for each valid item in data
+```",10.0,The response accurately refactors the loop into a concise list comprehension and adheres to the output-only constraint with a clear one-line comment.,6.292,55,388,0.00014269,False,False,False,True,
+18,code,balanced,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"Optimized for cost-efficient coding tasks like concise Python refactoring, aligning well with the balanced preference for performance and efficiency.","```python
+# List comprehension that filters valid items and normalizes them
+results = [item.normalize() for item in data if item.is_valid()]
+```",10.0,"The response correctly refactors the loop into a list comprehension with accurate logic (filtering and mapping) and includes a clear, concise one-line comment explaining the operation.",3.041,55,144,6.07e-05,False,False,False,True,
+19,code,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```typescript
+type DeepReadonly<T> = 
+  T extends (infer U)[] 
+    ? readonly DeepReadonly<U>[] 
+    : T extends Record<string, any> 
+      ? { readonly [K in keyof T]: DeepReadonly<T[K]> } 
+      : T;
+
+// Usage example:
+interface User {
+  name: string;
+  address: {
+    city: string;
+    zip: number;
+  };
+  hobbies: string[];
+}
+
+type ReadonlyUser = DeepReadonly<User>;
+// ReadonlyUser is:
+// {
+//   readonly name: string;
+//   readonly address: {
+//     readonly city: string;
+//     readonly zip: number;
+//   };
+//   readonly hobbies: readonly string[];
+// }
+```",10.0,"The code correctly implements the recursive readonly logic for objects and arrays using conditional and mapped types, and it strictly adheres to the output-only constraint with a clear usage example.",32.273,42,2147,0.0007308,False,False,False,True,
+19,code,quality,random,zhipu/glm-5@5.0,uniform random,"```typescript
+type DeepReadonly = T extends (...args: any[]) => any
+  ? T
+  : T extends object
+  ? { readonly [P in keyof T]: DeepReadonly }
+  : T;
+
+// Usage Example
+
+interface User {
+  id: number;
+  name: string;
+  preferences: {
+    theme: string;
+    notifications: boolean;
+  };
+  roles: string[];
+}
+
+const user: DeepReadonly<User> = {
+  id: 1,
+  name: ""Alice"",
+  preferences: {
+    theme: ""dark"",
+    notifications: true,
+  },
+  roles: [""admin"", ""editor""],
+};
+
+// Valid: reading properties
+console.log(user.name);
+console.log(user.preferences.theme);
+
+// Error: Cannot assign to 'name' because it is a read-only property
+// user.name = ""Bob"";
+
+// Error: Cannot assign to 'theme' because it is a read-only property
+// user.preferences.theme = ""light"";
+
+// Error: Property 'push' does not exist on type 'readonly string[]'
+// user.roles.push(""guest"");
+```",9.0,"The DeepReadonly type implementation is technically correct and handles nested objects, arrays, and functions properly. The usage example is comprehensive but slightly exceeds the requested 'brief' sc",77.389,42,2712,0.00548621,False,False,False,True,
+19,code,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```typescript
+type DeepReadonly<T> = T extends readonly (infer U)[]
+  ? ReadonlyArray<DeepReadonly<U>>
+  : T extends Function
+    ? T
+    : T extends object
+      ? { readonly [K in keyof T]: DeepReadonly<T[K]> }
+      : T;
+
+// Usage example
+interface User {
+  name: string;
+  address: {
+    street: string;
+    city: string;
+  };
+  hobbies: string[];
+}
+
+type ReadonlyUser = DeepReadonly<User>;
+
+const user: ReadonlyUser = {
+  name: ""Alice"",
+  address: { street: ""123 Main"", city: ""NYC"" },
+  hobbies: [""reading"", ""coding""]
+};
+
+// user.name = ""Bob""; // Error
+// user.address.street = ""456""; // Error
+// user.hobbies.push(""swimming""); // Error
+```",10.0,"The provided TypeScript utility type correctly implements deep recursion for objects and arrays while preserving function types, includes a comprehensive usage example, and adheres strictly to the out",21.053,42,2060,0.00070157,False,False,False,True,
+19,code,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,"```typescript
+type DeepReadonly<T> = 
+  T extends Function 
+    ? T 
+    : T extends readonly (infer U)[] 
+      ? ReadonlyArray<DeepReadonly<U>>
+      : T extends object 
+        ? { readonly [K in keyof T]: DeepReadonly<T[K]> }
+        : T;
+
+// Usage example
+interface User {
+  name: string;
+  settings: {
+    theme: string;
+    notifications: boolean[];
+  };
+  tags: string[];
+}
+
+const user: DeepReadonly<User> = {
+  name: ""Alice"",
+  settings: {
+    theme: ""dark"",
+    notifications: [true, false]
+  },
+  tags: [""admin""]
+};
+
+// user.name = ""Bob""; // Error: Cannot assign to 'name' because it is a read-only property.
+// user.settings.theme = ""light""; // Error: Cannot assign to 'theme' because it is a read-only property.
+// user.tags.push(""user""); // Error: Property 'push' does not exist on type 'readonly string[]'.
+```",10.0,"The provided type correctly implements deep readonly recursion, includes a clear usage example, and adheres to the output-only code constraint.",40.448,46,1721,0.00366848,False,False,False,True,
+19,code,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, which best satisfies the 'quality' preference axis.","```typescript
+type DeepReadonly<T> = T extends (infer U)[]
+  ? ReadonlyArray<DeepReadonly<U>>
+  : T extends object
+  ? { readonly [K in keyof T]: DeepReadonly<T[K]> }
+  : T;
+
+// Usage example
+interface Config {
+  server: {
+    port: number;
+    hosts: string[];
+  };
+  debug: boolean;
+}
+
+const config: DeepReadonly<Config> = {
+  server: {
+    port: 3000,
+    hosts: [""localhost""]
+  },
+  debug: true
+};
+
+// All of these would be compile-time errors:
+// config.debug = false;
+// config.server.port = 8080;
+// config.server.hosts.push(""example.com"");
+```",10.0,"The implementation correctly handles recursion for both nested objects and arrays, includes a clear usage example demonstrating immutability, and strictly adheres to the output-only constraint.",82.607,46,2373,0.00505072,False,False,False,True,
+19,code,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is explicitly described as a flagship reasoning and coding model with strong capabilities, making it best suited for high-quality implementation of precise TypeScript utility types.","type DeepReadonly<T> = {
+  readonly [K in keyof T]: T[K] extends object
+    ? T[K] extends Function
+      ? T[K]
+      : DeepReadonly<T[K]>
+    : T[K];
+};
+
+// Usage example:
+interface User {
+  name: string;
+  address: {
+    street: string;
+    city: string;
+  };
+  tags: string[];
+}
+
+const user: DeepReadonly<User> = {
+  name: ""Alice"",
+  address: {
+    street: ""123 Main St"",
+    city: ""Wonderland""
+  },
+  tags: [""developer"", ""typescript""]
+};
+
+// user.name = ""Bob""; // Error: cannot assign to 'name' because it is a read-only property
+// user.address.city = ""Nowhere""; // Error: cannot assign to 'city' because it is a read-only property
+// user.tags.push(""new""); // Error: Property 'push' does not exist on type 'readonly string[]'",0.0,judge_error: The read operation timed out,8.711,45,206,0.00048664,False,False,False,True,
+20,code,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"```python
+import sys,json; print('\n'.join(json.load(sys.stdin).keys()))
+```",10.0,"The response provides a correct, valid Python one-liner that meets all constraints by using sys.stdin and json to read input and printing each top-level key on a new line.",7.793,35,496,0.0001745,False,False,False,True,
+20,code,cost,random,moonshot/kimi-k2.5@2.5,uniform random,"```bash
+python -c ""import sys, json; print(*json.load(sys.stdin), sep='\n')""
+```
+
+**Explanation:**
+- `json.load(sys.stdin)` reads and parses the JSON from standard input (assuming the top level is a dictionary)
+- Iterating over a dict yields its keys, which are unpacked with `*`
+- `print(..., sep='\n')` outputs each key on its own line
+
+Alternative using a list comprehension (if you prefer explicit `.keys()`):
+```bash
+python -c ""import sys, json; [print(k) for k in json.load(sys.stdin).keys()]""
+```",10.0,"The response correctly implements the requested functionality using `sys.stdin` and `json` in a valid Python one-liner executed via command line, with accurate handling of dictionary unpacking and out",26.226,39,1014,0.00216661,False,False,False,True,
+20,code,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"```python
+import sys, json; [print(k) for k in json.load(sys.stdin)]
+```",10.0,"The response correctly implements a one-liner that imports the required modules, reads JSON from stdin, and prints each top-level key on its own line as specified.",4.765,35,437,0.00015467,False,False,False,True,
+20,code,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"```python
+import sys,json; print(*json.load(sys.stdin).keys(), sep='\n')
+```",10.0,The code is a valid one-liner that correctly uses sys.stdin and json to read input and print each top-level key on a separate line.,30.19,35,621,0.0002165,False,False,False,True,
+20,code,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.","```python
+python -c ""import sys,json; print('\n'.join(json.load(sys.stdin)))""
+```",10.0,"The response correctly uses `json.load(sys.stdin)` to read the JSON object and `'
+'.join()` to print the keys, perfectly adhering to the one-liner constraint and specific module requirements.",7.358,35,527,0.00018491,False,False,False,True,
+20,code,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient coding tasks, making it the best match for a simple, low-complexity scripting request.","```python
+import sys,json; [print(k) for k in json.load(sys.stdin)]
+```",10.0,"The response correctly implements the one-liner using the required modules to read from stdin and print keys, fulfilling all constraints and technical requirements.",30.333,35,555,0.00019432,False,False,False,True,
+21,summarization,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The Model Context Protocol registry, launched in March 2026, contains over 14,000 entries for MCP servers with capabilities like filesystem access and browser automation. Its metadata schema is intentionally minimal, relying on downstream aggregators to provide curation and additional metadata layers such as pricing and quality benchmarks.",10.0,"The response accurately condenses the passage into exactly two sentences, preserving both the concrete number of 14,000+ entries and the key technical claim regarding the minimal metadata schema and r",3.554,173,157,9.15e-05,False,False,False,True,
+21,summarization,quality,random,moonshot/kimi-k2.5@2.5,uniform random,"The Model Context Protocol registry, launched in March 2026 as a centralized but federated discovery mechanism, hosts over 14,000 server entries spanning capabilities from filesystem access to database connectivity. However, its metadata schema is deliberately minimal—omitting structured fields for pricing, SLAs, and quality benchmarks—and relies on downstream aggregators and external protocols to provide enriched curation and additional metadata layers.",10.0,"The response strictly adheres to the two-sentence limit while accurately preserving the concrete number (14,000) and the key technical claims about the registry's launch and minimal metadata schema.",15.893,174,675,0.00150652,False,False,False,True,
+21,summarization,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"The Model Context Protocol registry, launched in March 2026, contains over 14,000 entries for MCP servers. Its intentionally minimal metadata schema omits fields like pricing or quality benchmarks, relying on downstream aggregators to provide curation and additional metadata layers.",10.0,"The response strictly adheres to the two-sentence limit, accurately includes the concrete number of entries (14,000+), and faithfully preserves the key technical claim about the minimal metadata schem",2.714,173,136,8.445e-05,False,False,False,True,
+21,summarization,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,"Launched in March 2026, the MCP registry contains 14,000+ server entries but employs an intentionally minimal metadata schema that omits structured fields for pricing, SLAs, quality benchmarks, and payment methods. Downstream aggregators are expected to provide curation and additional metadata layers that extend these core registry records.",10.0,"The response perfectly summarizes the passage in exactly 2 sentences, preserves the key technical claim about the minimal metadata schema, and includes the concrete number of 14,000+ entries while mai",16.478,174,579,0.001303,False,False,False,True,
+21,summarization,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, which best satisfies the 'quality' preference axis.","Launched in March 2026, the Model Context Protocol registry contains over 14,000 entries for servers spanning capabilities such as filesystem access and database connectivity. Its metadata schema is intentionally minimal—omitting structured fields for pricing, SLAs, and quality benchmarks—and delegates curation and enriched metadata to downstream aggregators.",10.0,"The response adheres to the 2-sentence constraint while accurately including the specific figure of 14,000 entries and explaining the minimal metadata schema design.",12.224,174,449,0.0010274,False,False,False,True,
+21,summarization,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is Alibaba's flagship reasoning and coding model with strong multilingual support and precise tool calling, making it best suited for accurately extracting and preserving technical claims an","The Model Context Protocol (MCP) registry, launched in March 2026, contains over 14,000 entries offering capabilities like filesystem access, browser automation, code execution, and database connectivity. Its intentionally minimal metadata schema includes only name, version, package URL, and category tags—excluding structured fields for pricing, SLA, quality benchmarks, or payment methods—with curation and richer metadata expected from downstream aggregators and external protocols.",10.0,"The response perfectly meets all constraints by summarizing the passage in exactly two sentences, including the specific figure of 14,000+ entries and accurately capturing the technical distinction be",4.364,181,93,0.00030968,False,False,False,True,
+22,summarization,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The updated TOPSIS implementation achieves a 40x speedup on 1000-task batches by enabling preference-vector hot-swapping at request time, eliminating the need to rebuild the candidate matrix per query.",10.0,The response accurately condenses the input into a single sentence without losing key technical details or performance metrics.,3.896,55,244,9.43e-05,False,False,False,True,
+22,summarization,cost,random,moonshot/kimi-k2.5@2.5,uniform random,The latest TOPSIS implementation achieves 40x speedups on large batches by supporting runtime preference-vector hot-swapping without rebuilding the candidate matrix.,10.0,"The response accurately condenses the technical details and performance metrics into a single, fluent sentence as requested.",44.883,57,605,0.00130734,False,False,False,True,
+22,summarization,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"The latest TOPSIS implementation achieves a 40x speedup on 1000-task batches by enabling preference-vector hot-swapping at request time, eliminating the need to rebuild the candidate matrix for each query.",10.0,"The response accurately condenses the original text into a single sentence that captures the key technical improvement, its mechanism, and the performance result.",3.089,55,198,7.885e-05,False,False,False,True,
+22,summarization,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"The latest TOPSIS implementation achieves a 40x speedup on 1000-task batches by enabling preference-vector hot-swapping at request time, which eliminates the need to rebuild the candidate matrix for each query.",10.0,"The response is a concise, single-sentence summary that accurately captures all key technical details and performance metrics from the original text.",2.377,55,159,6.574e-05,False,False,False,True,
+22,summarization,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.","The latest TOPSIS implementation achieves a 40x speedup on 1000-task batches by enabling preference-vector hot-swapping at request time, which eliminates the need to rebuild the candidate matrix for each query.",10.0,"The response accurately condenses the input into a single, grammatically correct sentence while preserving all key technical details and the performance metric.",3.939,55,159,6.574e-05,False,False,False,True,
+22,summarization,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient coding and reasoning at scale, aligning best with the 'cost' preference axis.","The latest TOPSIS implementation achieves a 40x speedup on 1000-task batches by enabling preference-vector hot-swapping at request time, which avoids rebuilding the candidate matrix for each query.",10.0,The response accurately captures all key technical details and performance metrics of the input text within a single grammatical sentence.,3.985,55,157,6.507e-05,False,False,False,True,
+23,summarization,latency,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The new generation of laptops features on-device, low-latency speech recognition for live captions, improving accessibility for hard-of-hearing users while running efficiently on the NPU and supporting multiple languages.",10.0,The response accurately condenses the source text into a single sentence covering all key points while strictly adhering to the output-only constraint.,4.036,83,114,5.69e-05,False,False,False,True,
+23,summarization,latency,random,zhipu/glm-5@5.0,uniform random,"New laptops offer low-latency, multi-language live captions powered by efficient on-device processing to significantly improve accessibility for hard-of-hearing users.",10.0,"The response accurately condenses the technical details and benefits into a single, well-constructed sentence while strictly adhering to the output-only constraint.",16.375,82,719,0.00148624,False,True,False,True,
+23,summarization,latency,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"New laptops feature on-device, low-latency speech recognition for live captions, improving accessibility for hard-of-hearing users while running efficiently on the NPU and supporting multiple languages.",10.0,"The response accurately condenses all key technical details and benefits into a single, well-constructed sentence while strictly adhering to the output-only constraint.",2.125,83,117,5.79e-05,False,False,False,True,
+23,summarization,latency,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"The new generation of laptops features on-device, low-latency speech recognition for live captions, improving accessibility for hard-of-hearing users while running efficiently on the NPU and supporting multiple languages.",10.0,The response accurately condenses the key technical details and benefits into a single grammatically correct sentence while strictly adhering to the output-only constraint.,12.703,83,114,5.69e-05,False,True,False,True,
+23,summarization,latency,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest p50 latency (550ms) and p99 latency (2.2s), well within the 5-second constraint, making it the best choice for minimizing latency.","The new generation of laptops features on-device, low-latency speech recognition for live captions, improving accessibility for hard-of-hearing users while running efficiently on the NPU and supporting multiple languages.",10.0,The response accurately summarizes the text into one sentence and strictly adheres to the output-only constraint.,2.616,83,119,5.858e-05,False,False,False,True,
+23,summarization,latency,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a 'fast inference variant,' aligning best with the latency preference for a simple summarization task.","The new generation of laptops features on-device, low-latency speech recognition for live captions that improves accessibility for hard-of-hearing users while running efficiently on the NPU and supporting multiple languages.",10.0,"The response perfectly adheres to the output-only constraint and accurately synthesizes the key technical points, benefits, and features into a single, well-constructed sentence.",2.024,83,114,5.69e-05,False,False,False,True,
+24,summarization,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"- **Main problem:** The user's agent was selecting the most expensive embedding model despite their explicit preference weights (cost=0.7, quality=0.2, speed=0.1).  
+- **Resolution attempted:** Support identified that the agent was using a cached preference vector from a previous session and instructed the user to run `agent reset --preferences`.  
+- **Outcome:** The reset resolved the issue, and the user confirmed it worked. Support noted an auto-reset feature is planned for the next sprint.",10.0,"The response accurately covers all three required points with precise details from the transcript in a clear, professional format.",2.857,153,182,9.542e-05,False,False,False,True,
+24,summarization,balanced,random,deepseek/deepseek-v4-flash@4.0,uniform random,"- **User's main problem:** The agent was selecting the most expensive embedding model despite the user setting cost as the highest priority (cost=0.7, quality=0.2, speed=0.1).  
+- **Resolution attempted:** Support identified that the agent was using a cached preference vector from a previous session and instructed the user to run `agent reset --preferences`.  
+- **Outcome:** The reset resolved the issue, and the user confirmed it worked. Support noted an auto-reset feature is planned for the next sprint.",10.0,"The response perfectly captures all three required aspects of the summary with high accuracy, including specific technical details like the command used and preference weights.",7.635,153,185,9.643e-05,False,False,False,True,
+24,summarization,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"- **Main problem:** The user's agent was selecting the most expensive embedding model despite their explicit preference weights (cost=0.7, quality=0.2, speed=0.1).  
+- **Resolution attempted:** Support identified that the agent was using a cached preference vector from a previous session and instructed the user to run `agent reset --preferences`.  
+- **Outcome:** The reset resolved the issue, and the user confirmed it worked. Support noted an auto-reset feature is planned for the next sprint.",10.0,The response perfectly captures the requested three aspects with accurate details and appropriate formatting.,26.995,153,182,9.542e-05,False,False,False,True,
+24,summarization,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"- **User's main problem:** The agent was ignoring the user's cost preference (cost=0.7) and selecting the most expensive embedding model.  
+- **Resolution attempted:** Support identified that the agent was using a cached preference vector from a previous session and instructed the user to run `agent reset --preferences`.  
+- **Outcome:** The reset resolved the issue, and the user confirmed it worked. Support noted an auto-reset feature is planned for the next sprint.",10.0,"The response accurately captures the user's problem, the specific resolution steps, and the successful outcome in three concise bullet points, perfectly meeting all task requirements.",2.53,153,171,9.173e-05,False,False,False,True,
+24,summarization,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, decent quality (53), and fastest latency (550ms p50) among the options, aligning well with a 'balanced' preference axis when no hard constraints are specified.","- **User's main problem:** The agent was ignoring the user's cost preference (cost=0.7) and selecting the most expensive embedding model.  
+- **Resolution attempted:** Support identified a cached preference vector from a previous session and instructed the user to run `agent reset --preferences`.  
+- **Outcome:** The reset resolved the issue, and support noted that an auto-reset feature will be rolled out in the next sprint.",10.0,"The response accurately summarizes the transcript in exactly 3 bullet points as requested, correctly identifying the user's problem (agent ignoring cost preference), the resolution (resetting cached p",2.901,153,174,9.274e-05,False,False,False,True,
+24,summarization,balanced,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max offers a strong balance of reasoning, coding, and multilingual support, making it well-suited for accurately parsing and summarizing nuanced customer-support interactions.","- **Main Problem**: The user’s agent consistently selected the most expensive embedding model despite explicit preference settings prioritizing cost (cost=0.7, quality=0.2, speed=0.1).  
+- **Resolution Attempted**: Support identified that the agent was using a cached preference vector from a previous session and instructed the user to run `agent reset --preferences` to clear it.  
+- **Outcome**: The issue was resolved after the user executed the reset command, and support mentioned an upcoming auto-reset feature to prevent recurrence.",10.0,The response accurately captures all three required elements in the correct format with precise details from the transcript.,5.405,155,109,0.00033096,False,False,False,True,
+25,summarization,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The Agent Service Manifest (ASM) is a JSON-Schema protocol that standardizes value descriptors for agent services across pricing, quality, SLA, provenance, verification, and payment. Audits of 50 GitHub repositories and 14,519 registry entries revealed that none exposed all four core economic value classes simultaneously, highlighting a critical gap. ASM was validated with 70 manifests spanning 47 taxonomies, demonstrating its broad applicability. In tests with three independent LLMs, replacing raw HTML with ASM manifests as the information surface improved top-1 selection accuracy from 63.9–72.2% to 100%, with non-overlapping 95% confidence intervals.",10.0,"The response provides an accurate and concise summary in exactly four sentences as requested, capturing all key data points and findings from the abstract without errors.",4.339,149,291,0.00013115,False,False,False,True,
+25,summarization,quality,random,moonshot/kimi-k2.5@2.5,uniform random,"Researchers introduce the Agent Service Manifest (ASM), a JSON-Schema protocol that standardizes value descriptors—including pricing, quality, SLA, provenance, and payment—for agent services. Current audits reveal a critical market gap: zero of 50 GitHub repositories and zero of 14,519 registry entries simultaneously expose all four core economic value classes. The team validated ASM through 70 manifests spanning 47 distinct taxonomies, demonstrating broad applicability across domains. In testing with three independent LLMs, substituting ASM manifests for raw HTML as the information surface improved top-1 selection accuracy from 63.9-72.2% to 100% with statistically significant confidence intervals.",10.0,"The response perfectly adheres to the 4-sentence constraint while accurately synthesizing the key technical details, statistical evidence, and performance improvements presented in the abstract.",51.149,152,793,0.00174713,False,False,False,True,
+25,summarization,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"The Agent Service Manifest (ASM) is a JSON-Schema protocol that standardizes value descriptors for agent services across pricing, quality, SLA, provenance, verification, and payment. Audits of 50 GitHub repositories and 14,519 registry entries revealed that none exposed all four core economic value classes simultaneously, highlighting a significant gap. ASM was validated with 70 manifests spanning 47 taxonomies, demonstrating its broad applicability. In tests with three independent LLMs, replacing raw HTML with ASM manifests as the information surface improved top-1 selection accuracy from 63.9–72.2% to 100%, with non-overlapping 95% confidence intervals.",10.0,"The response accurately summarizes the abstract in exactly four sentences, capturing all technical details, methodology, and results while maintaining a professional style.",3.641,149,203,0.00010158,False,False,False,True,
+25,summarization,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,"This paper introduces the Agent Service Manifest (ASM), a JSON-Schema settlement protocol that standardizes value descriptors—including pricing, quality, SLAs, provenance, and payment—for autonomous agent services. Audits of 50 GitHub repositories and 14,519 registry entries revealed that no existing solutions currently expose all four core economic value classes simultaneously, highlighting a critical market gap. The team validated ASM through 70 manifests across 47 taxonomies, testing its effectiveness as a structured information surface for large language models. Results demonstrate that replacing raw HTML with ASM manifests increased top-1 selection accuracy from 63.9–72.2% to 100% across three independent LLMs with non-overlapping 95% confidence intervals.",10.0,"The response accurately condenses the abstract into exactly four sentences, capturing all key metrics and definitions while maintaining a professional tone.",41.893,152,1721,0.00371449,False,False,False,True,
+25,summarization,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, which best satisfies the 'quality' preference axis.","We introduce the Agent Service Manifest (ASM), a JSON-Schema protocol that standardizes economic value descriptors—including pricing, quality, SLAs, and provenance—to enable automated agent-to-agent transactions. Current audits reveal a critical market gap, with zero of 50 GitHub repositories and zero of 14,519 registry entries simultaneously exposing the four core economic value classes required for settlement. We validate ASM through the creation and deployment of 70 manifests across 47 distinct taxonomies. When three independent LLMs utilized ASM manifests instead of raw HTML as their information surface, top-1 selection accuracy improved from 63.9–72.2% to 100%, with statistically significant non-overlapping 95% confidence intervals.",10.0,"The response accurately condenses the abstract into exactly four sentences covering the problem, solution, validation, and results without losing technical detail.",20.579,152,751,0.00165809,False,False,False,True,
+25,summarization,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is described as Alibaba's flagship reasoning and coding model with strong multilingual support and tool calling, making it best suited for high-quality, concise executive summarization of te","The research introduces Agent Service Manifest (ASM), a JSON-Schema protocol that standardizes how agents describe economic value across pricing, quality, SLAs, provenance, verification, and payment. An audit of 50 GitHub repositories and 14,519 registry entries found none fully exposing all four core economic value classes, highlighting a critical gap. The team validated ASM using 70 manifests spanning 47 taxonomies. When used as input for large language models (LLMs) instead of raw HTML, ASM increased top-1 selection accuracy to 100%, a significant improvement over the 63.9–72.2% baseline, with statistically non-overlapping confidence intervals.",10.0,"The response accurately condenses the abstract into exactly four sentences covering the protocol introduction, the identified gap, validation metrics, and performance improvement results.",5.798,163,144,0.00041384,False,False,False,True,
+26,summarization,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"GPU spot prices on US-East-1 fell 18% week-over-week with new H200 capacity, but sustained-use commitments are cheaper than spot for workloads exceeding 6 hours daily.",10.0,"The response accurately condenses the source text into a single, fluent sentence that captures all key information without factual error.",2.262,52,113,4.962e-05,False,False,False,True,
+26,summarization,cost,random,deepseek/deepseek-v4-flash@4.0,uniform random,"GPU spot pricing on US-East-1 fell 18% week-over-week due to new H200 capacity, making sustained-use commitments more cost-effective than spot for workloads exceeding 6 hours daily.",10.0,"The response accurately summarizes all key data points (pricing drop, cause, and pricing comparison condition) in a single, well-structured sentence.",2.81,52,122,5.264e-05,False,False,False,True,
+26,summarization,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"GPU spot pricing on US-East-1 fell 18% week-over-week due to new H200 capacity, making sustained-use commitments more cost-effective than spot for workloads exceeding 6 hours daily.",10.0,"The response accurately condenses the source text into a single, grammatically correct sentence without losing any critical details or nuance.",2.274,52,125,5.365e-05,False,False,False,True,
+26,summarization,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"GPU spot prices on US-East-1 fell 18% week-over-week due to new H200 capacity, but sustained-use commitments are now cheaper than spot for any workload running over 6 hours per day.",10.0,"The response perfectly adheres to the one-sentence constraint and accurately captures all key information from the source text, including the percentage drop, cause, and cost comparison.",4.966,52,118,5.13e-05,False,False,False,True,
+26,summarization,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.","GPU spot pricing on US-East-1 fell 18% week-over-week due to new H200 capacity, making sustained-use commitments more cost-effective than spot for workloads exceeding 6 hours daily.",10.0,The response accurately condenses the original text into a single sentence without losing any key information or meaning.,2.935,52,125,5.365e-05,False,False,False,True,
+26,summarization,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly tuned for cost-efficient inference, aligning best with the 'cost' preference axis.","GPU spot pricing on US-East-1 fell 18% week-over-week due to new H200 capacity, but sustained-use commitments are now cheaper than spot for any workload exceeding 6 hours per day.",10.0,The response accurately captures all key facts from the source text and strictly adheres to the one-sentence constraint.,3.08,52,130,5.533e-05,False,False,False,True,
+27,summarization,latency,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The protocol stack now includes four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and the newly added value settlement (ASM)—which was absent in earlier surveys.",10.0,"The response provides a clear, accurate one-sentence summary that captures all key information from the original text, including the four layers of the protocol stack and noting that the settlement la",2.986,62,136,5.958e-05,False,False,False,True,
+27,summarization,latency,random,moonshot/kimi-k2.5@2.5,uniform random,"The protocol stack now supports four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and value settlement (ASM)—with the settlement layer being the newest addition that was missing from earlier surveys.",10.0,"The response accurately condenses the original text into a single, grammatically correct sentence that preserves all technical details and contextual information about the new settlement layer.",12.297,65,548,0.00118997,False,False,False,True,
+27,summarization,latency,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"The protocol stack now includes four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and value settlement (ASM)—with the settlement layer being the newest addition previously absent from earlier surveys.",10.0,The response accurately condenses the original text into a single grammatically correct sentence while retaining all technical details and nuances regarding the new settlement layer.,3.875,62,140,6.093e-05,False,False,False,True,
+27,summarization,latency,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"The protocol stack now includes four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and the newly added value settlement (ASM)—which was absent in earlier surveys.",10.0,The response accurately condenses the original text into a single grammatically correct sentence while retaining all key technical details and the context of the new addition.,2.985,62,136,5.958e-05,False,False,False,True,
+27,summarization,latency,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest p50 latency (550ms) and p99 latency (2.2s), making it the best choice for minimizing response time.","The protocol stack now includes four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and value settlement (ASM)—with the settlement layer being the newest addition previously absent from earlier surveys.",10.0,"The response accurately condenses the source text into a single, grammatically correct sentence while retaining all specific details about the protocol stack layers and the new settlement layer.",2.649,62,140,6.093e-05,False,False,False,True,
+27,summarization,latency,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a 'fast inference variant,' making it the best choice for low-latency performance.","The protocol stack now includes four layers—capability discovery (MCP), inter-agent communication (A2A), payment execution (AP2), and the newly added value settlement (ASM)—which was absent in earlier surveys.",10.0,"The response accurately condenses all key information, including the four specific layers and the novelty of the settlement layer, into a single grammatically correct sentence.",28.669,62,136,5.958e-05,False,False,False,True,
+28,summarization,balanced,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"- **Decision:** Adopt ASM v0.3 as the canonical schema for the next release.  
+- **Decision:** Pricing fields will support both per-token and per-call billing.  
+- **Decision:** Trust delta calculation will use a 30-day exponential decay.  
+- **Open issue:** Whether the receipt endpoint should be required or optional remains unresolved; tabled until next week.  
+- **Action items:** A drafts v0.3 spec changes by Friday; B writes trust-delta migration guide; C and D gather usage data from the alpha cohort to inform the receipt-endpoint decision.",8.0,"The response is well-structured and factually correct, but it includes action items despite the prompt explicitly requesting only decisions made and open issues.",5.44,190,347,0.00015915,False,False,False,True,
+28,summarization,balanced,random,moonshot/kimi-k2.5@2.5,uniform random,"• Adopted ASM v0.3 as the canonical schema for the next release (**Action**: A to draft spec changes by Friday).
+• Pricing fields will support both per-token and per-call billing.
+• Trust delta calculation standardized on 30-day exponential decay (**Action**: B to write migration guide).
+• **Open Issue**: No consensus on whether the receipt endpoint should be mandatory (B argues required for compliance; C argues optional in v0.3, required in v0.4).
+• **Open Issue**: Decision on receipt endpoint tabled until next week pending C and D's analysis of alpha cohort usage data.",10.0,"The response accurately captures all decisions and open issues in exactly five bullet points, integrates action items effectively, and maintains a professional style.",67.132,191,2084,0.00450097,False,False,False,True,
+28,summarization,balanced,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"- **Decision:** Adopt ASM v0.3 as the canonical schema for the next release.  
+- **Decision:** Pricing fields will support both per-token and per-call billing.  
+- **Decision:** Trust delta calculation will use a 30-day exponential decay.  
+- **Open Issue:** Whether the receipt endpoint should be required or optional remains unresolved; tabled until next week.  
+- **Action Items:** A drafts v0.3 spec changes by Friday; B writes trust-delta migration guide; C and D will gather usage data from the alpha cohort to inform the receipt-endpoint decision.",9.0,"The response accurately summarizes the meeting notes in five bullet points, clearly distinguishing decisions and open issues, though it includes action items which slightly deviate from the explicit '",5.805,190,227,0.00011883,False,False,False,True,
+28,summarization,balanced,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"- **Decision:** Adopt ASM v0.3 as the canonical schema for the next release.  
+- **Decision:** Pricing fields will support both per-token and per-call billing.  
+- **Decision:** Trust delta calculation will use a 30-day exponential decay.  
+- **Open issue:** Whether the receipt endpoint should be required or optional in v0.3 (tabled until next week; C argues optional now, required in v0.4; B opposes optional fields).  
+- **Action items:** A drafts v0.3 spec changes by Friday; B writes trust-delta migration guide; C and D will gather usage data from the alpha cohort to inform the receipt-endpoint decision.",10.0,"The response accurately captures all decisions and the identified open issue in exactly 5 bullet points, and logically includes action items to ensure a complete summary of the provided text.",27.68,190,241,0.00012354,False,False,False,True,
+28,summarization,balanced,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It offers the best balance of low cost, lowest latency, and acceptable quality among the candidates.","- **Decision:** Adopt ASM v0.3 as the canonical schema for the next release.  
+- **Decision:** Pricing fields will support both per-token and per-call billing.  
+- **Decision:** Trust delta calculation will use a 30-day exponential decay.  
+- **Open issue:** Whether the receipt endpoint should be required or optional remains unresolved; tabled for next week.  
+- **Action items:** A drafts v0.3 spec changes by Friday; B writes trust-delta migration guide; C and D will gather usage data from the alpha cohort to inform the receipt-endpoint decision.",9.0,"The response accurately captures the three decisions and the open issue with clear formatting, adding action items to satisfy the five-bullet count while maintaining factual fidelity.",3.079,190,227,0.00011883,False,False,False,True,
+28,summarization,balanced,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max offers a balanced combination of strong reasoning, coding, and multilingual capabilities suitable for accurately summarizing structured meeting notes with nuanced decisions and open issues.","- **Adopted ASM v0.3** as the canonical schema for the next release.  
+- **Pricing fields** will support both per-token and per-call billing models.  
+- **Trust delta calculation** will use a 30-day exponential decay.  
+- **Receipt endpoint requirement** remains undecided; C favors optional in v0.3 (required in v0.4), while B argues it should be required now to prevent non-compliance.  
+- **Open issue**: C and D will analyze alpha cohort usage data to inform the receipt-endpoint decision before next week’s meeting.",10.0,"The response accurately summarizes the meeting into exactly five bullet points covering all decisions and the open issue regarding the receipt endpoint, adhering perfectly to the constraints.",5.304,197,123,0.00038584,False,False,False,True,
+29,summarization,quality,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"The new caching system cuts unnecessary data retrievals by 92%, making manifest delivery as fast as serving static files (median 8ms). It automatically refreshes content within an hour of any change, ensuring updates are timely without sacrificing speed. The system uses very little memory—less than 50MB for 10,000 manifests—thanks to efficient compression.",10.0,The response accurately summarizes the technical details into three accessible sentences for an executive while retaining all key metrics and value propositions.,6.636,115,307,0.00012891,False,False,False,True,
+29,summarization,quality,random,zhipu/glm-5@5.0,uniform random,"The new caching layer drives significant operational efficiency by reducing redundant data requests by 92%. It achieves near-instant response times while ensuring data remains current with updates propagating within an hour. This high-performance solution requires negligible memory resources, delivering speed and efficiency at a low infrastructure cost.",10.0,"The response perfectly condenses the technical details into three accessible sentences for an executive, preserving the specific 92% efficiency metric and translating jargon into business-relevant ter",20.975,115,960,0.00198688,False,False,False,True,
+29,summarization,quality,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"This new caching system cuts redundant data requests by 92%, making our service dramatically faster and more efficient. It delivers responses in milliseconds while still ensuring updates are reflected within an hour, so users get both speed and accuracy. The entire system uses minimal memory—less than 50MB for 10,000 items—thanks to smart compression, meaning it delivers major performance gains without straining resources.",10.0,"The response perfectly adheres to the three-sentence constraint, simplifies complex technical terms for an executive audience, and accurately preserves the key performance metrics and value propositio",2.818,115,203,9.397e-05,False,False,False,True,
+29,summarization,quality,weighted_average,moonshot/kimi-k2.5@2.5,additive weighted score,"Our new caching layer reduces redundant data requests by 92% while accelerating content delivery to just 8 milliseconds. Updates still reach users within an hour, ensuring a strong balance between speed and accuracy. The system requires minimal memory resources—under 50MB—keeping infrastructure costs negligible.",10.0,"The response perfectly meets all constraints, providing a concise three-sentence summary in executive-friendly language that accurately preserves the key performance metrics and value claims.",16.733,117,788,0.00172134,False,False,False,True,
+29,summarization,quality,llm_picker_manifest,moonshot/kimi-k2.5@2.5,"It has the highest Artificial_Analysis_Intelligence quality score of 60, best meeting the 'quality' preference axis.","Our new caching layer eliminates 92% of redundant data requests, dramatically improving system efficiency and reducing infrastructure load. It delivers near-instant response times of just 8 milliseconds while ensuring updates propagate within an hour, striking an optimal balance between speed and content freshness. The solution operates with negligible memory overhead—under 50MB for thousands of items—making it highly cost-effective to deploy and scale.",10.0,"The response accurately condenses the technical details into exactly three accessible sentences for an executive, preserving all key metrics and value claims without unnecessary jargon.",53.615,117,667,0.00146482,False,False,False,True,
+29,summarization,quality,llm_picker_raw_doc,qwen/qwen3-max@3.0,"Qwen3 Max is Alibaba's flagship reasoning and coding model with strong multilingual support, making it best suited for accurately distilling technical content into clear, concise executive summaries w","The new caching layer dramatically cuts redundant data requests by 92%, significantly improving system efficiency. It delivers near-instant response times (median 8ms) while ensuring updates are reflected within an hour, balancing speed and freshness. The solution is lightweight, using less than 50MB of memory even when handling 10,000 manifests, thanks to efficient compression.",10.0,The response accurately condenses the technical documentation into exactly three accessible sentences for an executive audience while successfully preserving the critical value claims and performance ,7.073,123,77,0.00024136,False,False,False,True,
+30,summarization,cost,asm_topsis,deepseek/deepseek-v4-flash@4.0,deterministic TOPSIS,"Switching to a 1-year reserved commitment cut compute costs by 38% but raised cancellation risk, so we reserved 10% of the savings as an exit-cost buffer.",10.0,"The response is an accurate, concise one-sentence summary that captures all key information from the original text, including the cost reduction percentage, risk increase, and the reserve strategy.",2.255,54,96,4.435e-05,False,False,False,True,
+30,summarization,cost,random,qwen/qwen3-max@3.0,uniform random,"Switching to a 1-year reserved instance reduced compute costs by 38% but introduced cancellation risk, prompting us to allocate 10% of the savings as an exit-cost reserve.",0.0,judge_error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。,4.989,61,39,0.00012152,False,False,False,True,
+30,summarization,cost,cheapest_first,deepseek/deepseek-v4-flash@4.0,minimum estimated cost,"Switching to a 1-year reserved commitment cut compute costs by 38% but raised cancellation risk, so we reserved 10% of the savings as an exit-cost buffer.",10.0,The response accurately condenses the original statement into a single effective TL;DR without losing any critical information or changing the meaning.,2.888,54,100,4.57e-05,False,False,False,True,
+30,summarization,cost,weighted_average,deepseek/deepseek-v4-flash@4.0,additive weighted score,"Switching from on-demand to a 1-year reserved instance cut compute costs by 38% but raised cancellation risk, so we reserved 10% of the savings as an exit-cost buffer.",10.0,The response accurately condenses the input text into a single sentence while preserving all key details and figures.,2.845,54,115,5.074e-05,False,False,False,True,
+30,summarization,cost,llm_picker_manifest,deepseek/deepseek-v4-flash@4.0,"It has the lowest input and output token costs among all candidates, making it the most cost-effective option.","Switching from on-demand to 1-year reserved instances cut compute costs by 38% but raised cancellation risk, so we reserved 10% of the savings as an exit-cost buffer.",10.0,The response accurately condenses the input into a single sentence while retaining all key details and maintaining a professional TL;DR style.,2.404,54,106,4.771e-05,False,False,False,True,
+30,summarization,cost,llm_picker_raw_doc,deepseek/deepseek-v4-flash@4.0,"It is explicitly described as a cost-efficient variant tuned for coding and reasoning at scale, aligning best with the 'cost' preference axis.","TL;DR: Switching from on-demand to 1-year reserved instances cut compute costs by 38% but raised cancellation risk, so we reserved 10% of the savings as an exit-cost buffer.",10.0,The response perfectly adheres to the one-sentence constraint while accurately summarizing all key facts and figures from the input text.,2.627,54,114,5.04e-05,False,False,False,True,

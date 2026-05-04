@@ -1,0 +1,7 @@
+selector,naive_n,naive_judge_mean,naive_execution_cost_total_usd,naive_latency_mean_s,naive_quality_violation_rate,clean_n,clean_judge_mean,clean_execution_cost_total_usd,clean_latency_mean_s,clean_quality_violation_rate,judge_delta
+asm_topsis,30,7.933,0.014901,13.457,0.0,30,9.267,0.006391,7.64,0.0,1.3339999999999996
+cheapest_first,30,9.5,0.005366,7.395,0.0,29,9.655,0.006384,9.802,0.0,0.15499999999999936
+llm_picker_description,30,9.967,0.006804,5.736,0.0,30,9.233,0.008729,10.533,0.0,-0.734
+llm_picker_manifest,30,9.6,0.041111,17.555,0.033,28,9.214,0.027473,16.829,0.036,-0.38599999999999923
+random,29,9.276,0.039211,18.445,0.0,29,9.207,0.045888,25.919,0.0,-0.06899999999999906
+weighted_average,30,7.4,0.014543,17.712,0.033,29,9.31,0.036966,23.603,0.0,1.9100000000000001

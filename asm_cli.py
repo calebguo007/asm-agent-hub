@@ -8,6 +8,7 @@ import re
 import sys
 from pathlib import Path
 
+from openrouter_adapter import load_openrouter_manifests
 from scorer import Constraints, Preferences, filter_services, load_manifests, parse_manifest, score_topsis
 
 
@@ -45,7 +46,15 @@ def infer_constraints(query: str, taxonomy: str | None) -> Constraints:
         max_latency_s = value / 1000 if unit == "ms" else value
 
     min_uptime = 0.99 if any(word in q for word in ("reliable", "reliability", "uptime")) else None
-    return Constraints(required_taxonomy=taxonomy, max_latency_s=max_latency_s, min_uptime=min_uptime)
+    max_cost = None
+    cost_match = re.search(
+        r"(?:under|below|less than|<=|<)\s*\$?\s*(\d+(?:\.\d+)?)\s*(?:/|per)?\s*(?:1m|1 m|million|m)\s*(?:tokens?)?",
+        q,
+    )
+    if cost_match:
+        max_cost = float(cost_match.group(1)) / 1_000_000
+
+    return Constraints(required_taxonomy=taxonomy, max_latency_s=max_latency_s, min_uptime=min_uptime, max_cost=max_cost)
 
 
 def infer_preferences(query: str) -> Preferences:
@@ -80,23 +89,39 @@ def rejection_reason(service, constraints: Constraints) -> str | None:
     if constraints.min_quality is not None and service.quality_score < constraints.min_quality:
         return f"quality {service.quality_score:.3f} < min {constraints.min_quality:.3f}"
     if constraints.max_cost is not None and service.cost_per_unit > constraints.max_cost:
-        return f"cost {service.cost_per_unit:.8f} > max {constraints.max_cost:.8f}"
+        return f"cost {format_cost(service.cost_per_unit, service.taxonomy)} > max {format_cost(constraints.max_cost, service.taxonomy)}"
     return None
 
 
 def cmd_score(args: argparse.Namespace) -> int:
-    manifest_dir = Path(args.manifests)
-    manifests = load_manifests(manifest_dir)
-    taxonomy = args.taxonomy or infer_taxonomy(args.query)
+    source_metadata = None
+    openrouter_latency_ignored = False
+    if args.source == "openrouter":
+        manifests, source_metadata = load_openrouter_manifests(
+            models_json=args.openrouter_models_json,
+            rankings_json=args.openrouter_rankings_json,
+            timeout=args.openrouter_timeout,
+        )
+        taxonomy = args.taxonomy or "ai.llm.chat"
+        manifest_dir = None
+    else:
+        manifest_dir = Path(args.manifests)
+        manifests = load_manifests(manifest_dir)
+        taxonomy = args.taxonomy or infer_taxonomy(args.query)
+
     constraints = infer_constraints(args.query, taxonomy)
     preferences = infer_preferences(args.query)
+    if args.source == "openrouter" and constraints.max_latency_s is not None and not args.strict_latency:
+        constraints.max_latency_s = None
+        openrouter_latency_ignored = True
 
     candidate_manifests = [
         m for m in manifests
         if not taxonomy or str(m.get("taxonomy", "")).startswith(taxonomy)
     ]
     if not candidate_manifests:
-        print(f"No candidate manifests found for taxonomy={taxonomy or 'any'} in {manifest_dir}")
+        location = source_metadata["source"] if source_metadata else str(manifest_dir)
+        print(f"No candidate manifests found for taxonomy={taxonomy or 'any'} in {location}")
         return 1
 
     services = [parse_manifest(m, io_ratio=preferences.io_ratio) for m in candidate_manifests]
@@ -105,17 +130,30 @@ def cmd_score(args: argparse.Namespace) -> int:
 
     print(f"Query: {args.query}")
     print(f"Taxonomy: {taxonomy or 'any'}")
+    if source_metadata:
+        print(
+            "Source: OpenRouter ephemeral manifests "
+            f"({source_metadata['n_manifests']} scoreable / {source_metadata['n_models']} models, "
+            f"retrieved_at={source_metadata['retrieved_at']})"
+        )
+        if source_metadata.get("ranking_snapshot"):
+            print(f"Usage signal: cached OpenRouter ranking snapshot {source_metadata['ranking_snapshot']}")
+        print("Caveat: OpenRouter usage is a revealed-preference signal, not benchmark quality.")
+    if openrouter_latency_ignored:
+        print("Warning: OpenRouter /api/v1/models does not expose latency; ignored latency hard constraint.")
     print(
         "Preferences: "
         f"cost={preferences.cost:.2f}, quality={preferences.quality:.2f}, "
         f"speed={preferences.speed:.2f}, reliability={preferences.reliability:.2f}"
     )
-    if constraints.max_latency_s is not None or constraints.min_uptime is not None:
+    if constraints.max_latency_s is not None or constraints.min_uptime is not None or constraints.max_cost is not None:
         parts = []
         if constraints.max_latency_s is not None:
             parts.append(f"latency <= {constraints.max_latency_s:.2f}s")
         if constraints.min_uptime is not None:
             parts.append(f"uptime >= {constraints.min_uptime:.3f}")
+        if constraints.max_cost is not None:
+            parts.append(f"representative cost <= {format_cost(constraints.max_cost, taxonomy)}")
         print(f"Hard constraints: {', '.join(parts)}")
 
     if not ranked:
@@ -128,8 +166,8 @@ def cmd_score(args: argparse.Namespace) -> int:
         for item in ranked[: args.limit]:
             print(
                 f"{item.rank}. {item.service.display_name} "
-                f"(score={item.total_score:.4f}, cost=${item.service.cost_per_unit:.8f}/unit, "
-                f"quality={item.service.quality_score:.3f}, latency={item.service.latency_seconds:.2f}s, "
+                f"(score={item.total_score:.4f}, cost={format_cost(item.service.cost_per_unit, item.service.taxonomy)}, "
+                f"quality={item.service.quality_score:.3f}, latency={format_latency(item.service.latency_seconds)}, "
                 f"uptime={item.service.uptime:.3f})"
             )
 
@@ -149,6 +187,18 @@ def cmd_score(args: argparse.Namespace) -> int:
     return 0 if ranked else 2
 
 
+def format_cost(cost_per_unit: float, taxonomy: str | None) -> str:
+    if taxonomy and taxonomy.startswith("ai.llm"):
+        return f"${cost_per_unit * 1_000_000:.4f}/1M blended tokens"
+    return f"${cost_per_unit:.8f}/unit"
+
+
+def format_latency(latency_seconds: float) -> str:
+    if latency_seconds == float("inf"):
+        return "unknown"
+    return f"{latency_seconds:.2f}s"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="asm", description="Agent Service Manifest CLI")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -157,6 +207,13 @@ def build_parser() -> argparse.ArgumentParser:
     score.add_argument("query", help='Example: "cheap reliable TTS under 1s"')
     score.add_argument("--taxonomy", help="Override inferred taxonomy, e.g. ai.audio.tts")
     score.add_argument("--manifests", default=str(DEFAULT_MANIFEST_DIR), help="Directory of .asm.json manifests")
+    score.add_argument("--source", choices=["local", "openrouter"], default="local",
+                       help="Manifest source. 'openrouter' builds ephemeral manifests from OpenRouter model metadata.")
+    score.add_argument("--openrouter-models-json", help="Use a cached OpenRouter /api/v1/models JSON file")
+    score.add_argument("--openrouter-rankings-json", help="Use a cached OpenRouter rankings JSON file")
+    score.add_argument("--openrouter-timeout", type=int, default=20, help="Timeout for OpenRouter models API fetch")
+    score.add_argument("--strict-latency", action="store_true",
+                       help="Do not ignore latency constraints for sources with unknown latency")
     score.add_argument("--limit", type=int, default=5, help="Maximum ranked/rejected rows to print")
     score.set_defaults(func=cmd_score)
     return parser

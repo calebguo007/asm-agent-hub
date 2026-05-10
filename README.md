@@ -9,10 +9,17 @@ pip install -e .
 asm score "cheap reliable TTS under 1s"
 ```
 
+Rank live OpenRouter models without writing manifests first:
+
+```bash
+asm score --source openrouter 'cheap LLM under $1 per 1M tokens under 1s'
+```
+
 If your Python script directory is not on `PATH`, use:
 
 ```bash
 python -m asm_cli score "cheap reliable TTS under 1s"
+python -m asm_cli score --source openrouter 'cheap LLM under $1 per 1M tokens under 1s'
 ```
 
 ASM is MCP-compatible today: publish a standalone `.well-known/asm`, or embed ASM in MCP Registry `server.json` under `_meta.io.modelcontextprotocol.registry/publisher-provided.asm`.
@@ -63,6 +70,18 @@ If the console script is not on `PATH`, use:
 ```bash
 python -m mcp_server_json_asm examples/mcp-server-json/remote-with-asm.server.json
 ```
+
+Try OpenRouter live model ranking:
+
+```bash
+asm score --source openrouter 'cheap LLM under $1 per 1M tokens under 1s'
+```
+
+This builds ephemeral ASM manifests from OpenRouter's public `/api/v1/models`
+metadata and merges the checked-in OpenRouter usage-ranking snapshot as a
+revealed-preference signal. OpenRouter does not expose per-model latency in
+that endpoint, so ASM reports and ignores latency hard constraints for this
+source unless `--strict-latency` is set.
 
 Extract the embedded ASM manifest:
 

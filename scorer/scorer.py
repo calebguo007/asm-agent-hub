@@ -234,12 +234,15 @@ def _min_max_normalize(values: list[float], invert: bool = False) -> list[float]
     """Min-max normalize to [0, 1]. If invert, lower raw = higher normalized."""
     if not values:
         return []
-    vmin, vmax = min(values), max(values)
-    if vmin == vmax:
+    finite_values = [v for v in values if math.isfinite(v)]
+    if not finite_values:
         return [1.0] * len(values)
+    vmin, vmax = min(finite_values), max(finite_values)
+    if vmin == vmax:
+        return [1.0 if math.isfinite(v) else 0.0 for v in values]
     if invert:
-        return [(vmax - v) / (vmax - vmin) for v in values]
-    return [(v - vmin) / (vmax - vmin) for v in values]
+        return [0.0 if not math.isfinite(v) else (vmax - v) / (vmax - vmin) for v in values]
+    return [0.0 if not math.isfinite(v) else (v - vmin) / (vmax - vmin) for v in values]
 
 
 def score_weighted_average(
@@ -340,6 +343,7 @@ def score_topsis(
     # Benefit criteria (True = higher is better, False = lower is better)
     is_benefit = [False, True, False, True]
     weights = [preferences.cost, preferences.quality, preferences.speed, preferences.reliability]
+    raw = _sanitize_decision_matrix(raw, is_benefit)
 
     # Step 2: Vector normalization
     num_criteria = 4
@@ -389,7 +393,14 @@ def score_topsis(
         for j, label in enumerate(labels):
             # Convert to 0-1 benefit score for display
             col = [weighted[k][j] for k in range(n)]
-            vmin, vmax = min(col), max(col)
+            finite_col = [v for v in col if math.isfinite(v)]
+            if not finite_col:
+                breakdown[label] = 1.0
+                continue
+            vmin, vmax = min(finite_col), max(finite_col)
+            if not math.isfinite(weighted[i][j]):
+                breakdown[label] = 0.0
+                continue
             if vmax == vmin:
                 breakdown[label] = 1.0
             elif is_benefit[j]:
@@ -408,6 +419,32 @@ def score_topsis(
         r.rank = i + 1
         r.reasoning = _generate_reasoning(r, preferences)
     return results
+
+
+def _sanitize_decision_matrix(raw: list[list[float]], is_benefit: list[bool]) -> list[list[float]]:
+    """Replace non-finite criteria before TOPSIS vector normalization.
+
+    Unknown values should not produce NaN scores. If an entire criterion is
+    unknown, it becomes neutral (all zeros). If only some services are unknown,
+    unknown cost criteria are treated as worst finite values and unknown benefit
+    criteria as worst finite values.
+    """
+    if not raw:
+        return raw
+    cleaned = [row[:] for row in raw]
+    num_criteria = len(raw[0])
+    for j in range(num_criteria):
+        finite = [row[j] for row in raw if math.isfinite(row[j])]
+        if not finite:
+            replacement = 0.0
+        elif is_benefit[j]:
+            replacement = min(finite)
+        else:
+            replacement = max(finite)
+        for row in cleaned:
+            if not math.isfinite(row[j]):
+                row[j] = replacement
+    return cleaned
 
 
 # ──────────────────────────────────────────────

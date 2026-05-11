@@ -129,10 +129,11 @@ https://github.com/calebguo007/asm-spec
 ## Posting Order
 
 1. Hacker News first only if the account is allowed to post Show HN.
-2. If HN blocks Show HN posting, do not repost, do not use another account, and do not change the title to bypass the restriction. Move to Reddit / r/LocalLLaMA and LinkedIn.
-3. Reddit / r/LocalLLaMA should lead with the OpenRouter CLI utility, not the protocol paper.
-4. X / Twitter and LinkedIn can go after Reddit, or immediately if HN is unavailable.
-5. Chinese community post can go in parallel if the audience is separate.
+2. If HN blocks Show HN posting, do not repost, do not use another account, and do not change the title to bypass the restriction. Move to LinkedIn and non-gated communities.
+3. Reddit / r/LocalLLaMA should lead with the OpenRouter CLI utility, not the protocol paper, but only if the account is allowed to post.
+4. If Reddit blocks posting because of karma/points/account-age rules, do not try to bypass it. Use comments in relevant existing threads, LinkedIn, X, GitHub issues, and Chinese developer communities first.
+5. X / Twitter and LinkedIn can go immediately if HN or Reddit are unavailable.
+6. Chinese community post can go in parallel if the audience is separate.
 
 ## HN Restriction Fallback
 
@@ -142,6 +143,16 @@ If Hacker News shows the temporary Show HN restriction for newer users:
 - Spend time commenting naturally on HN before trying again later.
 - Use the Reddit and LinkedIn drafts below as the primary first launch.
 - If sharing on HN later, avoid a pure promotional pattern; contribute useful comments first, then post occasional project links when contextually relevant.
+
+## Reddit Restriction Fallback
+
+If Reddit or r/LocalLLaMA requires karma, points, or account age before posting:
+
+- Do not repost from another account or ask for upvotes.
+- Use Reddit in comment mode first: find existing threads about OpenRouter pricing, model routing, MCP servers, or provider selection, and leave a useful technical comment with the repo link only if it is directly relevant.
+- Make LinkedIn the first public post.
+- Use X / Twitter, GitHub issue follow-ups, V2EX, Zhihu, Juejin, or other communities where the account can post normally.
+- Return to Reddit after the account has normal participation history.
 
 ## Accounts / Access
 

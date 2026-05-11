@@ -128,10 +128,20 @@ https://github.com/calebguo007/asm-spec
 
 ## Posting Order
 
-1. Hacker News first.
-2. Reddit / r/LocalLLaMA after at least 4 hours.
-3. X / Twitter and LinkedIn after the first external reaction or after 24 hours.
-4. Chinese community post can go in parallel if the audience is separate.
+1. Hacker News first only if the account is allowed to post Show HN.
+2. If HN blocks Show HN posting, do not repost, do not use another account, and do not change the title to bypass the restriction. Move to Reddit / r/LocalLLaMA and LinkedIn.
+3. Reddit / r/LocalLLaMA should lead with the OpenRouter CLI utility, not the protocol paper.
+4. X / Twitter and LinkedIn can go after Reddit, or immediately if HN is unavailable.
+5. Chinese community post can go in parallel if the audience is separate.
+
+## HN Restriction Fallback
+
+If Hacker News shows the temporary Show HN restriction for newer users:
+
+- Do not try to bypass it.
+- Spend time commenting naturally on HN before trying again later.
+- Use the Reddit and LinkedIn drafts below as the primary first launch.
+- If sharing on HN later, avoid a pure promotional pattern; contribute useful comments first, then post occasional project links when contextually relevant.
 
 ## Accounts / Access
 

@@ -2,7 +2,7 @@
 
 **Status**: Draft, open for review
 **Authors**: Yi Guo (ASM) · Rahat Hasan, Akkhar-Labs (reference integration)
-**Target version**: ASM v0.3.1
+**Target version**: ASM v0.3.2 (v0.3.1 was already taken for the MCP Registry `_meta` release on 2026-05-08)
 **Tracking issue**: (link to be added when issue is created)
 **Reference integration**: [`docs/integrations/akkhar-code-receipt-spec.md`](../integrations/akkhar-code-receipt-spec.md)
 
@@ -148,7 +148,7 @@ Changes to `schema/asm-v0.3.schema.json`:
 
 The receipt envelope itself is specified in `schema/asm-receipt-envelope-v0.1.schema.json` (new file in this RFC).
 
-## 4. Acceptance criteria for v0.3.1
+## 4. Acceptance criteria for v0.3.2
 
 This RFC lands when:
 
@@ -170,8 +170,8 @@ This RFC lands when:
 
 - T+0 (today): Open issue, post this RFC.
 - T+1 week: Comments + schema diff draft PR.
-- T+2 weeks: Merge schema changes to `main` as v0.3.1-rc1. Akkhar-Code first reference integration ships its `.well-known/asm-receipts` endpoint.
-- T+3 weeks: v0.3.1 tagged + released; ASM paper v2 adds §6.5c citing the first reference integration.
+- T+2 weeks: Merge schema changes to `main`. Akkhar-Code first reference integration ships its `.well-known/asm-receipts` endpoint.
+- T+3 weeks: v0.3.2 tagged + released; ASM paper v2 adds §6.5c citing the first reference integration. (Actual shipping: PR #8 merged 2026-05-18 at commit 99a9773; v0.3.2 tag cut same day at commit e929253. Akkhar-Code manifest deferred to Akkhar-Labs's own production-readiness timeline.)
 
 ## 7. Acknowledgements
 

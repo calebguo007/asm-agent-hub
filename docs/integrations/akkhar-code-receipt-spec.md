@@ -206,7 +206,7 @@ The four open questions from the original brief were resolved as follows. See th
 | 1 | Receipt cadence | Push to consumer webhook (preferred), poll fallback. Envelope: `{receipts: [...], publisher, signature}`. Both modes interoperable. |
 | 2 | `billing.cost` authority | Both: receipt cost = publisher claim; Trust Delta also recomputes from `token_counts × manifest.pricing` and surfaces the delta as a first-class trust signal. |
 | 3 | Multi-model seal chaining | v0.1 minimum = pipeline-level seal sufficient for settlement. v0.2 full attribution = each `delegates_to` entry carries its own provider-signed seal; Trust Delta walks the chain. Opt-in. |
-| 4 | Taxonomy | `tool.code.orchestration` added as new ASM taxonomy leaf in v0.3.1. Akkhar-Code holds the first manifest under it. |
+| 4 | Taxonomy | `tool.code.orchestration` added as new ASM taxonomy leaf in v0.3.2. Akkhar-Code's manifest is reserved for the leaf, pending Akkhar-Labs's own production-readiness timeline. |
 
 ---
 
